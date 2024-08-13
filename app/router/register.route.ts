@@ -17,5 +17,3 @@ export class RegisterRoute {
         ];
     }
 }
-
-(() => { return new RegisterRoute(express.application).routers(); })();

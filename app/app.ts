@@ -4,4 +4,3 @@ export const app = () => {
     const webServer: serverListen = new serverListen();
     server(webServer, serverParams);
 }
-(() => { app(); })();
