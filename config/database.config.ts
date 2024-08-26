@@ -1,3 +1,3 @@
-import {database} from "opticore-database";
+import {DbConnexionConfig} from "opticore-database";
 
-database.mySql();
+DbConnexionConfig.
