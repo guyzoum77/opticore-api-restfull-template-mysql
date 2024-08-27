@@ -1,3 +1,3 @@
-import {DbConnexionConfig} from "opticore-database";
+import {database} from "opticore-database";
 
-DbConnexionConfig.
+export const dbConnection = database.mySql();
