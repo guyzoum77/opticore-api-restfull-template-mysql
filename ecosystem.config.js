@@ -49,7 +49,7 @@ module.exports = {
             user: 'user',
             host: '0.0.0.0',
             ref: 'origin/master',
-            repo: 'https://github.com/guyzoum77/opticore-template.git',
+            repo: 'https://github.com/guyzoum77/opticore-template-mysql.git',
             path: 'src/server.ts',
             'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --only prod',
         },

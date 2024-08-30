@@ -1,7 +1,7 @@
 {
-  "name": "opticore-template",
+  "name": "opticore-api-restfull-template-mysql",
   "version": "1.0.0",
-  "description": "Opticore template",
+  "description": "Opticore API Restfull template with mysql as database",
   "scripts": {
     "start:prod": "cross-env NODE_ENV=production ts-node src/server.ts",
     "start:dev": "cross-env NODE_ENV=development nodemon --watch src --delay 1 --exec 'ts-node' src/server.ts",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ https://github.com/guyzoum77/opticore-template.git"
+    "url": "git+ https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git"
   },
   "author": "Guy-serge Kouacou",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guyzoum77/opticore-template.git/issues"
+    "url": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git/issues"
   },
-  "homepage": "https://github.com/guyzoum77/opticore-template.git#readme",
+  "homepage": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git#readme",
   "dependencies": {
     "@types/gradient-string": "^1.1.6",
     "cross-env": "^7.0.3",
