@@ -1,8 +1,10 @@
 /**
  * kernel app
  */
-export const Kernel = [
-    () => import("../router/register.route"),
-    () => import("../app"),
-    () => import("../../config/database.config")
-];
+export const Kernel = () => {
+    return [
+        () => import("../router/register.route"),
+        () => import("../app"),
+        () => import("../../config/database.config")
+    ];
+}
