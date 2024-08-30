@@ -1,5 +1,3 @@
-import {server, serverListen, serverParams} from "opticore-core-module";
+import {serverWeb} from "opticore-core-module";
 
-export const app = () => {
-    server(new serverListen(), serverParams);
-}
+export const app = (): void => { serverWeb(); }

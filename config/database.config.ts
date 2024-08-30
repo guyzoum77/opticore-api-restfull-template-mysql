@@ -1,7 +1,7 @@
-import {DbConnexionConfig} from "opticore-core-module";
+import { mySqlCheckerDatabase } from "opticore-core-module";
 
 /**
- * databaseMySQLConnexionChecker is function with an optional params.
- * So if you desire use an optional params used databaseMySQLConnexionChecker() with your params instead databaseMySQLConnexionChecker
+ * mySqlCheckerDatabase is function with an optional params.
+ * So if you desire use an optional params define it.
  */
-export const dbConnection = new DbConnexionConfig().databaseMySQLConnexionChecker;
+export const dbConnection = (): void => { mySqlCheckerDatabase(""); }
