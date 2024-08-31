@@ -25,7 +25,7 @@
   "dependencies": {
     "@types/gradient-string": "^1.1.6",
     "cross-env": "^7.0.3",
-    "opticore-core-module": "^1.0.74",
+    "opticore-core-module": "^1.0.75",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
