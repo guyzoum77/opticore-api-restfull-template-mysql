@@ -1,10 +1,13 @@
+import {express} from "opticore-core-module";
+import {registerRoutes} from "../router/register.route";
+import {dbConnection} from "../../config/database.config";
+
 /**
  * kernel app
  */
-export const Kernel = () => {
+export const Kernel = (): [express.Router[], () => void] => {
     return [
-        () => import("../router/register.route"),
-        () => import("../app"),
-        () => import("../../config/database.config")
+        registerRoutes(),
+        dbConnection
     ];
 }
