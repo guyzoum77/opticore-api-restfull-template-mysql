@@ -1,3 +1,1 @@
-import {serverWeb} from "opticore-core-module";
-
-export const app = (): void => { serverWeb(); }
+import {CoreApplication} from "opticore-core-module";
