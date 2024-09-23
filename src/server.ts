@@ -1,1 +1,3 @@
-(() => { new URL("../app/app", import.meta.url); })();
+import {appInit} from "../app/app";
+
+appInit();

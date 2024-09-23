@@ -1,9 +1,16 @@
-import {CoreApplication, dateTimeFormattedUtils, getEnvVariable} from "opticore-core-module";
 import {Server} from "node:net";
 import {Kernel} from "./core/kernel";
+import {coreAppOptions} from "../config/coreAppOptions";
+import {CoreApplication, dateTimeFormattedUtils, getEnvVariable} from "opticore-core-module";
 
 
-const entryApp: CoreApplication = new CoreApplication();
-const server: Server = entryApp.onStartServer(getEnvVariable.appHost, Number(getEnvVariable.appPort));
-entryApp.onListeningOnServerEvent(server, getEnvVariable.appHost, Number(getEnvVariable.appPort), Kernel());
-entryApp.onRequestOnServerEvent(server, getEnvVariable.appHost, Number(getEnvVariable.appPort), dateTimeFormattedUtils);
+export const appInit = (): void => {
+    const host: string = getEnvVariable.appHost;
+    const port: number = Number(getEnvVariable.appPort);
+
+    const entryApp: CoreApplication = new CoreApplication(coreAppOptions.corsOptions, coreAppOptions.optionsUrlencoded);
+    const server: Server = entryApp.onStartServer(host, port);
+
+    entryApp.onListeningOnServerEvent(server, host, port, Kernel());
+    entryApp.onRequestOnServerEvent(server, host, port, dateTimeFormattedUtils);
+}
