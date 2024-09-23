@@ -5,6 +5,7 @@
   "scripts": {
     "start:prod": "cross-env NODE_ENV=production ts-node src/server.ts",
     "start:dev": "cross-env NODE_ENV=development nodemon --watch src --delay 1 --exec 'ts-node' src/server.ts",
+    "stop": "sh -c 'lsof -i :${PORT:-3000} -t | xargs kill'",
     "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
     "db:push": "npx prisma db push",
     "test": "jest --forceExit --detectOpenHandles",
