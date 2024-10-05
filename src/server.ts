@@ -1,3 +1,3 @@
-import {appInit} from "../app/app";
+import {Bootstrap} from "../app/bootstrap";
 
-appInit();
+Bootstrap.run();
