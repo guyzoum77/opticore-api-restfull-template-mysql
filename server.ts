@@ -1,1 +1,1 @@
-import("./app/bootstrap");
+import("./src/core/bootstrap");
