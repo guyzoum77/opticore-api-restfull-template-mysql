@@ -1,4 +1,4 @@
-export const coresAppOptions = {
+export const corsOptions = {
     corsOptions: {},
     optionsUrlencoded: {}
 }
