@@ -1,1 +1,1 @@
-import("./src/core/bootstrap");
+import ("core/driver/server/webApp.server");

@@ -1,0 +1,19 @@
+#     You need to define the options that you want to enable into cors
+#
+#     origin?: StaticOrigin | CustomOrigin | undefined;
+#     methods?: string | string[] | undefined;
+#     allowedHeaders?: string | string[] | undefined;
+#     exposedHeaders?: string | string[] | undefined;
+#     credentials?: boolean | undefined;
+#     maxAge?: number | undefined;
+#     preflightContinue?: boolean | undefined;
+#     optionsSuccessStatus?: number | undefined;
+
+origin:
+methods: []
+allowedHeaders: []
+exposedHeaders: []
+credentials: false
+maxAge: 1d
+preflightContinue: false
+optionsSuccessStatus: 200

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Opticore API Restfull template with mysql as database",
   "scripts": {
-    "start:prod": "cross-env NODE_ENV=production ts-node server.ts",
-    "start:dev": "cross-env NODE_ENV=development nodemon --watch src --delay 1 --exec 'ts-node' server.ts",
+    "start:prod": "cross-env NODE_ENV=production tsx server.ts",
+    "start:dev": "cross-env NODE_ENV=development nodemon --watch src --delay 1 --exec tsx server.ts",
     "stop": "sh -c 'lsof -i :${PORT:-3000} -t | xargs kill'",
     "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
     "db:push": "npx prisma db push",
@@ -26,13 +26,16 @@
   "dependencies": {
     "@types/gradient-string": "^1.1.6",
     "cross-env": "^7.0.3",
-    "opticore-core-module": "^1.0.125",
-    "reflect-metadata": "^0.2.2"
+    "opticore-core-module": "^1.0.168",
+    "opticore-feature-module": "^1.0.30",
+    "reflect-metadata": "^0.2.2",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@naholyr/cross-env": "^1.0.0",
+    "@types/express": "^5.0.0",
     "@types/node": "^20.12.11",
-    "concurrently": "^9.0.1",
+    "concurrently": "^9.1.0",
     "kill": "^0.0.2",
     "nodemon": "^3.1.7",
     "supertest": "^7.0.0",
