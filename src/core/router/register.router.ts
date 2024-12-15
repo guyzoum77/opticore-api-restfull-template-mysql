@@ -1,8 +1,8 @@
-import { RegisterCoreRouteRouter,} from "opticore-core-module";
+import { oPTRegisterRouters, RoutersAppCore } from "opticore-core-module";
 
 export const registerRouter = () => {
-    const registerRouter: RegisterCoreRouteRouter = new RegisterCoreRouteRouter();
+    const oPTRegister: oPTRegisterRouters = new oPTRegisterRouters();
 
-    return registerRouter.register([
+    return oPTRegister.register([
     ]);
 }
