@@ -39,7 +39,7 @@ module.exports = {
             output: './logs/access.log', // pm2 log file
             error: './logs/error.log', // pm2 error log file
             env: { // environment variable
-                PORT: 3000,
+                PORT: 4200,
                 NODE_ENV: 'development',
             },
         },

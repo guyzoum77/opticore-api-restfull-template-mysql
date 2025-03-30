@@ -1,1 +1,1 @@
-import ("core/driver/server/webApp.server");
+import "core/infrastructure/server/webApp.server";

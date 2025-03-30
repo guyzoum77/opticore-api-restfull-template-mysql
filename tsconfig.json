@@ -5,8 +5,12 @@
     "emitDecoratorMetadata": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "declaration": true,
+    "isolatedModules": true,
+    "noEmit": false,
     "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types"],
+    "types": ["reflect-metadata", "node"],
     "sourceMap": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
@@ -15,7 +19,9 @@
     "strict": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"],
   "include": [
@@ -25,6 +31,11 @@
     "node_modules/@types/node/globals.d.ts",
     "node_modules/@types/node/globals.d.ts"
   ],
+  "baseUrl": ".",
+  "paths": {
+    "@opticore-web-application/*": ["src/*"],
+    "core/*": ["core/*"]
+  },
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
