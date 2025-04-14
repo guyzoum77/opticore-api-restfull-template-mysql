@@ -1,10 +1,14 @@
-import { loggerConfig, YamlParsing } from "opticore-webapp-core";
+import {LocalLanguageLoader, loggerConfig, YamlParsing} from "opticore-webapp-core";
 import { express } from "opticore-express";
 import { TFeatureRoutes, WebServer, envPath } from "opticore-webapp";
 import { getEnvironnementValue, IEnvVariables} from "opticore-env-access";
 import { registerRouter } from "../router/register.router";
 import { LoggerConfigInterface, LoggerCore } from "opticore-logger";
 import { OptiCoreMySQLDriver } from "opticore-mysqldb";
+import { dependenciesProvider } from "../../providers/dependencies.provider";
+import {TranslationLoader} from "opticore-translator";
+import * as path from "node:path";
+import * as process from "node:process";
 
 /**
  * Express instance
@@ -22,6 +26,18 @@ const getEnvVariablePath: IEnvVariables = getEnvironnementValue(envPath);
 const localLanguage: string = getEnvVariablePath.defaultLocal;
 
 /**
+ * Loading a project local translation
+ */
+const localLang = new LocalLanguageLoader(localLanguage, path.join(process.cwd(), "src", "utils", "translations"));
+
+/**
+ * YAML file returning as a JavaScript Object contains some keys and values as
+ * following: origin, methods, allowedHeaders, exposedHeaders,
+ * credentials, maxAge, preflightContinue, optionsSuccessStatus.
+ */
+const yamlParsing: YamlParsing = new YamlParsing(localLanguage, envPath);
+
+/**
  * Instantiate database to use his method
  */
 const mySQL: OptiCoreMySQLDriver = new OptiCoreMySQLDriver(getEnvVariablePath, localLanguage);
@@ -31,13 +47,6 @@ const mySQL: OptiCoreMySQLDriver = new OptiCoreMySQLDriver(getEnvVariablePath, l
  */
 const routers: TFeatureRoutes[] = registerRouter();
 
-
-/**
- * YAML file returning as a JavaScript Object contains some keys and values as
- * following: origin, methods, allowedHeaders, exposedHeaders,
- * credentials, maxAge, preflightContinue, optionsSuccessStatus.
- */
-const yamlParsing: YamlParsing = new YamlParsing(localLanguage, envPath);
 
 /**
  * Load cors options by YAML file
@@ -59,7 +68,8 @@ const app: WebServer = new WebServer(appXpr, logger, localLanguage, envPath, cor
  */
 const server: any = app.onStartServer(
     routers,
-    mySQL.databaseConnexionChecker(getEnvVariablePath, getEnvVariablePath.argumentsDatabaseConnection) as unknown as () => void
+    mySQL.databaseConnexionChecker(getEnvVariablePath, getEnvVariablePath.argumentsDatabaseConnection) as unknown as () => void,
+    dependenciesProvider
 );
 
 /**
@@ -71,7 +81,3 @@ app.onListeningOnServerEvent(server);
  * listening to all requested requests on server.
  */
 app.onRequestOnServerEvent(server);
-
-export const webServer = () => {
-  
-}
