@@ -1,4 +1,4 @@
-import { TDependency } from "opticore-inject-dependency";
+import { TDependency } from "opticore-dependency-inject";
 
 export const dependenciesProvider: TDependency[] = [
 ];

@@ -1,32 +1,38 @@
 import { LocalLanguageLoader, loggerConfig, YamlParsing } from "opticore-webapp-core";
 import { express } from "opticore-express";
 import { WebServer, envPath } from "opticore-webapp";
-import { getEnvironnementValue } from "opticore-env-access";
-import { registerRouter } from "../router/register.router";
+import { getEnvironnementValue, IEnvVariables } from "opticore-env-access";
+import { OptiCoreMySQLDriver } from "opticore-mysqldb";
 import { ILoggerConfig, LoggerCore} from "opticore-logger";
+import { registerRouter } from "../router/register.router";
 import { dependenciesProvider } from "../../providers/dependencies.provider";
+
+
+/**
+ * All Environment values
+ */
+const environment: IEnvVariables = getEnvironnementValue(envPath);
 
 /**
  * YAML file returning as a JavaScript Object contains some keys and values as
  * following: origin, methods, allowedHeaders, exposedHeaders,
  * credentials, maxAge, preflightContinue, optionsSuccessStatus.
  */
-const yamlParsing: YamlParsing = new YamlParsing(getEnvironnementValue(envPath).defaultLocal, envPath);
+const yamlParsing: YamlParsing = new YamlParsing(environment.defaultLocal, envPath);
 
 /**
  * Loading a project local translation
  */
-new LocalLanguageLoader(getEnvironnementValue(envPath).defaultLocal, yamlParsing.absolutPath()).load();
+new LocalLanguageLoader(environment.defaultLocal, yamlParsing.absolutPath()).load();
 
 
 /**
  * Instantiate application bootstrap.
  */
-console.log("getEnvironnementValue(envPath).defaultLocal is : ", getEnvironnementValue(envPath).defaultLocal)
 const app: WebServer = new WebServer(
     express(),
     new LoggerCore(loggerConfig(envPath) as ILoggerConfig),
-    getEnvironnementValue(envPath).defaultLocal,
+    environment.defaultLocal,
     envPath,
     yamlParsing.readFile("config/cors/corsOptions.yaml")
 );
@@ -34,7 +40,11 @@ const app: WebServer = new WebServer(
 /**
  * Running Server and loading routes register of all features modules.
  */
-const server: any = app.onStartServer(registerRouter(), dependenciesProvider);
+const server: any = app.onStartServer(
+    registerRouter(),
+    ((): void => new OptiCoreMySQLDriver(environment, environment.defaultLocal).connect()),
+    dependenciesProvider
+);
 
 /**
  * listening to all events triggered on server.
