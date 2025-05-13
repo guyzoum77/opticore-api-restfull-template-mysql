@@ -32,10 +32,10 @@
     "opticore-http-response": "^1.0.3",
     "opticore-dependency-inject": "^1.0.2",
     "opticore-logger": "^1.0.17",
-    "opticore-mysqldb": "^1.0.31",
+    "opticore-mysqldb": "^1.0.33",
     "opticore-request-call-event": "^1.0.2",
     "opticore-router": "^1.0.11",
-    "opticore-server-logger": "^1.0.2",
+    "opticore-server-logger": "^1.0.3",
     "opticore-translator": "^1.0.10",
     "opticore-validator": "^1.0.3",
     "opticore-webapp": "^1.0.54",
@@ -47,9 +47,8 @@
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "nodemon": "^3.1.10",
-    "supertest": "^7.1.0",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.19.3",
+    "supertest": "^7.1.1",
+    "tsx": "^4.19.4",
     "typescript": "^5.4.5"
   }
 }

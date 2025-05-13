@@ -27,13 +27,10 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.json",
-    ".env",
-    "node_modules/@types/node/globals.d.ts",
-    "node_modules/@types/node/globals.d.ts"
   ],
-  "baseUrl": ".",
+  "baseUrl": "src",
   "paths": {
-    "@opticoreWebApp*": ["*"],
+    "@opticoreWebApp/*": ["*"],
     "core/*": ["core/*"]
   },
   "ts-node": {
