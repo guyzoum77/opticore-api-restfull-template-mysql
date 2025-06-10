@@ -1,1 +1,1 @@
-import "core/infrastructure/server/webApp.server";
+import "bootstrap/server/webApp.server";

@@ -4,8 +4,8 @@ import { WebServer, envPath } from "opticore-webapp";
 import { getEnvironnementValue, IEnvVariables } from "opticore-env-access";
 import { OptiCoreMySQLDriver } from "opticore-mysqldb";
 import { ILoggerConfig, LoggerCore} from "opticore-logger";
-import { registerRouter } from "../router/register.router";
-import { dependenciesProvider } from "../../providers/dependencies.provider";
+import { registerRouter } from "../../app/router/register.router";
+import { dependenciesProvider } from "../../helpers/providers/dependencies.provider";
 
 
 /**
