@@ -39,7 +39,7 @@
     "opticore-server-logger": "^1.0.3",
     "opticore-translator": "^1.0.10",
     "opticore-validator": "^1.0.3",
-    "opticore-watcher": "^1.0.5",
+    "opticore-watcher": "^1.0.4",
     "opticore-webapp": "^1.0.54",
     "opticore-webapp-core": "^1.0.18",
     "reflect-metadata": "^0.2.2"
