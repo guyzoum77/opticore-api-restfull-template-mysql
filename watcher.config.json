@@ -1,8 +1,0 @@
-
-{
-    "watch": ["src", "."],
-    "ext": "ts, js, json, env",
-    "delay": 300,
-    "ignore": ["logs/", "src/__tests__/", "src/test-utils/"],
-    "exec": "tsx watch ./src/bin/watcher.ts"
-}

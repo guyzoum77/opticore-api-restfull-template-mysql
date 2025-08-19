@@ -1,64 +1,64 @@
 {
-  "name": "opticore-template-mysqldb",
-  "version": "1.0.0",
-  "description": "Opticore API Restfull template with mysql as database",
-  "scripts": {
-    "start:prod": "cross-env NODE_ENV=production tsx server.ts",
-    "start:dev": "NODE_ENV=development opticore-watcher",
-    "stop": "sh -c 'lsof -i :${PORT:-4200} -t'",
-    "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
-    "db:push": "npx prisma db push",
-    "test": "jest --forceExit --detectOpenHandles",
-    "deploy:prod": "npm run build && pm2 start ecosystem.config.js --only prod",
-    "deploy:dev": "pm2 start ecosystem.config.js --only dev",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint --ext .ts src/",
-    "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix --ext .ts src/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git"
-  },
-  "author": "Guy-serge Kouacou",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git/issues"
-  },
-  "homepage": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git#readme",
-  "dependencies": {
-    "@types/gradient-string": "^1.1.6",
-    "opticore-catch-exception-error": "^1.0.25",
-    "opticore-dependency-inject": "^1.0.2",
-    "opticore-env-access": "^1.0.7",
-    "opticore-express": "^1.0.3",
-    "opticore-feature-module": "^1.0.30",
-    "opticore-http-response": "^1.0.3",
-    "opticore-logger": "^1.0.17",
-    "opticore-mysqldb": "^1.0.35",
-    "opticore-request-call-event": "^1.0.2",
-    "opticore-router": "^1.0.11",
-    "opticore-server-logger": "^1.0.3",
-    "opticore-translator": "^1.0.10",
-    "opticore-validator": "^1.0.3",
-    "opticore-watcher": "^1.0.5",
-    "opticore-webapp": "^1.0.54",
-    "opticore-webapp-core": "^1.0.18",
-    "reflect-metadata": "^0.2.2"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.28.0",
-    "@types/node": "^22.14.0",
-    "@typescript-eslint/eslint-plugin": "^8.34.0",
-    "@typescript-eslint/parser": "^8.34.0",
-    "concurrently": "^9.1.2",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.28.0",
-    "eslint-plugin-import": "^2.31.0",
-    "globals": "^16.2.0",
-    "nodemon": "^3.1.10",
-    "supertest": "^7.1.1",
-    "tsx": "^4.19.4",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^8.34.0"
-  }
+    "name": "opticore-template-mysqldb",
+    "version": "1.0.0",
+    "description": "Opticore API Restfull template with mysql as database",
+    "scripts": {
+        "start:prod": "cross-env NODE_ENV=production tsx server.ts",
+        "start:dev": "opticore-watcher",
+        "stop": "sh -c 'lsof -i :${PORT:-4200} -t'",
+        "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
+        "db:push": "npx prisma db push",
+        "test": "jest --forceExit --detectOpenHandles",
+        "deploy:prod": "npm run build && pm2 start ecosystem.config.js --only prod",
+        "deploy:dev": "pm2 start ecosystem.config.js --only dev",
+        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint --ext .ts src/",
+        "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix --ext .ts src/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git"
+    },
+    "author": "Guy-serge Kouacou",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git/issues"
+    },
+    "homepage": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git#readme",
+    "dependencies": {
+        "@types/gradient-string": "^1.1.6",
+        "opticore-catch-exception-error": "^1.0.25",
+        "opticore-dependency-inject": "^1.0.2",
+        "opticore-env-access": "^1.0.7",
+        "opticore-express": "^1.0.3",
+        "opticore-feature-module": "^1.0.30",
+        "opticore-http-response": "^1.0.3",
+        "opticore-logger": "^1.0.17",
+        "opticore-mysqldb": "^1.0.35",
+        "opticore-request-call-event": "^1.0.2",
+        "opticore-router": "^1.0.11",
+        "opticore-server-logger": "^1.0.3",
+        "opticore-translator": "^1.0.10",
+        "opticore-validator": "^1.0.3",
+        "opticore-watcher": "^1.0.13",
+        "opticore-webapp": "^1.0.54",
+        "opticore-webapp-core": "^1.0.18",
+        "reflect-metadata": "^0.2.2"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.28.0",
+        "@types/node": "^22.14.0",
+        "@typescript-eslint/eslint-plugin": "^8.34.0",
+        "@typescript-eslint/parser": "^8.34.0",
+        "concurrently": "^9.1.2",
+        "cross-env": "^7.0.3",
+        "eslint": "^9.28.0",
+        "eslint-plugin-import": "^2.31.0",
+        "globals": "^16.2.0",
+        "nodemon": "^3.1.10",
+        "supertest": "^7.1.1",
+        "tsx": "^4.19.4",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^8.34.0"
+    }
 }
