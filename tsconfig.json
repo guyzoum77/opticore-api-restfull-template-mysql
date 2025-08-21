@@ -31,7 +31,8 @@
   "baseUrl": "src",
   "paths": {
     "@opticoreWebApp/*": ["*"],
-    "core/*": ["core/*"]
+    "core/*": ["core/*"],
+    "bootstrap/*": ["bootstrap/*"]
   },
   "ts-node": {
     "esm": true,
