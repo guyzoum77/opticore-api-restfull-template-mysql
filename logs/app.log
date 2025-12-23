@@ -1,96 +1,1738 @@
-Mon Jul 07 2025 02:43:34 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:43:34 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:43:34 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:43:34 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:43:34 GMT+0000 (Greenwich Mean Time) | ERROR | mySQLCreatingConnOccurAnError
-Mon Jul 07 2025 02:44:38 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:44:38 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:44:38 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:44:38 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:44:38 GMT+0000 (Greenwich Mean Time) | ERROR | mySQLCreatingConnOccurAnError
-Mon Jul 07 2025 02:52:37 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:52:37 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:52:37 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:52:37 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-mysqldb/dist/utils/translations'
-Mon Jul 07 2025 02:52:37 GMT+0000 (Greenwich Mean Time) | ERROR | mySQLCreatingConnOccurAnError
-Mon Jul 07 2025 02:55:34 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Mon Jul 07 2025 02:55:57 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Tue Aug 19 2025 01:40:44 GMT+0000 (Greenwich Mean Time) | ERROR | Cannot find module '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/index.js'. Please verify that the package.json has a valid "main" entry
-Tue Aug 19 2025 01:40:44 GMT+0000 (Greenwich Mean Time) | ERROR | Cannot find module '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/index.js'. Please verify that the package.json has a valid "main" entry
-Tue Aug 19 2025 09:27:27 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Tue Aug 19 2025 10:36:05 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 10:38:44 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 10:44:56 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 10:56:56 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 10:58:02 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 10:58:54 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-Tue Aug 19 2025 11:45:12 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/dist/utils/translations'
-Tue Aug 19 2025 11:45:12 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/dist/utils/translations'
-Tue Aug 19 2025 11:45:12 GMT+0000 (Greenwich Mean Time) | ERROR | ENOENT: no such file or directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/dist/utils/translations'
-Wed Aug 20 2025 01:01:27 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Wed Aug 20 2025 01:02:58 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Wed Aug 20 2025 01:07:17 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Wed Aug 20 2025 01:07:45 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Wed Aug 20 2025 01:07:48 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 01:08:36 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 01:08:41 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-[SERVER] Wed Aug 20 2025 01:08:47 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-Wed Aug 20 2025 01:08:47 GMT+0000 (Greenwich Mean Time) | ERROR | In the .env file configuration the value of key DATA_BASE_PORT is missing or blank.
-[SERVER] Wed Aug 20 2025 01:08:56 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-Wed Aug 20 2025 01:08:56 GMT+0000 (Greenwich Mean Time) | ERROR | Unknown database 'hairestyleV2'
-[SERVER] Wed Aug 20 2025 01:09:07 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-Wed Aug 20 2025 01:09:07 GMT+0000 (Greenwich Mean Time) | ERROR | Unknown database 'HairestyleV2'
-[SERVER] Wed Aug 20 2025 01:09:41 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 01:09:41 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 01:14:53 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 01:14:53 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-Wed Aug 20 2025 01:15:08 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 01:15:08 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-[SERVER] Wed Aug 20 2025 01:15:50 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 01:15:50 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 01:21:02 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 01:21:02 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-[SERVER] Wed Aug 20 2025 01:21:23 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 01:21:23 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 01:22:08 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 01:22:08 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-[SERVER] Wed Aug 20 2025 01:22:44 GMT+0000 (Greenwich Mean Time) | Serveur est en cours d'exécution | Serveur OptiCore - Le serveur est en cours d'exécution sur : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 01:22:44 GMT+0000 (Greenwich Mean Time) | Connexion MySQL | Connection réussite - La connexion a la base de donnee hairstyleV2 s'est effectuée avec succès  🚀
-Wed Aug 20 2025 01:23:13 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 01:23:13 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-[SERVER] Wed Aug 20 2025 06:59:07 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 06:59:07 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 07:17:54 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-[SERVER] Wed Aug 20 2025 07:17:54 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:17:54 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 07:19:05 GMT+0000 (Greenwich Mean Time) | ERROR | opticoreLockNotFound
-[SERVER] Wed Aug 20 2025 07:19:05 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:19:05 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-[SERVER] Wed Aug 20 2025 07:19:20 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:19:20 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-[SERVER] Wed Aug 20 2025 07:24:02 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:24:02 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-[SERVER] Wed Aug 20 2025 07:24:33 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:24:33 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-[SERVER] Wed Aug 20 2025 07:25:47 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 07:25:47 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
-Wed Aug 20 2025 07:26:37 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 07:26:37 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-Wed Aug 20 2025 07:26:42 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 07:26:42 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-Wed Aug 20 2025 07:27:20 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 07:27:20 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-Wed Aug 20 2025 07:27:27 GMT+0000 (Greenwich Mean Time) | ERROR | The port is not correct. Please define a right port with number port.
-Wed Aug 20 2025 07:27:37 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
-Wed Aug 20 2025 07:27:37 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
-Wed Aug 20 2025 07:38:34 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:36:52 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:55:44 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:55:49 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:56:33 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:56:50 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 08:59:54 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 09:00:10 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-Wed Aug 20 2025 09:00:24 GMT+0000 (Greenwich Mean Time) | ERROR | There were problems creating a connection to the MySQL server
-[SERVER] Wed Aug 20 2025 09:00:30 GMT+0000 (Greenwich Mean Time) | Server running | OptiCore server - Server is running at : [4mhttp://localhost:4200[24m
-[SERVER] Wed Aug 20 2025 09:00:30 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 13:57:02 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 13:57:02 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 14:51:01 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 14:51:01 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 14:52:58 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 14:52:58 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 14:59:27 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 14:59:27 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 14:59:38 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 14:59:38 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:11:31 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:11:31 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:12:08 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:12:08 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:12:33 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:12:34 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:12:54 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:12:55 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:13:28 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:13:28 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:22:29 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:22:29 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:24:37 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:24:37 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 04 2025 15:47:49 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 04 2025 15:47:50 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 04 2025 15:47:50 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 04 2025 17:41:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 04 2025 17:41:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sat Oct 04 2025 17:42:20 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Tue Oct 07 2025 22:16:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 22:16:54 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 22:16:55 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Tue Oct 07 2025 22:18:23 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Tue Oct 07 2025 22:46:36 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 22:46:37 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 22:46:37 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 07 2025 22:51:44 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 22:51:44 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 22:51:44 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 07 2025 22:52:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 22:52:34 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 22:52:34 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 07 2025 22:57:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 22:57:02 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 22:57:02 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 07 2025 23:04:28 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 23:04:28 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 23:04:28 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 07 2025 23:23:59 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 07 2025 23:24:00 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 07 2025 23:24:00 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Tue Oct 07 2025 23:41:41 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Tue Oct 07 2025 23:41:41 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Tue Oct 07 2025 23:41:41 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Tue Oct 07 2025 23:41:41 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Tue Oct 07 2025 23:47:35 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Tue Oct 07 2025 23:47:42 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:07:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:08:11 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:09:28 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:10:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:11:33 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:11:40 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 08 2025 00:12:29 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Fri Oct 10 2025 21:52:17 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Fri Oct 10 2025 21:52:18 GMT+0000 (Greenwich Mean Time) | ERROR | Router.use() requires a middleware function but got a undefined
+[SERVER] Fri Oct 10 2025 21:52:18 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Fri Oct 10 2025 21:55:05 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Fri Oct 10 2025 21:55:06 GMT+0000 (Greenwich Mean Time) | ERROR | Router.use() requires a middleware function but got a undefined
+[SERVER] Fri Oct 10 2025 21:55:06 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Fri Oct 10 2025 21:55:50 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Fri Oct 10 2025 21:55:51 GMT+0000 (Greenwich Mean Time) | ERROR | router.routes.forEach is not a function
+[SERVER] Fri Oct 10 2025 21:55:51 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Fri Oct 10 2025 21:56:06 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 21:56:07 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 21:56:07 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Fri Oct 10 2025 21:56:22 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 21:56:47 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 21:57:30 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 21:59:54 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 22:01:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Fri Oct 10 2025 22:04:59 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 22:05:00 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 22:05:00 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Fri Oct 10 2025 22:05:30 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 22:05:30 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Fri Oct 10 2025 22:05:30 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Fri Oct 10 2025 22:05:30 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+[SERVER] Fri Oct 10 2025 22:06:02 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 22:06:03 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 22:06:03 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Fri Oct 10 2025 22:06:14 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 22:06:14 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Fri Oct 10 2025 22:06:14 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Fri Oct 10 2025 22:06:14 GMT+0000 (Greenwich Mean Time) | ERROR | ORCHESTRATED: Uncaught exception for testing EventEmitters
+Fri Oct 10 2025 22:07:50 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 22:07:54 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 22:08:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Fri Oct 10 2025 22:11:46 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 22:11:47 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 22:11:47 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Fri Oct 10 2025 22:17:25 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 22:17:26 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 22:17:26 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Fri Oct 10 2025 22:19:16 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Fri Oct 10 2025 22:19:17 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 22:19:17 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Fri Oct 10 2025 22:30:00 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Fri Oct 10 2025 23:17:40 GMT+0000 (Greenwich Mean Time) | ERROR | fs is not defined
+[SERVER] Fri Oct 10 2025 23:17:40 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | ERROR | fs is not defined
+Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | ERROR | fs is not defined
+Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | ERROR | fs is not defined
+Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | ERROR | fs is not defined
+[SERVER] Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 23:17:41 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Fri Oct 10 2025 23:19:06 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+[SERVER] Fri Oct 10 2025 23:19:06 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+[SERVER] Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Fri Oct 10 2025 23:19:07 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 11 2025 13:35:20 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+[SERVER] Sat Oct 11 2025 13:35:20 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | ERROR | EISDIR: illegal operation on a directory, read
+[SERVER] Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 13:35:21 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 11 2025 14:11:25 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:11:25 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 14:11:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:11:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:11:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:11:26 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:11:26 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 11 2025 14:13:10 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:13:10 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 14:13:11 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:13:11 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:13:11 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:13:11 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:13:11 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 11 2025 14:13:42 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:13:42 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 14:13:43 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:13:43 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Oct 11 2025 14:13:43 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+[SERVER] Sat Oct 11 2025 14:13:43 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:13:43 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:25:08 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:25:08 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:25:08 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:26:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:26:02 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:26:02 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:30:00 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:30:00 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:30:00 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:30:52 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:30:53 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:30:53 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:42:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:42:34 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:42:34 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 14:51:28 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 14:51:29 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 14:51:29 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 16:00:42 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:00:42 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 16:00:43 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 16:07:38 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 16:07:38 GMT+0000 (Greenwich Mean Time) | ERROR | noDefaultLocalLang
+[SERVER] Sat Oct 11 2025 16:07:54 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Sat Oct 11 2025 16:07:54 GMT+0000 (Greenwich Mean Time) | ERROR | noDefaultLocalLang
+[SERVER] Sat Oct 11 2025 16:08:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:08:02 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 16:08:02 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 16:39:51 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:39:54 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:39:57 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:00 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:03 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:06 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:08 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:11 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:14 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:17 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:20 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:23 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:26 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:29 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:32 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:35 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:37 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:40 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:46 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:49 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:52 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:55 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:40:58 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:04 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:07 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:10 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:13 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:15 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:18 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:24 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:27 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:30 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:35 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:38 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:41 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:44 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:47 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:50 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:56 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:41:59 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:04 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:07 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:10 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:13 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:16 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:18 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:24 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:27 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:30 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:36 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:39 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:41 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:44 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:47 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:50 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:56 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:42:59 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:01 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:04 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:07 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:39 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:39 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 16:43:39 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 16:43:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:43:54 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 11 2025 16:43:54 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 11 2025 16:47:06 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:09 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:12 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:15 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:18 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:23 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:26 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:29 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 11 2025 16:47:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:18 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:24 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:27 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:30 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:33 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:56 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 12 2025 21:20:57 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 12 2025 21:20:57 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Sun Oct 12 2025 21:21:34 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Tue Oct 14 2025 00:43:06 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 00:43:07 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Tue Oct 14 2025 00:43:07 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Tue Oct 14 2025 01:34:34 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:36 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:39 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:42 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:45 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:48 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:51 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Tue Oct 14 2025 01:34:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Oct 15 2025 20:47:07 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Oct 15 2025 20:48:55 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Oct 15 2025 20:48:56 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Wed Oct 15 2025 20:48:56 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Wed Oct 15 2025 21:04:37 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Oct 15 2025 21:04:55 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Oct 15 2025 21:04:56 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Wed Oct 15 2025 21:04:56 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Wed Oct 15 2025 21:44:59 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Sun Oct 19 2025 18:14:29 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 18:15:31 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 18:15:32 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 18:15:32 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sun Oct 19 2025 18:41:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Sun Oct 19 2025 18:54:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 18:54:54 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 18:54:54 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:09:32 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:09:32 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:09:32 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:11:22 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:11:30 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:11:30 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:11:30 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:17:39 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:17:47 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:17:47 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:17:47 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:19:53 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:20:07 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:20:08 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:20:08 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:24:26 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:24:26 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:24:26 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:33:42 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:33:51 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:33:52 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:33:52 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:43:52 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:43:53 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:43:53 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Oct 19 2025 19:49:54 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sun Oct 19 2025 19:49:55 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sun Oct 19 2025 19:49:55 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sat Oct 25 2025 17:17:19 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 25 2025 17:17:20 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 25 2025 17:17:20 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 25 2025 17:17:46 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Sat Oct 25 2025 17:18:44 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 25 2025 17:18:45 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 25 2025 17:18:45 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 25 2025 17:18:50 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Sat Oct 25 2025 17:20:02 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 25 2025 17:20:03 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 25 2025 17:20:03 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 25 2025 17:20:07 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 25 2025 17:20:07 GMT+0000 (Greenwich Mean Time) | ERROR | unhandledRejectionAtPromise
+Sat Oct 25 2025 17:21:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 25 2025 17:21:24 GMT+0000 (Greenwich Mean Time) | ERROR | unhandledRejectionAtPromise
+[SERVER] Sat Oct 25 2025 17:21:32 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 25 2025 17:21:33 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 25 2025 17:21:33 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 25 2025 17:21:37 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 25 2025 17:21:37 GMT+0000 (Greenwich Mean Time) | ERROR | unhandledRejectionAtPromise
+Sat Oct 25 2025 17:22:51 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 25 2025 17:22:51 GMT+0000 (Greenwich Mean Time) | ERROR | unhandledRejectionAtPromise
+[SERVER] Sat Oct 25 2025 17:22:57 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Sat Oct 25 2025 17:22:58 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Sat Oct 25 2025 17:22:58 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Sat Oct 25 2025 17:23:02 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Sat Oct 25 2025 19:54:06 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Wed Dec 03 2025 21:03:17 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+[SERVER] Wed Dec 03 2025 21:03:18 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Wed Dec 03 2025 21:03:18 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Wed Dec 03 2025 21:06:36 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Wed Dec 03 2025 21:06:36 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Wed Dec 03 2025 21:06:36 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Wed Dec 03 2025 21:06:36 GMT+0000 (Greenwich Mean Time) | ERROR | The "paths[1]" argument must be of type string. Received undefined
+Wed Dec 03 2025 21:06:37 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
+Fri Dec 05 2025 23:06:53 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Fri Dec 05 2025 23:06:53 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Fri Dec 05 2025 23:06:53 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Fri Dec 05 2025 23:06:53 GMT+0000 (Greenwich Mean Time) | ERROR | The "paths[1]" argument must be of type string. Received undefined
+Fri Dec 05 2025 23:06:53 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
+[SERVER] Fri Dec 05 2025 23:19:41 GMT+0000 (Greenwich Mean Time) | Hot reloading | Reloading - Hot reload was triggered because a file was modified
+[SERVER] Fri Dec 05 2025 23:19:59 GMT+0000 (Greenwich Mean Time) | Hot reloading | Reloading - Hot reload was triggered because a file was modified
+[SERVER] Fri Dec 05 2025 23:24:12 GMT+0000 (Greenwich Mean Time) | Hot reloading | Reloading - Hot reload was triggered because a file was modified
+Sat Dec 06 2025 23:05:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Sat Dec 06 2025 23:05:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Sat Dec 06 2025 23:05:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Sat Dec 06 2025 23:05:28 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Dec 06 2025 23:05:28 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sat Dec 06 2025 23:05:28 GMT+0000 (Greenwich Mean Time) | ERROR | Cannot read properties of undefined (reading 'map')
+[SERVER] Sat Dec 06 2025 23:05:28 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+[SERVER] Sun Dec 07 2025 18:54:22 GMT+0000 (Greenwich Mean Time) | Hot reloading | Reloading - Hot reload was triggered because a file was modified
+Sun Dec 07 2025 18:54:25 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sun Dec 07 2025 18:54:25 GMT+0000 (Greenwich Mean Time) | ERROR | listen EADDRINUSE: address already in use :::4200
+Sun Dec 07 2025 18:54:25 GMT+0000 (Greenwich Mean Time) | ERROR | processExitCode
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | write EIO
+Sun Dec 07 2025 23:44:30 GMT+0000 (Greenwich Mean Time) | ERROR | processPIDReceivedSignal
+Mon Dec 08 2025 02:20:23 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:23 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:23 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+[SERVER] Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Mon Dec 08 2025 02:20:24 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Mon Dec 08 2025 02:23:12 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:24:50 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:43:38 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-watcher/dist/utils/translations/message.translation.en.json'
+[SERVER] Mon Dec 08 2025 02:43:38 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+[SERVER] Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Mon Dec 08 2025 02:43:39 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | ENOTDIR: not a directory, scandir '/home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/node_modules/opticore-webapp/dist/utils/translations/message.translation.en.json'
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:26 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 03:08:27 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+[SERVER] Mon Dec 08 2025 03:11:35 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Mon Dec 08 2025 03:11:36 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Mon Dec 08 2025 03:25:50 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:26:27 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:26:35 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:15 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | SERVER_STARTING | STARTING_PROCESS - Starting server process...
+Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+[SERVER] Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[SERVER] Mon Dec 08 2025 03:27:21 GMT+0000 (Greenwich Mean Time) | MySQL Connection | Connection successful - The connection to the database hairstyleV2 was completed successfully 🚀
+Mon Dec 08 2025 03:27:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:50 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:54 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 03:27:55 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | write EPIPE
+Mon Dec 08 2025 21:32:49 GMT+0000 (Greenwich Mean Time) | ERROR | childProcessDiscon
+Mon Dec 22 2025 00:32:21 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:21 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:21 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | ERROR | Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | ERROR | Watcher system error: Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | ERROR | Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+[SERVER] Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+Mon Dec 22 2025 00:32:22 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:32:24 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:33:58 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:06 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:19 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:36 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:34:48 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:15 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:15 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:15 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:15 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | ERROR | Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | ERROR | Watcher system error: Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | ERROR | Directory does not exist: /home/guy-serge/projects/backend/nodejs/Framework/opticore-framework/template/api-rest-full-template/opticore-template-mysqldb/locales
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+[SERVER] Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+Mon Dec 22 2025 00:35:16 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | ERROR | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:35:18 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:53:15 GMT+0000 (Greenwich Mean Time) | INFO | undefined
+Mon Dec 22 2025 00:53:31 GMT+0000 (Greenwich Mean Time) | INFO | undefined

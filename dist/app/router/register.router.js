@@ -1,7 +1,8 @@
-import { OpticoreRegisterRouter, TFeatureRoutes } from "opticore-router";
-import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
-
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerRouter = void 0;
+const opticore_router_1 = require("opticore-router");
+const testError_1 = require("../../features/tests/unit/mocks/testError");
 /**
  * Feature routers registration function
  *
@@ -21,9 +22,11 @@ import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
  * and allows easy extensibility by adding new features
  * in the registered() array
  */
-export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
-    return new OpticoreRegisterRouter().registered([
-        testFeatureRoutes, // It' only just for test, remove it when you will start to dev
+const registerRouter = () => {
+    return new opticore_router_1.OpticoreRegisterRouter().registered([
+        testError_1.testFeatureRoutes, // It' only just for test, remove it when you will start to dev
         // Add new features here as they are developed
     ]);
-}
+};
+exports.registerRouter = registerRouter;
+//# sourceMappingURL=register.router.js.map

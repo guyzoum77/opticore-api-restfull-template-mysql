@@ -1,7 +1,4 @@
-import { OpticoreRegisterRouter, TFeatureRoutes } from "opticore-router";
-import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
-
-
+import { TFeatureRoutes } from "opticore-router";
 /**
  * Feature routers registration function
  *
@@ -21,9 +18,4 @@ import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
  * and allows easy extensibility by adding new features
  * in the registered() array
  */
-export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
-    return new OpticoreRegisterRouter().registered([
-        testFeatureRoutes, // It' only just for test, remove it when you will start to dev
-        // Add new features here as they are developed
-    ]);
-}
+export declare const registerRouter: () => TFeatureRoutes[];

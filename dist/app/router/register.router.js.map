@@ -1,0 +1,1 @@
+{"version":3,"file":"register.router.js","sourceRoot":"","sources":["../../../src/app/router/register.router.ts"],"names":[],"mappings":";;;AAAA,qDAAyE;AACzE,yEAA8E;AAG9E;;;;;;;;;;;;;;;;;;GAkBG;AACI,MAAM,cAAc,GAA2B,GAAqB,EAAE;IACzE,OAAO,IAAI,wCAAsB,EAAE,CAAC,UAAU,CAAC;QAC3C,6BAAiB,EAAE,+DAA+D;QAClF,8CAA8C;KACjD,CAAC,CAAC;AACP,CAAC,CAAA;AALY,QAAA,cAAc,kBAK1B"}
