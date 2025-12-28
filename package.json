@@ -36,7 +36,7 @@
         "opticore-logger": "^1.0.22",
         "opticore-mysqldb": "^1.0.36",
         "opticore-request-call-event": "^1.0.6",
-        "opticore-router": "^1.0.18",
+        "opticore-router": "^1.0.19",
         "opticore-server-logger": "^1.0.7",
         "opticore-translator": "^1.0.10",
         "opticore-validator": "^1.0.3",
