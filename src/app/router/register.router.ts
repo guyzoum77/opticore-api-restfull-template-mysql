@@ -22,6 +22,7 @@ import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
  * in the registered() array
  */
 export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
+
     return new OpticoreRegisterRouter().registered([
         testFeatureRoutes, // It' only just for test, remove it when you will start to dev
         // Add new features here as they are developed

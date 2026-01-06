@@ -1,7 +1,7 @@
 import { LocalLanguageLoader, loggerConfig, YamlParsing } from "opticore-webapp-core";
 import { express } from "opticore-express";
 import { WebServer, envPath } from "opticore-webapp";
-import { getEnvironnementValue, IEnvVariables } from "opticore-env-access";
+import { getEnvironmentValue, IEnvVariables } from "opticore-env-access";
 import { OptiCoreMySQLDriver } from "opticore-mysqldb";
 import { ILoggerConfig, LoggerCore} from "opticore-logger";
 import { registerRouter } from "../../app/router/register.router";
@@ -12,7 +12,7 @@ import { dependenciesProvider } from "../../helpers/providers/dependencies.provi
 /**
  * All Environment values
  */
-const environment: IEnvVariables = getEnvironnementValue(envPath);
+const environment: IEnvVariables = getEnvironmentValue(envPath);
 
 /**
  * YAML file returning as a JavaScript Object contains some keys and values as
@@ -41,8 +41,18 @@ const app: WebServer = new WebServer({
 /**
  * Running Server and loading routes register of all features modules.
  */
-app.onStartServer(
+const server = app.onStartServer(
     registerRouter(),
     () => new OptiCoreMySQLDriver(environment, environment.defaultLocal),
     dependenciesProvider
 );
+
+/**
+ * listening to all events triggered on server.
+ */
+app.onListeningOnServerEvent(server!);
+
+/**
+ * listening to all requested requests on server.
+ */
+app.onRequestOnServerEvent(server!);
