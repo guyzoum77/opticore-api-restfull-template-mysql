@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Opticore API Restfull template with mysql as database",
     "scripts": {
-        "start:prod": "cross-env NODE_ENV=production tsx server.ts",
+        "start:prod": "tsx server.ts",
         "start:dev": "tsx server.ts",
         "stop": "sh -c 'lsof -i :${PORT:-4200} -t'",
         "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
@@ -33,7 +33,7 @@
         "opticore-feature-module": "^1.0.30",
         "opticore-http-response": "^1.0.9",
         "opticore-loader-translation": "^1.0.3",
-        "opticore-logger": "^1.0.22",
+        "opticore-logger": "^1.0.28",
         "opticore-mysqldb": "^1.0.38",
         "opticore-request-call-event": "^1.0.8",
         "opticore-router": "^1.0.19",
