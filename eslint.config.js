@@ -29,26 +29,22 @@ module.exports = [
                         {
                             target: "./src/domain",
                             from: "./src/infrastructure",
-                            message:
-                                "Domain layer must not depend on Infrastructure. Use interfaces from Core instead.",
+                            message: "Domain layer must not depend on Infrastructure. Use interfaces from Core instead.",
                         },
                         {
                             target: "./src/core",
                             from: "./src/presentation",
-                            message:
-                                "Core layer must not depend on Presentation. Core should remain framework-agnostic.",
+                            message: "Core layer must not depend on Presentation. Core should remain framework-agnostic.",
                         },
                         {
                             target: "./src/application",
                             from: "./src/infrastructure",
-                            message:
-                                "Application layer must depend on abstractions (Core), not implementations (Infrastructure).",
+                            message: "Application layer must depend on abstractions (Core), not implementations (Infrastructure).",
                         },
                         {
                             target: "./src/domain",
                             from: "./src/presentation",
-                            message:
-                                "Domain must remain pure business logic. Presentation should call Application, not Domain directly.",
+                            message: "Domain must remain pure business logic. Presentation should call Application, not Domain directly.",
                         },
                     ],
                 },

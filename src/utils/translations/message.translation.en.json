@@ -93,5 +93,11 @@
   "noDefaultLocalLang": "A default local language is not define. Please define it into .env file at the key : DEFAULT_LOCAL_LANG",
   "noLocalLang": "Local lang missing",
   "localLangMissing": "DEFAULT_LOCAL_LANG missing",
-  "ENOENT:NoSuchFileOrDir": "ENOENT:NoSuchFileOrDir"
+  "ENOENT:NoSuchFileOrDir": "ENOENT:NoSuchFileOrDir",
+  "FILE_CHANGE_DETECTED": "Change detected",
+  "NO_REGISTER_DEPENDENCIES": "No dependencies is stored in registry",
+  "REGISTER_DEPENDENCIES": "Register Dependencies",
+  "DEPENDENCIES_STORED": "Dependencies stored in container : {dependenciesList}",
+  "DEPENDENCIES_CONTAINER": "Dependencies container",
+  "NO_DEPENDENCIES_STORED": "Aucune dépendance enregistrée dans le conteneur."
 }

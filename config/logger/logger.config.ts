@@ -1,11 +1,11 @@
-import { getEnvironnementValue, IEnvVariables } from "opticore-env-access";
+import { getEnvironmentValue, IEnvVariables } from "opticore-env-access";
 
 /**
  *
  * @param envDir
  */
 export const loggerConfig = (envDir: any) => {
-    const getEnvAccess: IEnvVariables = getEnvironnementValue(envDir);
+    const getEnvAccess: IEnvVariables = getEnvironmentValue(envDir);
     return {
         logLevels: [
             getEnvAccess.logLevelInfo,
