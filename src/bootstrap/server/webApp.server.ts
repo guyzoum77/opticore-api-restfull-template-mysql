@@ -35,7 +35,14 @@ const app: WebServer = new WebServer({
     corsOriginOptions: yamlParsing.readFile("config/cors/corsOptions.yaml"),
     environmentPath: envPath,
     localLanguage: environment.defaultLocal,
-    loggerConfig: new LoggerCore(loggerConfig(envPath) as ILoggerConfig)
+    loggerConfig: new LoggerCore(loggerConfig(envPath) as ILoggerConfig),
+    hotReload: {
+        rootDir: "src",
+        watchExtensions: [".ts", ".js", ".json"],
+        hotReloadExtensions: [".json"],
+        ignore: ["uploads", "tmp", "node_modules"],
+        debounceMs: 300,
+    }
 });
 
 /**

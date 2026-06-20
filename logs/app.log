@@ -1,0 +1,200 @@
+[SERVER] 16/05/2026 20:12 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 20:12 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:04:54 | SUCCESS | serverWebStopped
+16/05/2026, 23:04:54 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:44 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:44 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:53:52 | SUCCESS | serverWebStopped
+16/05/2026, 23:53:52 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:53 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:53 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+[OPTICORE] 16/05/2026 23:53 | Stop | Process stopped - allProcessStopped
+[SERVER] 16/05/2026 23:53 | Ending | Server ending - serverClosed
+16/05/2026, 23:53:56 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:54 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:54 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+[OPTICORE] 16/05/2026 23:54 | Stop | Process stopped - allProcessStopped
+[SERVER] 16/05/2026 23:54 | Ending | Server ending - serverClosed
+16/05/2026, 23:54:21 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:55 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:55 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:55:53 | ERROR | processPIDReceivedSignal
+16/05/2026, 23:55:53 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:55 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:55 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:56:21 | ERROR | processPIDReceivedSignal
+16/05/2026, 23:56:21 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:56 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:56 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:56:43 | ERROR | processPIDReceivedSignal
+16/05/2026, 23:56:43 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:56 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:56 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:57:08 | ERROR | processPIDReceivedSignal
+16/05/2026, 23:57:08 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:57 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:57 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:57:19 | SUCCESS | serverWebStopped
+16/05/2026, 23:57:19 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:57 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:57 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+16/05/2026, 23:57:58 | ERROR | processPIDReceivedSignal
+16/05/2026, 23:57:58 | SUCCESS | finishingProcessWell
+[SERVER] 16/05/2026 23:57 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 16/05/2026 23:57 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 00:00:01 | ERROR | processPIDReceivedSignal
+17/05/2026, 00:00:01 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 00:00 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 00:00 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:30:14 | SUCCESS | serverWebStopped
+17/05/2026, 01:30:14 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:46 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:46 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:47:06 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:47:06 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:47 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:47 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:47:30 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:47:30 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:47 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:47 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:49:16 | SUCCESS | serverWebStopped
+17/05/2026, 01:49:16 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:49 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:49 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:49:58 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:49:58 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:49 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:49 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:50:04 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:50:04 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:50 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:50 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:50:18 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:50:18 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:50 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:50 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:50:26 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:50:26 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:50 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:50 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:50:42 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:50:42 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:50 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:50 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:50:51 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:50:51 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:50 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:50 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 01:51:50 | ERROR | processPIDReceivedSignal
+17/05/2026, 01:51:50 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 01:51 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 01:51 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:26:19 | SUCCESS | serverWebStopped
+17/05/2026, 02:26:19 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:27 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:27 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:27:32 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:27:32 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:27 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:27 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:27:51 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:27:51 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:27 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:27 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:32:05 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:32:05 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:32 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:32 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:32:25 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:32:25 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:32 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:32 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:32:33 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:32:33 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:32 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:32 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:32:37 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:32:37 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:32 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:32 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:32:53 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:32:53 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:32 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:32 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:33:33 | SUCCESS | serverWebStopped
+17/05/2026, 02:33:33 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:33 | SERVEUR EST EN COURS D'EXECUTION | SERVEUR OPTICORE - Le serveur est en cours d'exécution sur : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:33 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:33:49 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:33:49 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:33 | SERVEUR EST EN COURS D'EXECUTION | SERVEUR OPTICORE - Le serveur est en cours d'exécution sur : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:33 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:53:37 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:53:37 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:53 | SERVEUR EST EN COURS D'EXECUTION | SERVEUR OPTICORE - Le serveur est en cours d'exécution sur : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:53 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:53:43 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:53:43 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:53 | SERVEUR EST EN COURS D'EXECUTION | SERVEUR OPTICORE - Le serveur est en cours d'exécution sur : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:53 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:54:50 | SUCCESS | serverWebStopped
+17/05/2026, 02:54:50 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:58 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:58 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:05 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:05 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:08 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:08 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:14 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:14 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:21 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:21 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:26 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:26 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 02:59:29 | ERROR | processPIDReceivedSignal
+17/05/2026, 02:59:29 | SUCCESS | finishingProcessWell
+[SERVER] 17/05/2026 02:59 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 17/05/2026 02:59 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+17/05/2026, 03:05:45 | SUCCESS | serverWebStopped
+17/05/2026, 03:05:45 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 05:46 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 18/05/2026 05:46 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+18/05/2026, 05:46:38 | ERROR | processPIDReceivedSignal
+18/05/2026, 05:46:38 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 05:46 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 18/05/2026 05:46 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+18/05/2026, 22:18:57 | SUCCESS | serverWebStopped
+18/05/2026, 22:18:57 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 22:35 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 22:35 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+18/05/2026, 22:36:15 | ERROR | processPIDReceivedSignal
+18/05/2026, 22:36:15 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 22:36 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 22:36 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+18/05/2026, 22:36:44 | ERROR | processPIDReceivedSignal
+18/05/2026, 22:36:44 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 22:36 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 22:36 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+[SERVER] 18/05/2026 22:40 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 22:40 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+18/05/2026, 22:44:39 | SUCCESS | serverWebStopped
+18/05/2026, 22:44:39 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 22:44 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 22:44 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+18/05/2026, 23:06:29 | SUCCESS | serverWebStopped
+18/05/2026, 23:06:29 | SUCCESS | finishingProcessWell
+[SERVER] 18/05/2026 23:06 | serverRunningTitle | opticoreServerTypeName - serverRunningAt
+[OPTICORE] 18/05/2026 23:06 | DEPENDENCIES_CONTAINER | DEPENDENCIES_CONTAINER - NO_DEPENDENCIES_STORED
+18/05/2026, 23:10:30 | ERROR | processPIDReceivedSignal
+18/05/2026, 23:10:30 | SUCCESS | finishingProcessWell
