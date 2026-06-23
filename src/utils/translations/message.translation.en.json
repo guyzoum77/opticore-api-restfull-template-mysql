@@ -99,5 +99,5 @@
   "REGISTER_DEPENDENCIES": "Register Dependencies",
   "DEPENDENCIES_STORED": "Dependencies stored in container : {dependenciesList}",
   "DEPENDENCIES_CONTAINER": "Dependencies container",
-  "NO_DEPENDENCIES_STORED": "Aucune dépendance enregistrée dans le conteneur."
+  "NO_DEPENDENCIES_STORED": "No dependencies are recorded in the container."
 }

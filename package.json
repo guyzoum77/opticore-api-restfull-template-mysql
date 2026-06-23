@@ -33,7 +33,7 @@
         "opticore-http-response": "^1.0.10",
         "opticore-loader-translation": "^1.0.8",
         "opticore-logger": "^1.0.30",
-        "opticore-mysqldb": "^1.0.28",
+        "opticore-mysqldb": "^1.0.41",
         "opticore-request-call-event": "^1.0.12",
         "opticore-router": "^1.0.22",
         "opticore-server-logger": "^1.0.13",

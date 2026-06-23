@@ -1,5 +1,5 @@
 import { OpticoreRegisterRouter, TFeatureRoutes } from "opticore-router";
-import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
+import { UsersTestRouter } from "../../features/users-test/routes/users.router";
 
 
 /**
@@ -24,7 +24,7 @@ import { testFeatureRoutes } from "../../features/tests/unit/mocks/testError";
 export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
 
     return new OpticoreRegisterRouter().registered([
-        testFeatureRoutes, // It' only just for test, remove it when you will start to dev
+        UsersTestRouter, // It' only just for test, remove it when you will start to dev
         // Add new features here as they are developed
     ]);
 }

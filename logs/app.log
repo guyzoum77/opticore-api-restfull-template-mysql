@@ -1,0 +1,98 @@
+6/22/2026, 7:18:08 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:18:08 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:18 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:18 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:18:23 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:18:33 PM | SUCCESS | serverWebStopped
+6/22/2026, 7:18:33 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:18 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:18 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:18:40 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:19:21 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:19:21 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:19 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:19 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:19:24 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:19:24 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:19 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:19 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:19:29 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:19:40 PM | SUCCESS | serverWebStopped
+6/22/2026, 7:19:40 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:21 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:21 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:21:12 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:21:40 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:21:40 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:21 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:21 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:21:44 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:22:38 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:22:39 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:23:00 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:23:01 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:23:02 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:24:24 PM | INFO | [ Host ] [4m[1mhttp://localhost:4200[22m[24m - [ Route ] [32m/add-users[39m
+   [1m[42m Request content [49m[22m -  [ Response ] [97m{"status":"success","message":"created","statusCode":201,"data":{"id":"9762b35c-e854-40e6-897b-73276b84fb85","firstName":"arnaud","lastName":"kablan","email":"kabson@gmail.com","createdAt":"2026-06-22T19:24:24.014Z","updatedAt":"2026-06-22T19:24:24.014Z"},"apiVersion":null}[39m - [1m[32m[ Status ][39m[22m [42m[37m 200 [39m[49m
+6/22/2026, 7:24:57 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:24:57 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:24 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:24 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:30:26 PM | INFO | [ Host ] [4m[1mhttp://localhost:4200[22m[24m - [ Route ] [32m/add-users[39m
+   [1m[42m Request content [49m[22m -  [ Response ] [97m{"status":"success","message":"created","statusCode":201,"data":{"id":"4a33f451-8714-4565-9790-54d6ec18804b","firstName":"arnaud","lastName":"kablan","email":"kabson@gmail.com","createdAt":"2026-06-22T19:30:26.848Z","updatedAt":"2026-06-22T19:30:26.848Z"},"apiVersion":null}[39m - [1m[32m[ Status ][39m[22m [42m[37m 200 [39m[49m
+6/22/2026, 7:31:33 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:34:08 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:34:08 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:34 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:34 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:34:12 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:34:12 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:34 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:34 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:34:19 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:34:19 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:34 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:34 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:34:40 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:34:40 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:34 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:34 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:36:31 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:36:31 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:36 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:36 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:36:41 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:36:49 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:36:49 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:36 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:36 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:36:51 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:36:51 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:36 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:36 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:39:47 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:39:47 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:39 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:39 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:39:58 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:39:58 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:39 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:39 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:42:34 PM | INFO | [ Host ] [4m[1mhttp://localhost:4200[22m[24m - [ Route ] [32m/add-users[39m
+   [1m[42m Request content [49m[22m -  [ Response ] [97m{"status":"success","message":"created","statusCode":201,"data":{"id":"9b6571f4-e3ad-49e2-996b-f833ab38458a","firstName":"arnaud","lastName":"kablan","email":"kabson@gmail.com","createdAt":"2026-06-22T19:42:34.319Z","updatedAt":"2026-06-22T19:42:34.319Z"},"apiVersion":null}[39m - [1m[32m[ Status ][39m[22m [42m[37m 200 [39m[49m
+6/22/2026, 7:42:40 PM | INFO | [ Host ] [4m[1mhttp://localhost:4200[22m[24m - [ Route ] [32m/users[39m
+   [1m[42m Request content [49m[22m -  [ Response ] [97m{"status":"success","message":"success","statusCode":200,"data":{"count":0,"data":[]},"apiVersion":null}[39m - [1m[32m[ Status ][39m[22m [42m[37m 200 [39m[49m
+6/22/2026, 7:45:59 PM | ERROR | processPIDReceivedSignal
+6/22/2026, 7:45:59 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:45 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:45 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:46:06 PM | SUCCESS | serverWebStopped
+6/22/2026, 7:46:06 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:46 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:46 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
+6/22/2026, 7:46:47 PM | INFO | [ Host ] [4m[1mhttp://localhost:4200[22m[24m - [ Route ] [32m/users[39m
+   [1m[42m Request content [49m[22m -  [ Response ] [97m{"status":"success","message":"success","statusCode":200,"data":{"count":0,"data":[]},"apiVersion":null}[39m - [1m[32m[ Status ][39m[22m [42m[37m 200 [39m[49m
+6/22/2026, 7:47:00 PM | ERROR | Cannot convert undefined or null to object
+6/22/2026, 7:48:08 PM | SUCCESS | finishingProcessWell
+[SERVER] 06/22/2026, 19:48 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 06/22/2026, 19:48 | Dependencies container | DEPENDENCIES_CONTAINER - Aucune dépendance enregistrée dans le conteneur.
