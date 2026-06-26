@@ -4,8 +4,6 @@ import { UsersService } from "../services/users.service";
 import { UsersModel } from "../models/users.model";
 
 
-
-
 export class UsersController {
 
     static async findAll(): Promise<IResponseHandlerSuccessData | ReturnType<typeof ResponseHandler.error>> {
