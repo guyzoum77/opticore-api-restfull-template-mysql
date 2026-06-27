@@ -6,6 +6,7 @@ import { OptiCoreMySQLDriver } from "opticore-mysqldb";
 import { ILoggerConfig, LoggerCore} from "opticore-logger";
 import { registerRouter } from "../../app/router/register.router";
 import { dependenciesProvider } from "../../helpers/providers/dependencies.provider";
+import { registerDebugToolbar } from "../../core/debug/debugToolbar.module";
 
 
 
@@ -44,6 +45,11 @@ const app: WebServer = new WebServer({
         debounceMs: 300,
     }
 });
+
+/**
+ * Register debug toolbar on WebServer's internal Express app before routes are set up.
+ */
+registerDebugToolbar((app as any).expressApp);
 
 /**
  * Running Server and loading routes register of all features modules.
