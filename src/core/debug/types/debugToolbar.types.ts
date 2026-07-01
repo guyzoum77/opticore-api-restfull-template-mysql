@@ -8,7 +8,7 @@ export interface ISqlQuery {
 }
 
 export interface ILogEntry {
-    level: "debug" | "info" | "warning" | "error" | "critical";
+    level: "debug" | "info" | "warning" | "error" | "critical" | "deprecation";
     message: string;
     timestamp: number;
     context?: Record<string, unknown>;
@@ -49,6 +49,42 @@ export interface IPerformanceEntry {
     duration: number;
     category: string;
     startOffset: number;
+}
+
+export interface ProfileMetrics {
+    sqlTotalTime: number;
+    sqlCount: number;
+    logCount: number;
+    logErrors: number;
+    logWarnings: number;
+    logDeprecations: number;
+    httpCount: number;
+    memoryFormatted: string;
+    durationFormatted: string;
+    statusClass: string;
+}
+
+export interface PanelConfig {
+    id: string;
+    enabled: boolean;
+    label: string;
+    icon: string;
+    order: number;
+}
+
+export interface SecurityConfig {
+    allowedDomains: string[];
+    maxUrlLength: number;
+}
+
+export interface ToolbarConfig {
+    position: "bottom" | "top";
+    maxRequests: number;
+    maxUrlLength: number;
+    theme: "dark" | "light";
+    panels: PanelConfig[];
+    autoHide: boolean;
+    security: SecurityConfig;
 }
 
 export interface IRequestProfile {

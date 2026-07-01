@@ -45,12 +45,29 @@ a{color:#7c98d3;}</style></head>
 
     // GET /_debug/profiler — list all profiled requests
     router.get("/profiler", (req: Request, res: Response) => {
-        const search  = typeof req.query.search  === "string" ? req.query.search  : "";
-        const method  = typeof req.query.method  === "string" ? req.query.method  : "";
-        const status  = typeof req.query.status  === "string" ? req.query.status  : "";
-        const limitRaw = typeof req.query.limit === "string" ? parseInt(req.query.limit, 10) : 50;
-        const limit   = [10, 25, 50, 100].includes(limitRaw) ? limitRaw : 50;
-        html(res, renderProfilerList(debugStore.getAll(), search, method, status, limit));
+        const qs = req.query;
+        const str = (k: string) => typeof qs[k] === "string" ? (qs[k] as string) : "";
+        const search = str("search");
+        const method = str("method");
+        const status = str("status");
+        const ip     = str("ip");
+        const token  = str("token");
+        const from   = str("from");
+        const until  = str("until");
+        const limitRaw = typeof qs.limit === "string" ? parseInt(qs.limit as string, 10) : 10;
+        const limit = [10, 25, 50, 100].includes(limitRaw) ? limitRaw : 10;
+        const tab = qs.tab === "commands" ? "commands" : "requests";
+        html(res, renderProfilerList(debugStore.getAll(), search, method, status, limit, ip, token, from, until, tab));
+    });
+
+    // GET /_debug/profiler/latest — redirect to most recent profile
+    router.get("/profiler/latest", (_req: Request, res: Response) => {
+        const latest = debugStore.getLatest();
+        if (!latest) {
+            res.redirect("/_debug/profiler");
+            return;
+        }
+        res.redirect("/_debug/profiler/" + latest.token);
     });
 
     // GET /_debug/profiler/:token — full profiler detail
@@ -85,6 +102,9 @@ flex-direction:column;gap:12px;}a{color:#7c98d3;}</style></head>
             memoryUsage: p.memoryUsage,
             sqlCount: p.queries.length,
             logCount: p.logs.length,
+            logErrors: p.logs.filter(l => l.level === "error" || l.level === "critical").length,
+            logWarnings: p.logs.filter(l => l.level === "warning").length,
+            logDeprecations: p.logs.filter(l => (l.level as string) === "deprecation").length,
         }));
         res.json({ count: profiles.length, profiles });
     });

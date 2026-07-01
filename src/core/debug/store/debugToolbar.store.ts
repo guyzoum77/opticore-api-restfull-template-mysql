@@ -1,4 +1,4 @@
-import { IRequestProfile } from "../types/debugToolbar.types";
+import { IRequestProfile, ILogEntry } from "../types/debugToolbar.types";
 
 class DebugToolbarStore {
     private readonly profiles: Map<string, IRequestProfile> = new Map();
@@ -12,6 +12,15 @@ class DebugToolbarStore {
         }
         this.tokens.push(profile.token);
         this.profiles.set(profile.token, profile);
+    }
+
+    patchLatestLogs(entry: ILogEntry): void {
+        const lastToken = this.tokens[this.tokens.length - 1];
+        if (!lastToken) return;
+        const profile = this.profiles.get(lastToken);
+        if (profile) {
+            profile.logs.push(entry);
+        }
     }
 
     get(token: string): IRequestProfile | undefined {

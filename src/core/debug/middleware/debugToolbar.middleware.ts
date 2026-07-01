@@ -33,7 +33,7 @@ function statusMessage(code: number): string {
 }
 
 export function debugToolbarMiddleware(req: Request, res: Response, next: NextFunction): void {
-    if (req.url.startsWith("/_debug") || req.url === "/" || req.url === "") {
+    if (req.url.startsWith("/_debug") || req.url.startsWith("/.well-known") || req.url === "/" || req.url === "") {
         return next();
     }
 

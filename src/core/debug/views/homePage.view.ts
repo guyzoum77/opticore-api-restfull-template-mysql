@@ -17,6 +17,7 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
     let lastToken = null;
     let lastProfile = null;
     let lastProfilerUrl = '/_debug/profiler';
+    let recentProfiles = [];
     let isCollapsed = false;
 
     // ── collapse / expand ──────────────────────────────────────────────────
@@ -69,9 +70,12 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
     function badge(text, color) {
         return '<span class="tt-badge" style="background:' + color + '">' + text + '</span>';
     }
-    function sep()  { return '<div class="tt-sep"></div>'; }
-    function link(href, label, icon) {
-        return '<a class="tt-link" href="' + href + '" target="_blank">' + (icon||'') + ' ' + label + '</a>';
+    function sep()  { 
+        return '<div class="tt-sep"></div>'; 
+    }
+    function link(href, label, icon, imgSRC=null, imageAltName=null) {
+        const iconHtml = icon ? icon : (imgSRC ? '<img src="' + imgSRC + '" alt="' + (imageAltName || '') + '">' : '');
+        return '<a class="tt-link" href="' + href + '" target="_blank">' + iconHtml + ' ' + label + '</a>';
     }
 
     function ttStatus(p) {
@@ -83,7 +87,7 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
                row('Status',  badge(sc + ' ' + statusMsg(sc), ok ? '#2e7d32' : '#c0392b')) +
                sep() +
                row('Duration', fmtDuration(p.duration)) +
-               row('Profiler', '<a href="' + lastProfilerUrl + '" style="color:#D4884A">Open →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '" style="color:#FAC68E">Open →</a>');
     }
     function ttDuration(p) {
         const sqlMs = p.sqlCount > 0 ? '~' + p.duration + ' ms' : '0 ms';
@@ -92,31 +96,60 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
                row('Application',  fmtDuration(appMs)) +
                row('Database',     sqlMs) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#D4884A">Performance →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance →</a>');
     }
     function ttMemory(p) {
         const mu = p.memoryUsage;
         return row('Heap used',  fmtMemory(mu)) +
                row('Node PID',  '' + (window._wdt_pid || '—')) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#D4884A">Performance →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance →</a>');
     }
     function ttLogs(p) {
-        return row('Total logs', p.logCount) +
+        var errors = p.logErrors || 0;
+        var warnings = p.logWarnings || 0;
+        var deprecations = p.logDeprecations || 0;
+        var errVal = errors > 0 ? badge(errors, '#c0392b') : '<span style="color:#555;">0</span>';
+        var warnVal = warnings > 0 ? badge(warnings, '#e67e22') : '<span style="color:#555;">0</span>';
+        var deprVal = deprecations > 0 ? badge(deprecations, '#8e44ad') : '<span style="color:#555;">0</span>';
+        return '<div style="padding:6px 14px 8px;font-size:10px;font-weight:700;color:#777;text-transform:uppercase;letter-spacing:.7px;border-bottom:1px solid #2a2a2a;">Logger</div>' +
+               row('Errors', errVal) +
+               row('Warnings', warnVal) +
+               row('Deprecations', deprVal) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=logs" style="color:#D4884A">Logs →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=logs" style="color:#FAC68E">Logs →</a>');
     }
-    function ttSql(p) {
-        return row('Queries',    p.sqlCount) +
-               row('Total time', p.sqlCount > 0 ? '—' : '0 ms') +
-               sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=database" style="color:#D4884A">Database →</a>');
+    function ttHttp() {
+        if (recentProfiles.length === 0) {
+            return row('Requests', 'No requests yet');
+        }
+        const last10 = recentProfiles.slice(0, 10);
+        const rows = last10.map(function(p) {
+            const m = p.method.toLowerCase();
+            const sc = p.statusCode;
+            const sClass = sc >= 400 ? 'http-tt-s-err' : sc >= 300 ? 'http-tt-s-redir' : 'http-tt-s-ok';
+            const url = p.url.length > 38 ? p.url.slice(0, 35) + '…' : p.url;
+            return '<tr>' +
+                '<td><span class="http-tt-method http-tt-m-' + m + '">' + p.method + '</span></td>' +
+                '<td><a href="/_debug/profiler/' + p.token + '" class="http-tt-url">' + url + '</a></td>' +
+                '<td class="' + sClass + '">' + sc + '</td>' +
+                '<td class="http-tt-dur">' + fmtDuration(p.duration) + '</td>' +
+                '</tr>';
+        }).join('');
+        return '<div class="http-tt-head">' +
+            '<span class="http-tt-head-title">Last ' + last10.length + ' HTTP Requests</span>' +
+            '<a href="/_debug/profiler" class="http-tt-head-link">View all →</a>' +
+            '</div>' +
+            '<table class="http-tt-table">' +
+            '<thead><tr><th>Method</th><th>URL</th><th>Status</th><th>Time</th></tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+            '</table>';
     }
     function ttRoute(p) {
         return row('Method', badge(p.method, '#1565c0')) +
                row('URL',    '<code>' + p.url + '</code>') +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=routing" style="color:#D4884A">Routing →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=routing" style="color:#FAC68E">Routing →</a>');
     }
     // hover sur "v1.0.0" → ancienne vue : versions + docs
     function ttVersion() {
@@ -150,11 +183,12 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
                row('Opticore API Gateway', pkgBadge(gatewayOk)) +
                sep() +
                '<div style="padding:4px 14px 2px;font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.8px;">Services</div>' +
-               link('#docker-compose',                        'Docker Compose', '🐳') +
-               link('/_debug/profiler?panel=configuration',  'Env Vars',       '⚙️') +
-               link('http://localhost:15672',                 'RabbitMQ UI',    '🐇') +
+               link('#docker-compose',                        'Docker Compose', '<svg width="16" height="13" viewBox="0 0 340 268" xmlns="http://www.w3.org/2000/svg"><path fill="#2560ff" d="M334,110.1c-8.3-5.6-30.2-8-46.1-3.7-.9-15.8-9-29.2-24-40.8l-5.5-3.7-3.7,5.6c-7.2,11-10.3,25.7-9.2,39,.8,8.2,3.7,17.4,9.2,24.1-20.7,12-39.8,9.3-124.3,9.3H0c-.4,19.1,2.7,55.8,26,85.6,2.6,3.3,5.4,6.5,8.5,9.6,19,19,47.6,32.9,90.5,33,65.4,0,121.4-35.3,155.5-120.8,11.2.2,40.8,2,55.3-26,.4-.5,3.7-7.4,3.7-7.4l-5.5-3.7h0ZM85.2,92.7h-36.7v36.7h36.7v-36.7ZM132.6,92.7h-36.7v36.7h36.7v-36.7ZM179.9,92.7h-36.7v36.7h36.7v-36.7ZM227.3,92.7h-36.7v36.7h36.7v-36.7ZM37.8,92.7H1.1v36.7h36.7v-36.7ZM85.2,46.3h-36.7v36.7h36.7v-36.7ZM132.6,46.3h-36.7v36.7h36.7v-36.7ZM179.9,46.3h-36.7v36.7h36.7v-36.7ZM179.9,0h-36.7v36.7h36.7V0Z"/></svg>') +
+               link('/_debug/profiler?panel=configuration',   'Env Vars',       '<svg width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 600 600"><path fill="currentColor" d="M600 0v600H0V0zM273.3 397.3H171v138h105V512h-77.1v-37.6H268v-23.2h-69v-30.6h74.4zm53.7 0h-27.1v138h25.9v-90l55.6 90h28v-138h-26v92.1zm127.9 0h-30.2l49.3 138h29.8l49.4-138h-29.6l-33.8 102zM135 492H93v42h42z"/></svg>️') +
+               link('http://localhost:15672',                 'RabbitMQ UI',    '<svg width="16" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#ff6600" d="M119.517 51.188H79.291a3.641 3.641 0 0 1-3.64-3.642V5.62A5.605 5.605 0 0 0 70.028 0H55.66a5.606 5.606 0 0 0-5.627 5.62v41.646a3.913 3.913 0 0 1-3.92 3.925l-13.188.047c-2.176 0-3.972-1.75-3.926-3.926l.094-41.687A5.606 5.606 0 0 0 23.467 0H9.1a5.61 5.61 0 0 0-5.626 5.625V122.99c0 2.737 2.22 5.01 5.01 5.01h111.033a5.014 5.014 0 0 0 5.008-5.011V56.195a4.975 4.975 0 0 0-5.008-5.007zM100.66 95.242a6.545 6.545 0 0 1-6.525 6.524H82.791a6.545 6.545 0 0 1-6.523-6.524V83.9a6.545 6.545 0 0 1 6.523-6.524h11.343a6.545 6.545 0 0 1 6.525 6.523zm0 0"/></svg>') +
                link('http://localhost:8025',                  'Webmail',        '📧') +
-               link('http://localhost:8001',                  'Redis',          '🔴');
+               link('http://localhost:8001',                  'Redis',          '<svg width="16" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#A41E11" d="M121.8 93.1c-6.7 3.5-41.4 17.7-48.8 21.6-7.4 3.9-11.5 3.8-17.3 1S13 98.1 6.3 94.9c-3.3-1.6-5-2.9-5-4.2V78s48-10.5 55.8-13.2c7.8-2.8 10.4-2.9 17-.5s46.1 9.5 52.6 11.9v12.5c0 1.3-1.5 2.7-4.9 4.4z"/><path fill="#D82C20" d="M121.8 80.5C115.1 84 80.4 98.2 73 102.1c-7.4 3.9-11.5 3.8-17.3 1-5.8-2.8-42.7-17.7-49.4-20.9C-.3 79-.5 76.8 6 74.3c6.5-2.6 43.2-17 51-19.7 7.8-2.8 10.4-2.9 17-.5s41.1 16.1 47.6 18.5c6.7 2.4 6.9 4.4.2 7.9z"/><path fill="#A41E11" d="M121.8 72.5C115.1 76 80.4 90.2 73 94.1c-7.4 3.8-11.5 3.8-17.3 1C49.9 92.3 13 77.4 6.3 74.2c-3.3-1.6-5-2.9-5-4.2V57.3s48-10.5 55.8-13.2c7.8-2.8 10.4-2.9 17-.5s46.1 9.5 52.6 11.9V68c0 1.3-1.5 2.7-4.9 4.5z"/><path fill="#D82C20" d="M121.8 59.8c-6.7 3.5-41.4 17.7-48.8 21.6-7.4 3.8-11.5 3.8-17.3 1C49.9 79.6 13 64.7 6.3 61.5s-6.8-5.4-.3-7.9c6.5-2.6 43.2-17 51-19.7 7.8-2.8 10.4-2.9 17-.5s41.1 16.1 47.6 18.5c6.7 2.4 6.9 4.4.2 7.9z"/><path fill="#A41E11" d="M121.8 51c-6.7 3.5-41.4 17.7-48.8 21.6-7.4 3.8-11.5 3.8-17.3 1C49.9 70.9 13 56 6.3 52.8c-3.3-1.6-5.1-2.9-5.1-4.2V35.9s48-10.5 55.8-13.2c7.8-2.8 10.4-2.9 17-.5s46.1 9.5 52.6 11.9v12.5c.1 1.3-1.4 2.6-4.8 4.4z"/><path fill="#D82C20" d="M121.8 38.3C115.1 41.8 80.4 56 73 59.9c-7.4 3.8-11.5 3.8-17.3 1S13 43.3 6.3 40.1s-6.8-5.4-.3-7.9c6.5-2.6 43.2-17 51-19.7 7.8-2.8 10.4-2.9 17-.5s41.1 16.1 47.6 18.5c6.7 2.4 6.9 4.4.2 7.8z"/><path fill="#fff" d="M80.4 26.1l-10.8 1.2-2.5 5.8-3.9-6.5-12.5-1.1 9.3-3.4-2.8-5.2 8.8 3.4 8.2-2.7L72 23zM66.5 54.5l-20.3-8.4 29.1-4.4z"/><ellipse fill="#fff" cx="38.4" cy="35.4" rx="15.5" ry="6"/><path fill="#7A0C00" d="M93.3 27.7l17.2 6.8-17.2 6.8z"/><path fill="#AD2115" d="M74.3 35.3l19-7.6v13.6l-1.9.8z"/></svg>');
+
     }
 
     // map data-tt → builder
@@ -163,7 +197,7 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
         duration: () => lastProfile ? ttDuration(lastProfile) : row('Duration', 'No request yet'),
         memory:   () => lastProfile ? ttMemory(lastProfile)   : row('Memory', 'No request yet'),
         logs:     () => lastProfile ? ttLogs(lastProfile)     : row('Logs', 'No request yet'),
-        sql:      () => lastProfile ? ttSql(lastProfile)      : row('SQL', 'No request yet'),
+        http:     () => ttHttp(),
         route:    () => lastProfile ? ttRoute(lastProfile)    : row('Route', 'No request yet'),
         version:  () => ttVersion(),
         server:   () => ttServer(),
@@ -202,7 +236,7 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
     const STATUS_MSGS = {200:'OK',201:'Created',204:'No Content',301:'Moved',302:'Found',304:'Not Modified',400:'Bad Request',401:'Unauthorized',403:'Forbidden',404:'Not Found',405:'Method Not Allowed',409:'Conflict',422:'Unprocessable',429:'Too Many Requests',500:'Internal Server Error',502:'Bad Gateway',503:'Service Unavailable'};
     function statusMsg(code) { return STATUS_MSGS[code] || 'Unknown'; }
 
-    function updateToolbar(p) {
+    function updateToolbar(p, animate) {
         lastProfile     = p;
         lastProfilerUrl = '/_debug/profiler/' + p.token;
 
@@ -214,21 +248,52 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
         }
 
         const dur = document.getElementById('tb-duration');
-        if (dur) { dur.textContent = fmtDuration(p.duration); dur.href = lastProfilerUrl + '?panel=performance'; }
+        if (dur) {
+            var durSpan = dur.querySelectorAll('span')[1];
+            if (durSpan) durSpan.textContent = fmtDuration(p.duration);
+            dur.href = lastProfilerUrl + '?panel=performance';
+        }
 
         const mem = document.getElementById('tb-memory');
-        if (mem) { mem.textContent = fmtMemory(p.memoryUsage); mem.href = lastProfilerUrl + '?panel=performance'; }
+        if (mem) {
+            var memSpan = mem.querySelector('span:last-child');
+            if (memSpan) memSpan.textContent = fmtMemory(p.memoryUsage);
+            mem.href = lastProfilerUrl + '?panel=performance';
+        }
 
-        const sql = document.getElementById('tb-sql');
-        if (sql) { sql.textContent = p.sqlCount > 0 ? p.sqlCount + ' SQL' : '0 SQL'; sql.href = lastProfilerUrl + '?panel=database'; }
+        const http = document.getElementById('tb-http');
+        if (http) {
+            const cnt = recentProfiles.length;
+            const textSpan = http.querySelector('span:last-child');
+            if (textSpan) textSpan.textContent = cnt + ' request' + (cnt !== 1 ? 's' : '');
+            http.href = lastProfilerUrl;
+        }
 
-        const logs = document.getElementById('tb-logs');
-        if (logs) { logs.textContent = p.logCount + ' logs'; logs.href = lastProfilerUrl + '?panel=logs'; }
+        const logsEl = document.getElementById('tb-logs');
+        if (logsEl) {
+            logsEl.href = lastProfilerUrl + '?panel=logs';
+            var logsSpan = logsEl.querySelector('span:last-child');
+            if (logsSpan) logsSpan.textContent = (p.logCount || 0) + ' logs';
+            // error badge pill — add/update/remove based on error count
+            var existingPill = logsEl.querySelector('.tb-err-pill');
+            var errCount = p.logErrors || 0;
+            if (errCount > 0) {
+                if (!existingPill) {
+                    existingPill = document.createElement('span');
+                    existingPill.className = 'tb-err-pill';
+                    logsEl.appendChild(existingPill);
+                }
+                existingPill.textContent = errCount;
+            } else if (existingPill) {
+                existingPill.parentNode.removeChild(existingPill);
+            }
+        }
 
         const route = document.getElementById('tb-route');
         if (route) {
-            route.textContent = p.method + ' ' + (p.url.length > 40 ? p.url.slice(0,40)+'…' : p.url);
-            route.href        = lastProfilerUrl + '?panel=routing';
+            var routeSpan = route.querySelector('span:last-child');
+            if (routeSpan) routeSpan.textContent = p.method + ' ' + (p.url.length > 40 ? p.url.slice(0,40)+'…' : p.url);
+            route.href = lastProfilerUrl + '?panel=routing';
         }
 
         const profLink = document.getElementById('tb-profiler-link');
@@ -246,16 +311,18 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
         const miniLink = document.getElementById('wdt-mini-link');
         if (miniLink) miniLink.href = lastProfilerUrl;
 
-        // pulse
-        const toolbar = document.getElementById('wdt-toolbar');
-        if (toolbar && !isCollapsed) {
-            toolbar.classList.add('tb-pulse');
-            setTimeout(() => toolbar.classList.remove('tb-pulse'), 400);
-        }
-        const mini = document.getElementById('wdt-mini');
-        if (mini && isCollapsed) {
-            mini.classList.add('tb-pulse');
-            setTimeout(() => mini.classList.remove('tb-pulse'), 400);
+        // pulse only for new requests, not count refreshes
+        if (animate) {
+            const toolbar = document.getElementById('wdt-toolbar');
+            if (toolbar && !isCollapsed) {
+                toolbar.classList.add('tb-pulse');
+                setTimeout(() => toolbar.classList.remove('tb-pulse'), 400);
+            }
+            const mini = document.getElementById('wdt-mini');
+            if (mini && isCollapsed) {
+                mini.classList.add('tb-pulse');
+                setTimeout(() => mini.classList.remove('tb-pulse'), 400);
+            }
         }
     }
 
@@ -265,10 +332,12 @@ function toolbarScript(appVersion: string, nodeVersion: string, npmVersion: stri
             if (!res.ok) return;
             const data = await res.json();
             if (!data.profiles || data.profiles.length === 0) return;
+            recentProfiles = data.profiles;
             const p = data.profiles[0];
-            if (p.token === lastToken) return;
-            lastToken = p.token;
-            updateToolbar(p);
+            const isNew = p.token !== lastToken;
+            if (isNew) lastToken = p.token;
+            // always update counts (errors may be patched in after the first fetch)
+            updateToolbar(p, isNew);
         } catch(e) {}
     }
 
@@ -311,7 +380,7 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
     padding: 0 11px; color: #bbb; text-decoration: none;
     white-space: nowrap; height: 100%;
     transition: background .15s, color .15s;
-    flex-shrink: 0; border-left: 1px solid #2e2e2e;
+    flex-shrink: 0;
   }
   .tb-block:hover { background: #252525; color: #fff; text-decoration: none; }
   .tb-icon { color: #666; display: flex; align-items: center; }
@@ -319,7 +388,7 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
   .tb-time-wrap { position: relative; }
   .tb-time-bar {
     position: absolute; bottom: 0; left: 0; height: 2px;
-    background: #C87A3C; width: 0%; transition: width .4s;
+    background: #FAC68E; width: 0%; transition: width .4s;
   }
   .tb-spacer { flex: 1; }
   .tb-brand {
@@ -329,7 +398,7 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
   }
   .tb-brand:hover { background: #252525; text-decoration: none; }
   .tb-brand-icon {
-    width: 20px; height: 20px; background: #C87A3C; border-radius: 4px;
+    width: 20px; height: 20px; background: #FAC68E; border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
     font-size: 10px; font-weight: 900; color: #fff;
   }
@@ -347,6 +416,12 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
     flex-shrink: 0;
   }
   .tb-collapse:hover { background: #333; color: #ccc; }
+  .tb-err-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #c0392b; color: #fff; border-radius: 10px;
+    font-size: 10px; font-weight: 700; min-width: 16px; height: 16px;
+    padding: 0 4px; margin-left: 3px; flex-shrink: 0;
+  }
   .tb-dot {
     width: 6px; height: 6px; border-radius: 50%;
     background: #22c55e; display: inline-block;
@@ -364,7 +439,6 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
     border-radius: 6px;
     padding: 10px 0 6px;
     min-width: 240px;
-    max-width: 340px;
     box-shadow: 0 8px 28px rgba(0,0,0,.7);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
     font-size: 12px;
@@ -404,10 +478,46 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
   }
   .tt-link {
     display: flex; align-items: center; gap: 6px;
-    padding: 4px 14px; color: #D4884A; font-size: 12px;
+    padding: 4px 14px; color: #FAC68E; font-size: 12px;
     text-decoration: none; transition: background .1s;
   }
-  .tt-link:hover { background: #252525; color: #E09A5A; }
+  .tt-link:hover { background: #252525; color: #FBD4A8; }
+
+  /* ── HTTP requests tooltip table ── */
+  .http-tt-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2px 14px 8px; border-bottom: 1px solid #2a2a2a; margin-bottom: 2px;
+  }
+  .http-tt-head-title { color: #888; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+  .http-tt-head-link { color: #7c98d3; font-size: 11px; text-decoration: none; }
+  .http-tt-head-link:hover { text-decoration: underline; }
+  .http-tt-table { width: 100%; border-collapse: collapse; }
+  .http-tt-table th {
+    text-align: left; padding: 4px 10px;
+    color: #555; font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .3px;
+    border-bottom: 1px solid #222; background: #181818;
+  }
+  .http-tt-table td { padding: 5px 10px; color: #bbb; border-bottom: 1px solid #1e1e1e; }
+  .http-tt-table tr:last-child td { border-bottom: none; }
+  .http-tt-table tr:hover td { background: #252525; }
+  .http-tt-method {
+    display: inline-block; padding: 1px 5px; border-radius: 3px;
+    font-size: 9px; font-weight: 700; min-width: 48px; text-align: center;
+  }
+  .http-tt-m-get     { background: #1565c0; color: #fff; }
+  .http-tt-m-post    { background: #e67e22; color: #fff; }
+  .http-tt-m-put     { background: #8e44ad; color: #fff; }
+  .http-tt-m-patch   { background: #16a085; color: #fff; }
+  .http-tt-m-delete  { background: #c0392b; color: #fff; }
+  .http-tt-m-head,
+  .http-tt-m-options { background: #555; color: #fff; }
+  .http-tt-s-ok    { color: #2ecc71; font-weight: 600; font-size: 11px; }
+  .http-tt-s-redir { color: #3498db; font-weight: 600; font-size: 11px; }
+  .http-tt-s-err   { color: #e74c3c; font-weight: 600; font-size: 11px; }
+  .http-tt-url { color: #ccc; text-decoration: none; font-size: 11px; }
+  .http-tt-url:hover { color: #7c98d3; }
+  .http-tt-dur { color: #888; font-size: 11px; white-space: nowrap; }
 
   /* ── collapsed mini button (bottom-right) ── */
   #wdt-mini {
@@ -434,7 +544,7 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
     color: #ccc; font-size: 12px; font-weight: 500;
   }
   #wdt-mini-logo-icon {
-    width: 22px; height: 22px; background: #C87A3C; border-radius: 50%;
+    width: 22px; height: 22px; background: #FAC68E; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 9px; font-weight: 900; color: #fff; flex-shrink: 0;
   }
@@ -481,13 +591,13 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
     <span>0 logs</span>
   </a>
 
-  <a id="tb-sql" href="/_debug/profiler" class="tb-block" data-tt="sql">
-    <span class="tb-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
-    <span>0 SQL</span>
+  <a id="tb-http" href="/_debug/profiler" class="tb-block" data-tt="http">
+    <span class="tb-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+    <span>0 requests</span>
   </a>
 
   <a id="tb-route" href="/_debug/profiler" class="tb-block" data-tt="route">
-    <span class="tb-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+    <span class="tb-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polygon points="12,5 19,5 22,9 19,13 12,13"/><polygon points="12,14 5,14 2,18 5,21 12,21"/></svg></span>
     <span>waiting…</span>
   </a>
 
@@ -516,7 +626,7 @@ function toolbarHtml(appVersion: string, nodeVersion: string, npmVersion: string
 <div id="wdt-mini">
   <a id="wdt-mini-link" href="/_debug/profiler" id="wdt-mini-logo" style="text-decoration:none;">
     <div id="wdt-mini-logo-inner" style="display:flex;align-items:center;gap:7px;padding:0 12px 0 10px;height:34px;border-right:1px solid #2a2a2a;color:#ccc;font-size:12px;font-weight:500;">
-      <div id="wdt-mini-logo-icon" style="width:22px;height:22px;background:#C87A3C;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff;flex-shrink:0;">OP</div>
+      <div id="wdt-mini-logo-icon" style="width:22px;height:22px;background:#FAC68E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff;flex-shrink:0;">OP</div>
       <span style="color:#888;font-size:11px;">Profiler</span>
     </div>
   </a>
@@ -541,17 +651,17 @@ export function renderHomePage(opts: IHomePageOptions): string {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OptiCoreJs API Server</title>
+<title>OptiCoreJs</title>
 <style>
   :root {
-    --bg:     #F5EFE0;
+    --bg:     #f5f5f5;
     --card:   #FFFCF7;
     --border: #E0D8CA;
     --text:   #1A1A14;
     --muted:  #7A7268;
-    --accent: #C87A3C;
-    --ok:     #2D6A4A;
-    --warn:   #C87A3C;
+    --accent: #FAC68E;
+    --ok:     #31af05;
+    --warn:   #FAC68E;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
@@ -611,8 +721,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
     min-height: 100%;
     display: flex; flex-direction: column;
     align-items: center;
-    /* contenu commence juste sous le bas des vagues */
-    padding: 430px 24px 48px;
+    padding: 48px 24px 48px;
   }
   .container { width: 100%; max-width: 860px; }
 
@@ -626,7 +735,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
     width: 52px; height: 52px; background: var(--accent);
     border-radius: 14px; display: flex; align-items: center;
     justify-content: center; font-size: 22px; font-weight: 900; color: #fff;
-    box-shadow: 0 4px 18px rgba(200,122,60,.30);
+    box-shadow: 0 4px 18px rgba(250,198,142,.30);
   }
   .hero-name { font-size: 28px; font-weight: 700; color: var(--text); }
   .hero-sub { font-size: 13px; color: var(--muted); letter-spacing: .5px; text-transform: uppercase; }
@@ -638,10 +747,16 @@ export function renderHomePage(opts: IHomePageOptions): string {
     gap: 8px; margin-bottom: 36px;
   }
   .status-pill {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: #EBF5EF; border: 1px solid #A8D5B8;
-    color: var(--ok); padding: 5px 14px; border-radius: 20px;
-    font-size: 12px; font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #31af05;
+    color: var(--ok);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
   }
   .status-dot {
     width: 7px; height: 7px; border-radius: 50%;
@@ -651,8 +766,8 @@ export function renderHomePage(opts: IHomePageOptions): string {
   .env-pill {
     display: inline-flex; align-items: center;
     background: ${isProd ? "#FDECEA" : "#FDF3EA"};
-    border: 1px solid ${isProd ? "#E57373" : "#D4884A"};
-    color: ${isProd ? "#C62828" : "#9A5020"};
+    border: 1px solid ${isProd ? "#E57373" : "#FAC68E"};
+    color: ${isProd ? "#C62828" : "#C07030"};
     padding: 5px 14px; border-radius: 20px;
     font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .4px;
   }
@@ -664,7 +779,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
     border-radius: 10px; padding: 18px 20px;
     transition: border-color .2s, box-shadow .2s;
   }
-  .card:hover { border-color: #C8B8A4; box-shadow: 0 2px 12px rgba(200,122,60,.10); }
+  .card:hover { border-color: #C8B8A4; box-shadow: 0 2px 12px rgba(250,198,142,.10); }
   .card-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 6px; }
   .card-value { font-size: 17px; font-weight: 600; color: var(--text); font-family: monospace; }
   .card-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
@@ -687,7 +802,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
     color: var(--text); text-decoration: none;
     transition: border-color .2s, background .2s, box-shadow .2s;
   }
-  .quick-link:hover { border-color: var(--accent); background: #FDF3EA; color: var(--text); box-shadow: 0 2px 10px rgba(200,122,60,.12); text-decoration: none; }
+  .quick-link:hover { border-color: var(--accent); background: #FDF3EA; color: var(--text); box-shadow: 0 2px 10px rgba(250,198,142,.12); text-decoration: none; }
   .quick-link-icon {
     width: 32px; height: 32px; border-radius: 7px;
     display: flex; align-items: center; justify-content: center;
@@ -737,7 +852,6 @@ export function renderHomePage(opts: IHomePageOptions): string {
         <span class="status-dot"></span>
         Running on port ${port}
       </div>
-      <div class="env-pill">${environment}</div>
     </div>
 
     <!-- CARDS -->
@@ -755,11 +869,11 @@ export function renderHomePage(opts: IHomePageOptions): string {
       <div class="card">
         <div class="card-label">App version</div>
         <div class="card-value">v${appVersion}</div>
-        <div class="card-sub">opticore-template-mysqldb</div>
+        <div class="card-sub">Template mysqldb</div>
       </div>
       <div class="card">
         <div class="card-label">Environment</div>
-        <div class="card-value" style="color:${isProd ? "#C62828" : "#9A5020"}">${environment}</div>
+        <div class="card-value" style="color:${isProd ? "#C62828" : "#C07030"}">${environment}</div>
         <div class="card-sub">NODE_ENV</div>
       </div>
     </div>
@@ -771,7 +885,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
       <div class="quick-links">
         <a href="/_debug/profiler" class="quick-link">
           <div class="quick-link-icon" style="background:#FDE8D4;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8924A" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FAC68E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polygon points="12,5 19,5 22,9 19,13 12,13"/><polygon points="12,14 5,14 2,18 5,21 12,21"/></svg>
           </div>
           <div>
             <div class="quick-link-label">Request Profiler</div>
@@ -780,7 +894,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
         </a>
         <a href="/_debug/toolbar" class="quick-link">
           <div class="quick-link-icon" style="background:#FDE8D4;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C87A3C" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FAC68E" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <div>
             <div class="quick-link-label">Toolbar View</div>
@@ -814,11 +928,6 @@ export function renderHomePage(opts: IHomePageOptions): string {
         </div>
       </div>
     </div>
-
-    <div class="footer">
-      OptiCoreJs &mdash; Built with Node.js ${nodeVersion} &mdash; <a href="/_debug/profiler">Open Profiler</a>
-    </div>
-
   </div>
 </div>
 
@@ -847,7 +956,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
       C 1200,470   960,470   720,360
       C  480,195   240,195     0,360
       Z"
-      fill="#E8AA68" fill-opacity="0.38"/>
+      fill="#FAC68E" fill-opacity="0.38"/>
   </svg>
 
   <!-- ══ Vague 2 — MILIEU, orange vif #D4844A, profondeur intermédiaire ══ -->
@@ -861,7 +970,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
       C 1200,375   960,375   720,265
       C  480,130   240,130     0,265
       Z"
-      fill="#F0BE80" fill-opacity="0.32"/>
+      fill="#FAC68E" fill-opacity="0.32"/>
   </svg>
 
   <!-- ══ Vague 3 — AVANT, orange pâle #F5CC90, la plus haute (en premier plan) ══ -->
@@ -875,7 +984,7 @@ export function renderHomePage(opts: IHomePageOptions): string {
       C 1200,265   960,265   720,165
       C  480, 60   240, 60     0,165
       Z"
-      fill="#F8D8A8" fill-opacity="0.45"/>
+      fill="#FAC68E" fill-opacity="0.45"/>
   </svg>
 
 </div>
@@ -896,8 +1005,8 @@ export function renderHomePage(opts: IHomePageOptions): string {
 
   /* palette sable / poussière du désert */
   var COLORS = [
-    '#F5D5A0','#F0C080','#E8A860','#D4884A',
-    '#C87A3C','#F5E0B8','#E0AA70','#F8E8C8'
+    '#150F04','#150F04','#150F04','#150F04',
+    '#150F04','#150F04','#150F04','#150F04'
   ];
 
   /* génère une particule */

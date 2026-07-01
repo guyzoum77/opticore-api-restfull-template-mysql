@@ -1,280 +1,217 @@
 import { IRequestProfile } from "../types/debugToolbar.types";
-import {
-    statusClass, formatDuration, formatMemory, formatTimestamp,
-    sqlTotalTime, escapeHtml,
-    ICON_LOG, ICON_DB, ICON_PERF, ICON_ROUTE, ICON_CONFIG, ICON_EXCEPTION
-} from "./helpers.view";
+import { escapeHtml } from "./helpers.view";
 
-const ICON_LIST = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`;
-const ICON_SETTINGS = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>`;
+const FF = `'Montserrat',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif`;
 
-const LIST_CSS = `
-  :root {
-    --bg:#F5EFE0; --card:#FFFCF7; --border:#E0D8CA; --text:#1A1A14;
-    --muted:#7A7268; --accent:#C87A3C; --hover:#FDF3EA;
-    --ok:#2D6A4A; --warn:#C0392B; --redirect:#1565c0;
-    --sidebar-w:240px; --header-h:56px;
-  }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  html, body { height:100%; background:var(--bg); color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; font-size:13px; }
-  a { color:var(--accent); text-decoration:none; }
-  a:hover { text-decoration:underline; }
+const LOGO_SVG = `<svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm6.7 9.46c-.07 1.83-1.07 2.78-2.05 2.75-.86-.03-1.4-.5-1.34-1.18.05-.62.45-.78.78-1.18.25-.32.31-.58.21-.9-.13-.42-.55-.62-1.1-.6-.93.02-1.55.62-1.49 1.5.04.55.43 1.12.86 1.86l.37.62c.42.83.66 1.36.7 2.04.08 1.27-.78 2.36-2.43 2.41-1.13.04-2.1-.44-2.27-1.26-.12-.57.18-.92.59-1.05.5-.13.86.13.96.65.1.5-.04.66-.04.92.02.42.46.55.92.54.71-.02 1.07-.5 1.05-1.11-.02-.5-.27-.85-.85-1.78l-.31-.5c-.61-1-1.04-1.77-1.07-2.62-.05-1.51 1.05-2.83 3.1-2.9 1.55-.05 2.78.66 2.74 1.56z" fill="#fff"/>
+</svg>`;
 
-  /* ── HEADER ── */
-  .pf-header {
-    position:sticky; top:0; z-index:100; height:var(--header-h);
-    background:var(--card); border-bottom:1px solid var(--border);
-    display:flex; align-items:center; gap:14px; padding:0 20px;
-    box-shadow:0 1px 4px rgba(200,122,60,.07);
-  }
-  .pf-logo { display:flex; align-items:center; gap:9px; font-weight:700; font-size:14px; color:var(--text); text-decoration:none; }
-  .pf-logo:hover { text-decoration:none; }
-  .pf-logo-icon {
-    width:26px; height:26px; background:#C87A3C; border-radius:5px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:11px; font-weight:900; color:#fff; flex-shrink:0;
-  }
-  .pf-logo-sub { font-size:11px; color:var(--muted); font-weight:400; }
-  .pf-spacer { flex:1; }
-  .pf-header-search {
-    background:#F0EBE1; border:1px solid var(--border); color:var(--text);
-    padding:5px 11px; border-radius:4px; font-size:12px; width:200px; outline:none;
-  }
-  .pf-header-search:focus { border-color:var(--accent); }
-  .pf-header-search::placeholder { color:#A09888; }
+const ICON_SETTINGS_LG = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>`;
+const CHEVRON = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
 
-  /* ── BODY LAYOUT ── */
-  .pf-body { display:flex; height:calc(100vh - var(--header-h)); overflow:hidden; }
-
-  /* ── SIDEBAR ── */
-  .pf-sidebar {
-    width:var(--sidebar-w); flex-shrink:0;
-    background:var(--card); border-right:1px solid var(--border);
-    display:flex; flex-direction:column; overflow-y:auto;
-  }
-
-  /* Tabs: Search profiles | Latest */
-  .pf-tabs { display:flex; border-bottom:1px solid var(--border); flex-shrink:0; }
-  .pf-tab {
-    flex:1; padding:11px 4px; text-align:center;
-    font-size:12px; color:var(--muted); text-decoration:none;
-    border-bottom:2px solid transparent; transition:color .1s,background .1s;
-    white-space:nowrap;
-  }
-  .pf-tab:hover { background:var(--hover); color:var(--text); text-decoration:none; }
-  .pf-tab.active { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
-  .pf-tab.disabled { opacity:.4; pointer-events:none; }
-
-  /* Filter form */
-  .pf-filter { padding:14px 14px 10px; border-bottom:1px solid var(--border); flex-shrink:0; }
-  .pf-field { margin-bottom:10px; }
-  .pf-field:last-of-type { margin-bottom:0; }
-  .pf-label {
-    display:block; font-size:10.5px; font-weight:600;
-    text-transform:uppercase; letter-spacing:.4px;
-    color:var(--muted); margin-bottom:4px;
-  }
-  .pf-input, .pf-select {
-    width:100%; background:#F0EBE1; border:1px solid var(--border);
-    color:var(--text); padding:6px 9px; border-radius:4px; font-size:12px;
-    outline:none; font-family:inherit;
-  }
-  .pf-input:focus, .pf-select:focus { border-color:var(--accent); background:#FDF7F0; }
-  .pf-select { cursor:pointer; }
-  .pf-row2 { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-  .pf-search-btn {
-    width:100%; margin-top:12px; padding:7px;
-    background:var(--accent); color:#fff; border:none;
-    border-radius:4px; font-size:12.5px; font-weight:600;
-    cursor:pointer; transition:opacity .15s;
-  }
-  .pf-search-btn:hover { opacity:.88; }
-
-  /* Footer */
-  .pf-sidebar-footer {
-    margin-top:auto; padding:12px 14px;
-    font-size:11.5px; color:var(--muted);
-    border-top:1px solid var(--border);
-    display:flex; align-items:center; gap:6px;
-  }
-  .pf-sidebar-footer a { color:var(--muted); display:flex; align-items:center; gap:5px; }
-  .pf-sidebar-footer a:hover { color:var(--accent); text-decoration:none; }
-
-  /* ── CONTENT ── */
-  .pf-content { flex:1; overflow-y:auto; padding:28px 32px; }
-  .pf-results-title {
-    font-size:22px; font-weight:600; color:var(--text); margin-bottom:20px;
-  }
-  .pf-results-title span { color:var(--accent); }
-
-  /* ── TABLE ── */
-  .tbl-wrap { overflow-x:auto; border-radius:5px; border:1px solid var(--border); background:var(--card); }
-  table { width:100%; border-collapse:collapse; }
-  thead th {
-    background:#F0EBE1; padding:9px 12px; text-align:left;
-    font-size:11px; font-weight:600; text-transform:uppercase;
-    letter-spacing:.5px; color:var(--muted); border-bottom:1px solid var(--border);
-    white-space:nowrap;
-  }
-  tbody tr { border-bottom:1px solid var(--border); transition:background .1s; }
-  tbody tr:last-child { border-bottom:none; }
-  tbody tr:hover { background:var(--hover); }
-  td { padding:9px 12px; vertical-align:middle; font-size:12px; }
-  .mono { font-family:"SF Mono",Consolas,monospace; }
-  .muted { color:var(--muted); }
-  .center { text-align:center; }
-  .url-cell { max-width:280px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:monospace; }
-
-  /* ── BADGES ── */
-  .status-badge { display:inline-block; padding:2px 8px; border-radius:3px; font-size:11px; font-weight:700; color:#fff; }
-  .status-badge.s-ok       { background:var(--ok); }
-  .status-badge.s-warn     { background:var(--warn); }
-  .status-badge.s-error    { background:var(--warn); }
-  .status-badge.s-redirect { background:var(--redirect); }
-  .count-badge {
-    display:inline-flex; align-items:center; justify-content:center;
-    background:#E8E0D4; color:#5A5040; border-radius:10px;
-    font-size:11px; font-weight:600; min-width:20px; height:20px; padding:0 5px;
-  }
-  .count-badge.err { background:#c62828; color:#fff; }
-  .open-link {
-    background:#FDF3EA; border:1px solid #D4884A; padding:2px 9px;
-    border-radius:3px; font-size:11px; color:#9A5020; white-space:nowrap;
-  }
-  .open-link:hover { background:#F5E6D4; border-color:var(--accent); text-decoration:none; }
-
-  /* empty */
-  .pf-empty { text-align:center; padding:56px 24px; color:var(--muted); }
-  .pf-empty-icon { font-size:40px; margin-bottom:14px; }
-  .pf-empty-text { font-size:14px; }
-`;
-
-function methodBadge(method: string): string {
-    const colors: Record<string, string> = {
-        GET: "#2e7d32", POST: "#1565c0", PUT: "#e65100",
-        DELETE: "#c62828", PATCH: "#6a1b9a", OPTIONS: "#424242"
-    };
-    const bg = colors[method] ?? "#424242";
-    return `<span style="background:${bg};color:#fff;padding:2px 7px;border-radius:3px;font-size:11px;font-weight:700;">${method}</span>`;
+function statusBadge(code: number): string {
+    let style: string;
+    if (code >= 500 || code >= 400) {
+        style = "background:#fbe3e4; color:#c0392b";
+    }
+    else if (code >= 300) {
+        style = "background:#e3edf8; color:#1565c0";
+    }
+    else {
+        style = "background:#e8f4ec; color:#1a7a3c";
+    }
+    return `<span style="display:inline-block; padding:2px 7px; border-radius:4px; font-size:12px; font-weight:600; ${style}">
+                ${code}
+            </span>`;
 }
 
-function row(p: IRequestProfile): string {
-    const sqlCount = p.queries.length;
-    const logCount = p.logs.length;
-    const hasError = logCount > 0 && p.logs.some(l => l.level === "error" || l.level === "critical");
+function fmtDate(ts: number): string {
+    return new Date(ts).toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" });
+}
+function fmtClock(ts: number): string {
+    return new Date(ts).toLocaleTimeString("en-US", { hour:"2-digit", minute:"2-digit", second:"2-digit" });
+}
 
+function tableRow(p: IRequestProfile): string {
+    const ip: string = escapeHtml(p.request?.ip ?? "—");
+    const token: string = p.token.slice(0, 6);
     return `
-    <tr onclick="location.href='/_debug/profiler/${p.token}'" style="cursor:pointer;">
-      <td><span class="status-badge ${statusClass(p.statusCode)}">${p.statusCode}</span></td>
-      <td>${methodBadge(p.method)}</td>
-      <td class="url-cell mono" title="${escapeHtml(p.url)}">${escapeHtml(p.url)}</td>
-      <td class="mono">${formatDuration(p.duration)}</td>
-      <td class="mono">${formatMemory(p.memoryUsage)}</td>
-      <td class="center">${sqlCount > 0 ? `<span class="count-badge">${sqlCount}</span>` : `<span class="muted">—</span>`}</td>
-      <td class="center">${logCount > 0 ? `<span class="count-badge${hasError ? " err" : ""}">${logCount}</span>` : `<span class="muted">—</span>`}</td>
-      <td class="mono muted" style="font-size:11px;">${formatTimestamp(p.timestamp)}</td>
-      <td><a href="/_debug/profiler/${p.token}" class="open-link">Open</a></td>
+    <tr onclick="location.href='/_debug/profiler/${p.token}'" style="border-bottom:1px solid #ececec;cursor:pointer;" onmouseenter="this.style.background='#fafafa'" onmouseleave="this.style.background=''">
+      <td style="padding:8px 12px;">${statusBadge(p.statusCode)}</td>
+      <td style="padding:8px 12px; font-size: 12px; color:#333; ">${escapeHtml(p.method)}</td>
+      <td style="padding:8px 12px; font-size: 12px; color:#333; max-width:380px; overflow:hidden; text-overflow: ellipsis; white-space:nowrap;" title="${escapeHtml(p.url)}">${escapeHtml(p.url)}</td>
+      <td style="padding:8px 12px; font-size: 12px; color:#333; line-height:1.4;white-space:nowrap;">${fmtDate(p.timestamp)}<br><span style="color:#888;font-size:11px;">${fmtClock(p.timestamp)}</span></td>
+      <td style="padding:8px 12px;"><a href="/_debug/profiler/${p.token}" onclick="event.stopPropagation()" style="font-size:13px;color:#C87A3C;text-decoration:none;">${token}</a></td>
     </tr>`;
+}
+
+function tabHref(
+    tab: "requests" | "commands",
+    search: string, method: string, status: string, ip: string, token: string, from: string, until: string, limit: number
+): string {
+    const params = new URLSearchParams();
+    if (search) params.set("search", search);
+    if (method) params.set("method", method);
+    if (status) params.set("status", status);
+    if (ip) params.set("ip", ip);
+    if (token) params.set("token", token);
+    if (from) params.set("from", from);
+    if (until) params.set("until", until);
+    if (limit !== 10) params.set("limit", String(limit));
+    if (tab !== "requests") params.set("tab", tab);
+    const qs = params.toString();
+    return `/_debug/profiler${qs ? "?" + qs : ""}`;
+}
+
+function selectWrap(inner: string): string {
+    return `<div style="position:relative;">
+      ${inner}
+      <span style="position:absolute;right:9px;top:50%;transform:translateY(-50%);pointer-events:none;">${CHEVRON}</span>
+    </div>`;
 }
 
 function renderSidebar(
     profiles: IRequestProfile[],
-    search: string, method: string, status: string, limit: number
+    search: string,
+    method: string,
+    status: string,
+    ip: string,
+    token: string,
+    from: string,
+    until: string,
+    limit: number
 ): string {
-    const latest = profiles[0] ?? null;
-    const latestUrl = latest ? `/_debug/profiler/${latest.token}` : null;
+    const hasProfiles: boolean = profiles.length > 0;
+    const FIELD_STYLE  = `width:100%; height:36px; border:1px solid #d0d0d0; border-radius:3px; padding:0 10px; font-family:${FF}; font-size:14px; outline:none; box-sizing:border-box;`;
+    const LABEL_STYLE  = `display:block; font-size:13px; font-weight:600; color:#333; margin-bottom:8px;`;
+    const SELECT_STYLE: string = FIELD_STYLE + `appearance:none; -webkit-appearance:none; color:#333; background:#fff; cursor:pointer; padding-right:28px;`;
+    const DATE_STYLE: string = FIELD_STYLE + `color:#777;cursor:pointer;`;
 
-    const methodOpts = ["Any", "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"].map(m =>
+    const methodOpts: string = ["Any","GET","POST","PUT","DELETE","PATCH","OPTIONS"].map(m =>
         `<option value="${m === "Any" ? "" : m}"${method === (m === "Any" ? "" : m) ? " selected" : ""}>${m}</option>`
     ).join("");
-
-    const statusOpts = [
-        { v: "", l: "Any" },
-        { v: "2", l: "2xx Success" },
-        { v: "3", l: "3xx Redirect" },
-        { v: "4", l: "4xx Client Error" },
-        { v: "5", l: "5xx Server Error" },
-    ].map(({ v, l }) =>
-        `<option value="${v}"${status === v ? " selected" : ""}>${l}</option>`
-    ).join("");
-
-    const limitOpts = [10, 25, 50, 100].map(n =>
+    const limitOpts: string = [10,25,50,100].map((n: number): string =>
         `<option value="${n}"${limit === n ? " selected" : ""}>${n}</option>`
     ).join("");
 
     return `
-    <aside class="pf-sidebar">
-      <div class="pf-tabs">
-        <a class="pf-tab active" href="/_debug/profiler">Search profiles</a>
-        <a class="pf-tab${latestUrl ? "" : " disabled"}" href="${latestUrl ?? "#"}">Latest</a>
+    <!-- SIDEBAR CARD -->
+    <div>
+      <div style="background: #ffffff;
+          box-shadow: #e4e4e4 0px 0px 0px 1px;
+          border-radius: 5px;
+          padding:22px 22px 26px 22px;
+      ">
+
+        <!-- Search profiles | Latest -->
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px;">
+          <a href="/_debug/profiler" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2">
+             <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span style="font-size:13px; color:#888;">Search profiles</span>
+          </a>
+          <a href="/_debug/profiler/latest"
+           style="font-size:13px; color:#C87A3C;text-decoration:none;cursor:pointer;${!hasProfiles ? "opacity:.4;pointer-events:none;" : ""}">Latest</a>
+        </div>
+
+        <form method="get" action="/_debug/profiler">
+
+          <!-- IP -->
+          <label style="${LABEL_STYLE}">IP</label>
+          <input name="ip" value="${escapeHtml(ip)}" style="${FIELD_STYLE}margin-bottom:20px;">
+
+          <!-- Method + Status -->
+          <div style="display:flex;gap:16px;margin-bottom:20px;">
+            <div style="flex:1;">
+              <label style="${LABEL_STYLE}">Method</label>
+              ${selectWrap(`<select name="method" style="${SELECT_STYLE}">${methodOpts}</select>`)}
+            </div>
+            <div style="flex:1;">
+              <label style="${LABEL_STYLE}">Status</label>
+              <input name="status" value="${escapeHtml(status)}" style="${FIELD_STYLE}" placeholder="">
+            </div>
+          </div>
+
+          <!-- URL -->
+          <label style="${LABEL_STYLE}">URL</label>
+          <input name="search" value="${escapeHtml(search)}" style="${FIELD_STYLE}margin-bottom:20px;">
+
+          <!-- Token -->
+          <label style="${LABEL_STYLE}">Token</label>
+          <input name="token" value="${escapeHtml(token)}" style="width:128px;height:36px;border:1px solid #d0d0d0;border-radius:3px;padding:0 10px;font-family:${FF};font-size:14px;outline:none;margin-bottom:20px;">
+
+          <!-- From -->
+          <label style="${LABEL_STYLE}">From</label>
+          <div style="margin-bottom:20px;">
+            <input type="date" name="from" value="${escapeHtml(from)}" style="${DATE_STYLE}">
+          </div>
+
+          <!-- Until -->
+          <label style="${LABEL_STYLE}">Until</label>
+          <div style="margin-bottom:20px;">
+            <input type="date" name="until" value="${escapeHtml(until)}" style="${DATE_STYLE}">
+          </div>
+
+          <!-- Results + Search -->
+          <label style="${LABEL_STYLE}">Results</label>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="position:relative;width:74px;">
+              <select name="limit" style="${SELECT_STYLE}width:74px;">${limitOpts}</select>
+              <span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);pointer-events:none;">${CHEVRON}</span>
+            </div>
+            <button type="submit" style="height:36px;padding:0 18px;border:1px solid #cfcfcf;border-radius:3px;background:#f0f0f0;font-family:${FF};font-size:14px;color:#333;cursor:pointer;">Search</button>
+          </div>
+
+        </form>
       </div>
 
-      <form class="pf-filter" method="get" action="/_debug/profiler">
-        <div class="pf-field">
-          <label class="pf-label">URL</label>
-          <input type="text" name="search" class="pf-input" placeholder="contains…" value="${escapeHtml(search)}">
-        </div>
-        <div class="pf-row2">
-          <div class="pf-field">
-            <label class="pf-label">Method</label>
-            <select name="method" class="pf-select">${methodOpts}</select>
-          </div>
-          <div class="pf-field">
-            <label class="pf-label">Status</label>
-            <select name="status" class="pf-select">${statusOpts}</select>
-          </div>
-        </div>
-        <div class="pf-field">
-          <label class="pf-label">Max results</label>
-          <select name="limit" class="pf-select">${limitOpts}</select>
-        </div>
-        <button type="submit" class="pf-search-btn">Search</button>
-      </form>
-
-      <div class="pf-sidebar-footer">
-        ${ICON_SETTINGS}
-        <a href="/_debug/profiler">Profiler settings</a>
-      </div>
-    </aside>`;
+      <!-- Profiler settings -->
+      <a href="/_debug/profiler" style="display:flex;align-items:center;gap:8px;margin-top:18px;color:#777;text-decoration:none;font-size:15px;">
+        ${ICON_SETTINGS_LG}
+        Profiler settings
+      </a>
+    </div>`;
 }
 
 export function renderProfilerList(
     profiles: IRequestProfile[],
-    search = "",
-    method = "",
-    status = "",
-    limit = 50
+    search   = "",
+    method   = "",
+    status   = "",
+    limit    = 10,
+    ip       = "",
+    token    = "",
+    from     = "",
+    until    = "",
+    tab: "requests" | "commands" = "requests"
 ): string {
-    let filtered = profiles;
+    let filtered = [...profiles];
 
-    if (search) {
-        filtered = filtered.filter(p =>
-            p.url.toLowerCase().includes(search.toLowerCase()) ||
-            p.method.toLowerCase().includes(search.toLowerCase()) ||
-            String(p.statusCode).includes(search)
-        );
-    }
-    if (method) {
-        filtered = filtered.filter(p => p.method === method.toUpperCase());
-    }
+    if (ip) filtered = filtered.filter(p => (p.request?.ip ?? "").toLowerCase().includes(ip.toLowerCase()));
+    if (token) filtered = filtered.filter(p => p.token.toLowerCase().startsWith(token.toLowerCase()));
+    if (search) filtered = filtered.filter(p => p.url.toLowerCase().includes(search.toLowerCase()));
+    if (method) filtered = filtered.filter(p => p.method === method.toUpperCase());
     if (status) {
-        const prefix = parseInt(status, 10) * 100;
-        filtered = filtered.filter(p => p.statusCode >= prefix && p.statusCode < prefix + 100);
+        const code = parseInt(status, 10);
+        if (code >= 100) filtered = filtered.filter(p => p.statusCode === code);
+        else if (code >= 1 && code <= 9) { const prefix = code * 100; filtered = filtered.filter(p => p.statusCode >= prefix && p.statusCode < prefix + 100); }
     }
+    if (from) { const ts = new Date(from).getTime(); if (!isNaN(ts)) filtered = filtered.filter(p => p.timestamp >= ts); }
+    if (until){ const ts = new Date(until).getTime() + 86399999; if (!isNaN(ts)) filtered = filtered.filter(p => p.timestamp <= ts); }
     filtered = filtered.slice(0, limit);
 
-    const latest = profiles[0] ?? null;
-    const latestUrl = latest ? `/_debug/profiler/${latest.token}` : null;
+    const isFiltered = !!(search || method || status || ip || token || from || until);
 
-    const tableRows = filtered.length > 0
-        ? filtered.map(row).join("")
-        : `<tr><td colspan="9">
-             <div class="pf-empty">
-               <div class="pf-empty-icon">📭</div>
-               <div class="pf-empty-text">No requests found. Try adjusting your filters.</div>
-             </div>
+    const tableBody = filtered.length > 0
+        ? filtered.map(tableRow).join("")
+        : `<tr><td colspan="6" style="padding:30px 20px;text-align:center;color:#999;font-size:14px;">
+             No requests found. Try adjusting your filters.
            </td></tr>`;
+
+
+    const TH = `text-align:left;padding:10px 14px;font-size:13px;font-weight:600;color:#444;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;background:#f5f5f5;`;
 
     return `<!DOCTYPE html>
 <html lang="en">
@@ -282,59 +219,104 @@ export function renderProfilerList(
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OptiCoreJs Profiler</title>
-<style>${LIST_CSS}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; background:#fff; font-family:${FF}; color:#222; -webkit-font-smoothing:antialiased; }
+  a { color:#C87A3C; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  input:focus, select:focus { border-color:#C87A3C !important; outline:none; }
+</style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="pf-header">
-  <a href="/_debug/profiler" class="pf-logo">
-    <div class="pf-logo-icon">OP</div>
-    <div>
-      <div>OptiCoreJs Profiler</div>
-      <div class="pf-logo-sub">Web Debug Toolbar</div>
+<!-- ── HEADER ── -->
+<div style="max-width:2000px;margin:0 auto;padding:34px 200px 0 200px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+
+    <a href="/_debug/profiler" style="display:flex;align-items:center;gap:14px;cursor:pointer;text-decoration:none;">
+      <span style="font-weight: 900; 
+        font-size: 20px; 
+        color:#222; 
+        letter-spacing:-.2px; "
+      >OptiCoreJs Profiler</span>
+    </a>
+
+    <div style="position:relative; width:340px;">
+      <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);" width="15" height="15" 
+            viewBox="0 0 24 24" fill="none" 
+            stroke="#999" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input placeholder="search on opticorejs.com" style="width:100%; height:42px; padding:0 14px 0 36px; border:1px solid #d8d8d8; border-radius:4px; font-family:${FF}; font-size:12.5px;color:#555; outline:none;background:#fff;cursor:default;opacity:.6;">
     </div>
-  </a>
-  <div class="pf-spacer"></div>
-  <input type="text" class="pf-header-search" placeholder="Search on symfony.com…" disabled style="opacity:.4;cursor:default;">
-</header>
+  </div>
+</div>
 
-<!-- BODY -->
-<div class="pf-body">
+<!-- ── PROFILE SEARCH BANNER ── -->
+<div style="max-width:2000px; margin:15px auto 0 auto; padding:0 200px;">
+  <div style="background:#f5f5f5; border-radius:5px 5px 0 0; padding:16px 36px; border-top:4px solid #737373;">
+    <h2 style="margin:0; font-size:22px; font-weight:900; color:#3c3c3c;">Profile Search</h2>
+  </div>
+</div>
 
-  ${renderSidebar(profiles, search, method, status, limit)}
+<!-- ── MAIN GRID ── -->
+<div
+    style="max-width:2000px; margin: 20px auto 0 auto;padding:0 200px 80px 200px;display:grid;grid-template-columns:250px 1fr;gap:20px;">
 
-  <!-- CONTENT -->
-  <main class="pf-content">
-    <div class="pf-results-title">
-      <span>${filtered.length}</span> result${filtered.length !== 1 ? "s" : ""} found
+  ${renderSidebar(profiles, search, method, status, ip, token, from, until, limit)}
+
+  <!-- ── RESULTS ── -->
+  <div style="width: 100%">
+
+    <!-- Tabs -->
+    <div style="background:#fff;border:1px solid #e3e3e3;border-radius:6px;padding:18px 28px 0 28px;margin-bottom:26px;display:flex;align-items:center;gap:36px;">
+      <a href="${tabHref("requests", search, method, status, ip, token, from, until, limit)}" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;">
+        <span style="font-family:${FF};font-size:13.5px;font-weight:${tab === "requests" ? 700 : 500};color:${tab === "requests" ? "#222" : "#888"};cursor:pointer;">HTTP Requests</span>
+        <span style="display:block;width:100%;height:3px;background:${tab === "requests" ? "#C87A3C" : "transparent"};margin-top:14px;border-radius:2px 2px 0 0;"></span>
+      </a>
+      <a href="${tabHref("commands", search, method, status, ip, token, from, until, limit)}" style="text-decoration:none;display:flex;flex-direction:column;align-items:center;">
+        <span style="font-family:${FF};font-size:13.5px;font-weight:${tab === "commands" ? 700 : 500};color:${tab === "commands" ? "#222" : "#888"};cursor:pointer;">Console Commands</span>
+        <span style="display:block;width:100%;height:3px;background:${tab === "commands" ? "#C87A3C" : "transparent"};margin-top:14px;border-radius:2px 2px 0 0;"></span>
+      </a>
     </div>
 
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Method</th>
-            <th>URL</th>
-            <th>Time</th>
-            <th>Memory</th>
-            <th>SQL</th>
-            <th>Logs</th>
-            <th>Profiled at</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>${tableRows}</tbody>
-      </table>
-    </div>
-  </main>
+    ${tab === "commands" ? `
+    <h2 style="margin:0 0 22px 0;font-size:15px;font-weight:700;color:#222;">Console Commands</h2>
 
+    <div style="border:1px solid #e6e6e6;border-radius:4px;background:#f5f5f5;padding:70px 20px;text-align:center;">
+      <div style="font-size:13.5px;color:#999;">No console commands have been executed yet.</div>
+    </div>
+    ` : `
+    <h2 style="margin:0 0 22px 0;font-size:15px;font-weight:700;color:#222;">${filtered.length} result${filtered.length !== 1 ? "s" : ""} found</h2>
+
+    <table style="width:100%; border-collapse:collapse;">
+      <thead>
+        <tr style="background:#f5f5f5;">
+          <th style="${TH}border-radius:4px 0 0 0;">Status</th>
+          <th style="${TH}">Method</th>
+          <th style="${TH}">URL</th>
+          <th style="${TH}">Time</th>
+          <th style="${TH}border-radius:0 4px 0 0;">Token</th>
+        </tr>
+      </thead>
+      <tbody>${tableBody}</tbody>
+    </table>
+    `}
+
+  </div>
 </div>
 
 <script>
-  ${!search && !method && !status ? "setTimeout(() => location.reload(), 5000);" : ""}
-  document.addEventListener("keydown", e => { if (e.key === "r" && !e.ctrlKey && !e.metaKey) location.reload(); });
+  ${!isFiltered && tab === "requests" ? "setTimeout(()=>location.reload(),5000);" : ""}
+  document.addEventListener("keydown", e=>{
+    if(e.key==="r" && !e.ctrlKey && !e.metaKey && document.activeElement.tagName!=="INPUT"){
+        location.reload();
+    }
+  });
 </script>
 </body>
 </html>`;

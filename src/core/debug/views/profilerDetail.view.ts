@@ -9,129 +9,31 @@ import {
 
 type Panel = "request" | "performance" | "logs" | "routing" | "configuration" | "database" | "exception" | "routes";
 
+const FF = `'Montserrat',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif`;
+
+const LOGO_SVG = `<svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm6.7 9.46c-.07 1.83-1.07 2.78-2.05 2.75-.86-.03-1.4-.5-1.34-1.18.05-.62.45-.78.78-1.18.25-.32.31-.58.21-.9-.13-.42-.55-.62-1.1-.6-.93.02-1.55.62-1.49 1.5.04.55.43 1.12.86 1.86l.37.62c.42.83.66 1.36.7 2.04.08 1.27-.78 2.36-2.43 2.41-1.13.04-2.1-.44-2.27-1.26-.12-.57.18-.92.59-1.05.5-.13.86.13.96.65.1.5-.04.66-.04.92.02.42.46.55.92.54.71-.02 1.07-.5 1.05-1.11-.02-.5-.27-.85-.85-1.78l-.31-.5c-.61-1-1.04-1.77-1.07-2.62-.05-1.51 1.05-2.83 3.1-2.9 1.55-.05 2.78.66 2.74 1.56z" fill="#fff"/></svg>`;
+
+const ICON_SETTINGS_LG = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>`;
+
 const BASE_CSS = `
-  :root {
-    --bg:#F5EFE0; --sidebar-bg:#FFFCF7; --content-bg:#F5EFE0;
-    --border:#E0D8CA; --header-bg:#FFFCF7;
-    --text:#1A1A14; --muted:#7A7268; --link:#C87A3C; --accent:#C87A3C;
-    --hover:#FDF3EA; --active-bg:#FDF3EA; --active-border:#C87A3C;
-    --ok-bg:#EBF5EF; --ok-text:#2D6A4A;
-    --warn-bg:#FDECEA; --warn-text:#C0392B;
-    --info-bg:#FDF3EA; --info-text:#9A5020;
-    --sidebar-w:220px; --header-h:100px;
-  }
   * { box-sizing:border-box; margin:0; padding:0; }
-  html, body { height:100%; background:var(--bg); color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,monospace; font-size:13px; line-height:1.5; }
-  a { color:var(--link); text-decoration:none; }
+  html, body { background:#fff; color:#222; font-family:${FF}; font-size:13px; line-height:1.5; -webkit-font-smoothing:antialiased; }
+  a { color:#C87A3C; text-decoration:none; }
   a:hover { text-decoration:underline; }
   code, pre { font-family:"SF Mono",Consolas,"Liberation Mono",monospace; }
 
-  /* HEADER */
-  .pf-header {
-    position:sticky; top:0; z-index:50;
-    background:var(--header-bg);
-    border-bottom:1px solid var(--border);
-    padding:14px 24px 0;
-    box-shadow:0 2px 10px rgba(200,122,60,.08);
+  /* keep panel inner styles using CSS vars for convenience */
+  :root {
+    --bg:#fff; --sidebar-bg:#fff; --content-bg:#fff;
+    --border:#e3e3e3; --text:#222; --muted:#888; --accent:#C87A3C;
+    --hover:#fafafa; --active-bg:#FDF3EA; --active-border:#C87A3C;
+    --ok-bg:#e8f4ec; --ok-text:#1a7a3c;
+    --warn-bg:#fbe3e4; --warn-text:#c0392b;
+    --info-bg:#FDF3EA; --info-text:#9A5020;
   }
-  .pf-header-top {
-    display:flex; align-items:center; gap:14px; margin-bottom:12px;
-  }
-  .pf-logo {
-    display:flex; align-items:center; gap:8px; font-weight:700; color:var(--text);
-  }
-  .pf-logo-icon {
-    width:24px; height:24px; background:#C87A3C;
-    border-radius:5px; display:flex; align-items:center; justify-content:center;
-    font-size:10px; font-weight:900; color:#fff; flex-shrink:0;
-  }
-  .pf-header-title { font-size:13px; color:var(--muted); }
-  .pf-spacer { flex:1; }
-  .pf-search {
-    background:#F0EBE1; border:1px solid var(--border); color:var(--text);
-    padding:5px 12px; border-radius:4px; font-size:12px; width:200px; outline:none;
-  }
-  .pf-search:focus { border-color:#C87A3C; }
-  .pf-search::placeholder { color:#A09888; }
-  .pf-back { background:#FDF3EA; border:1px solid #D4884A; color:#9A5020; padding:5px 12px; border-radius:4px; font-size:12px; }
-  .pf-back:hover { background:#F5E6D4; border-color:#C87A3C; text-decoration:none; }
 
-  /* STATUS BAR */
-  .pf-status-bar {
-    display:flex; align-items:center; gap:12px;
-    padding:10px 0;
-    border-top:1px solid var(--border);
-    font-size:12px;
-  }
-  .pf-status-pill {
-    padding:4px 12px; border-radius:4px;
-    font-weight:700; font-size:12px; color:#fff;
-  }
-  .pf-status-pill.s-ok       { background:#2D6A4A; border:1px solid #4A9A6A; }
-  .pf-status-pill.s-warn     { background:#C0392B; border:1px solid #E05040; }
-  .pf-status-pill.s-error    { background:#C0392B; border:1px solid #E05040; }
-  .pf-status-pill.s-redirect { background:#1565c0; border:1px solid #2980b9; }
-  .pf-status-method {
-    font-family:monospace; font-size:12px; font-weight:700;
-    color:#fff; background:#6A5A48; padding:4px 8px; border-radius:3px;
-  }
-  .pf-status-url { font-family:monospace; font-size:13px; color:var(--text); }
-  .pf-status-meta { color:var(--muted); font-size:11px; margin-left:auto; white-space:nowrap; }
-
-  /* LAYOUT */
-  .pf-body { display:flex; height:calc(100vh - var(--header-h)); }
-
-  /* SIDEBAR */
-  .pf-sidebar {
-    width:var(--sidebar-w); flex-shrink:0;
-    background:var(--sidebar-bg);
-    border-right:1px solid var(--border);
-    overflow-y:auto;
-    display:flex; flex-direction:column;
-  }
-  .pf-sidebar-section { padding:8px 0; border-bottom:1px solid var(--border); }
-  .pf-sidebar-item {
-    display:flex; align-items:center; gap:8px;
-    padding:9px 16px;
-    color:var(--muted);
-    text-decoration:none;
-    font-size:12.5px;
-    transition:all .1s;
-    border-left:3px solid transparent;
-  }
-  .pf-sidebar-item svg { flex-shrink:0; }
-  .pf-sidebar-item:hover { background:var(--hover); color:var(--text); text-decoration:none; border-left-color:#C8B8A4; }
-  .pf-sidebar-item.active { background:var(--active-bg); color:#7A3A10; border-left-color:var(--active-border); font-weight:600; }
-  .pf-sidebar-badge {
-    margin-left:auto; background:#C0392B; color:#fff;
-    border-radius:10px; font-size:10px; font-weight:700;
-    min-width:18px; height:18px; display:inline-flex;
-    align-items:center; justify-content:center; padding:0 4px;
-  }
-  .pf-sidebar-badge.ok { background:#2D6A4A; }
-  .pf-sidebar-badge.warn { background:#C87A3C; }
-  .pf-sidebar-footer {
-    margin-top:auto; padding:12px 14px;
-    font-size:11.5px; color:var(--muted); border-top:1px solid var(--border);
-    display:flex; align-items:center; gap:6px;
-  }
-  .pf-sidebar-footer a { color:var(--muted); display:flex; align-items:center; gap:5px; }
-  .pf-sidebar-footer a:hover { color:#C87A3C; text-decoration:none; }
-
-  /* SIDEBAR TABS */
-  .pf-sidebar-tabs { display:flex; border-bottom:1px solid var(--border); flex-shrink:0; }
-  .pf-sidebar-tab {
-    flex:1; padding:10px 6px; text-align:center;
-    font-size:11.5px; color:var(--muted); text-decoration:none;
-    border-bottom:2px solid transparent; transition:all .12s;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-  }
-  .pf-sidebar-tab:hover { background:var(--hover); color:var(--text); text-decoration:none; }
-  .pf-sidebar-tab--active { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; background:#F8F2E8; }
-
-  /* CONTENT */
-  .pf-content { flex:1; overflow-y:auto; padding:24px; }
+  /* CONTENT area */
+  .pf-content { flex:1; overflow-y:auto; padding:36px 40px; }
 
   /* PANEL */
   .panel-title { font-size:17px; font-weight:600; color:var(--text); margin-bottom:18px; display:flex; align-items:center; gap:8px; }
@@ -260,7 +162,7 @@ const BASE_CSS = `
     letter-spacing:.5px; color:var(--muted); margin-bottom:10px;
   }
   .perf-metric-value { font-size:30px; font-weight:700; color:var(--text); font-family:monospace; }
-  .perf-metric-unit { font-size:16px; font-weight:400; color:var(--muted); }
+  .perf-metric-unit { font-size:13px; font-weight:400; color:var(--muted); }
 
   /* ── EXECUTION TIMELINE ── */
   .tl-threshold-row {
@@ -339,15 +241,21 @@ const BASE_CSS = `
   .route-filter-btn:hover, .route-filter-btn.active {
     background:var(--hover); border-color:var(--accent); color:var(--text);
   }
-</style>`;
+`;
 
-function sidebarItem(icon: string, label: string, panel: Panel, active: Panel, badge?: number, badgeClass?: string): string {
+function sidebarItem(icon: string, label: string, panel: Panel, active: Panel, badge?: number, badgeIsError = false): string {
     const isActive = panel === active;
     const badgeHtml = badge != null && badge > 0
-        ? `<span class="pf-sidebar-badge ${badgeClass ?? ""}">${badge}</span>`
+        ? `<span style="background:${badgeIsError ? "#fbe3e4" : "#e8f4ec"};color:${badgeIsError ? "#c0392b" : "#1a7a3c"};border-radius:4px;padding:2px 9px;font-size:13px;font-weight:600;">${badge}</span>`
         : "";
-    return `<a href="?panel=${panel}" class="pf-sidebar-item${isActive ? " active" : ""}">
-        ${icon} ${label}${badgeHtml}
+    const activeCss = isActive
+        ? `border-left:4px solid #C87A3C;background:#FDF3EA;color:#C87A3C;font-weight:600;padding-left:20px;`
+        : `padding-left:24px;color:#555;border-left:4px solid transparent;`;
+    const flex = badge != null && badge > 0 ? "justify-content:space-between;" : "";
+    return `<a href="?panel=${panel}" style="display:flex;align-items:center;gap:14px;${flex}padding:16px 20px;${activeCss}font-size:16px;text-decoration:none;" onmouseenter="if(!this.classList.contains('act'))this.style.background='#fafafa'" onmouseleave="if(!this.classList.contains('act'))this.style.background=''">
+        ${badge != null && badge > 0
+            ? `<span style="display:flex;align-items:center;gap:14px;">${icon} ${label}</span>${badgeHtml}`
+            : `${icon} ${label}`}
     </a>`;
 }
 
@@ -371,7 +279,7 @@ function renderHeaders(headers: Record<string, string>): string {
 
 function renderKeyValue(obj: Record<string, unknown>, emptyLabel = "None"): string {
     const entries = Object.entries(obj);
-    if (entries.length === 0) return `<div style="color:#555;font-style:italic;padding:10px 0;font-size:12px;">${emptyLabel}</div>`;
+    if (entries.length === 0) return `<div style="color:#555;font-style:italic;padding:10px 0;font-size:13px;">${emptyLabel}</div>`;
     return `<table class="data-table">
     <tbody>${entries.map(([k, v]) =>
         `<tr><td class="key-col">${escapeHtml(k)}</td><td class="val-col">${escapeHtml(typeof v === "object" ? JSON.stringify(v, null, 2) : String(v))}</td></tr>`
@@ -499,7 +407,7 @@ function panelPerformance(profile: IRequestProfile): string {
         : `<div class="tl-empty">No timing events recorded for this request.</div>`;
 
     return `
-    <div class="panel-title" style="font-size:18px;margin-bottom:22px;">Performance metrics</div>
+    <div class="panel-title">Performance metrics</div>
 
     <div class="perf-metrics-row">
       <div class="perf-metric">
@@ -617,7 +525,6 @@ function panelLogs(profile: IRequestProfile): string {
 
     if (logs.length === 0) {
         return `
-        <div class="panel-title">${ICON_LOG} Logs</div>
         <div class="empty-state">
           <div class="empty-icon">📋</div>
           <div class="empty-text">No log entries were recorded for this request.</div>
@@ -627,36 +534,124 @@ function panelLogs(profile: IRequestProfile): string {
         </div>`;
     }
 
-    const countByLevel: Record<string, number> = {};
-    logs.forEach(l => { countByLevel[l.level] = (countByLevel[l.level] ?? 0) + 1; });
+    const errCount  = logs.filter(l => l.level === "error" || l.level === "critical").length;
+    const warnCount = logs.filter(l => l.level === "warning").length;
+    const deprCount = logs.filter(l => (l.level as string) === "deprecation").length;
+
+    function tabBadge(count: number, cls: string): string {
+        return count > 0
+            ? `<span class="log-tab-badge ${cls}">${count}</span>`
+            : `<span class="log-tab-zero">0</span>`;
+    }
+
+    function levelCls(level: string): string {
+        if (level === "critical") return "log-error";
+        if (level === "deprecation") return "log-deprecation";
+        return `log-${level}`;
+    }
+
+    function rowBorderCls(level: string): string {
+        if (level === "error" || level === "critical") return "log-row-error";
+        if (level === "warning") return "log-row-warning";
+        if (level === "deprecation") return "log-row-deprecation";
+        return "";
+    }
+
+    function logType(level: string): string {
+        if (level === "error" || level === "critical") return "error";
+        if (level === "warning") return "warning";
+        if (level === "deprecation") return "deprecation";
+        return "other";
+    }
+
+    const rows = logs.map((l: ILogEntry, i: number) => {
+        const ctx = l.context ?? {};
+        const hasCtx = Object.keys(ctx).length > 0;
+        const hasStack = hasCtx && typeof ctx.stack === "string" && (ctx.stack as string).length > 0;
+        const source = hasCtx && typeof ctx.source === "string" ? ctx.source as string : "";
+
+        const ctxId   = `lctx${i}`;
+        const stackId = `lstk${i}`;
+        const ms = String(l.timestamp % 1000).padStart(3, "0");
+        const timeStr = new Date(l.timestamp).toLocaleTimeString("en-US", {
+            hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
+        }) + "." + ms;
+
+        let extra = "";
+        if (hasStack) {
+            const stack = ctx.stack as string;
+            const ctxWithoutStack: Record<string, unknown> = {};
+            for (const [k, v] of Object.entries(ctx)) {
+                if (k !== "stack") ctxWithoutStack[k] = v;
+            }
+            const hasOtherCtx = Object.keys(ctxWithoutStack).length > 0;
+            extra = `
+            <div class="log-meta-links">
+              ${hasOtherCtx ? `<button class="log-ctx-btn" onclick="toggleLogCtx('${ctxId}', this)">Show context</button>` : ""}
+              <button class="log-ctx-btn" onclick="toggleLogCtx('${stackId}', this)">Show trace</button>
+            </div>
+            ${hasOtherCtx ? `<pre id="${ctxId}" class="log-context-detail">${escapeHtml(JSON.stringify(ctxWithoutStack, null, 2))}</pre>` : ""}
+            <pre id="${stackId}" class="log-context-detail log-stack-trace">${escapeHtml(stack)}</pre>`;
+        } else if (hasCtx) {
+            extra = `
+            <div class="log-meta-links">
+              <button class="log-ctx-btn" onclick="toggleLogCtx('${ctxId}', this)">Show context</button>
+            </div>
+            <pre id="${ctxId}" class="log-context-detail">${escapeHtml(JSON.stringify(ctx, null, 2))}</pre>`;
+        }
+
+        return `
+        <tr class="log-row ${rowBorderCls(l.level)}" data-ltype="${logType(l.level)}">
+          <td class="log-td-time">
+            ${escapeHtml(timeStr)}<br>
+            <span class="log-level ${levelCls(l.level)}">${escapeHtml(l.level)}</span>
+          </td>
+          <td class="log-td-msg">
+            <span class="log-msg-text">${escapeHtml(l.message)}</span>
+            ${source ? `<span class="log-source-ref">${escapeHtml(source)}</span>` : ""}
+            ${extra}
+          </td>
+        </tr>`;
+    }).join("");
 
     return `
-    <div class="panel-title">${ICON_LOG} Logs</div>
-
-    <div class="stats-grid">
-      ${Object.entries(countByLevel).map(([level, count]) =>
-        `<div class="stat-card">
-          <div class="stat-value">${count}</div>
-          <div class="stat-label">${level}</div>
-        </div>`
-      ).join("")}
+    <div class="log-tabs" id="log-tabs">
+      <button class="log-tab active" data-ltab="all">All messages</button>
+      <button class="log-tab" data-ltab="error">Errors ${tabBadge(errCount, "log-tab-err")}</button>
+      <button class="log-tab" data-ltab="deprecation">Deprecations ${tabBadge(deprCount, "log-tab-depr")}</button>
+      <button class="log-tab" data-ltab="warning">Warnings ${tabBadge(warnCount, "log-tab-warn")}</button>
     </div>
 
-    <div class="table-wrap">
-      <div class="table-wrap-title">${ICON_LOG} Log Entries <span class="badge badge-info">${logs.length}</span></div>
-      ${logs.map((l: ILogEntry) => `
-        <div class="log-entry">
-          <span class="log-level log-${l.level}">${l.level}</span>
-          <div style="flex:1;">
-            <div class="log-msg">${escapeHtml(l.message)}</div>
-            ${l.context && Object.keys(l.context).length > 0
-                ? `<div class="log-context">${escapeHtml(JSON.stringify(l.context, null, 2))}</div>`
-                : ""}
-          </div>
-          <span class="log-time">${new Date(l.timestamp).toLocaleTimeString()}</span>
-        </div>`
-      ).join("")}
-    </div>`;
+    <div class="log-table-wrap">
+      <table class="log-table">
+        <thead><tr><th>Time</th><th>Message</th></tr></thead>
+        <tbody id="log-tbody">${rows}</tbody>
+      </table>
+    </div>
+
+    <script>
+    (function(){
+      var tabs = document.querySelectorAll('#log-tabs .log-tab');
+      var rows = document.querySelectorAll('#log-tbody .log-row');
+      tabs.forEach(function(tab){
+        tab.addEventListener('click', function(){
+          var f = this.getAttribute('data-ltab');
+          tabs.forEach(function(t){ t.classList.remove('active'); });
+          this.classList.add('active');
+          rows.forEach(function(row){
+            row.style.display = (f === 'all' || row.getAttribute('data-ltype') === f) ? '' : 'none';
+          });
+        });
+      });
+    })();
+    function toggleLogCtx(id, btn){
+      var el = document.getElementById(id);
+      if(!el) return;
+      var shown = el.style.display === 'block';
+      el.style.display = shown ? 'none' : 'block';
+      btn.textContent = shown ? 'Show context' : 'Hide context';
+    }
+    </script>`;
 }
 
 function panelRouting(profile: IRequestProfile): string {
@@ -760,7 +755,7 @@ function panelException(profile: IRequestProfile): string {
     </div>` : `
     ${isError || isNotFound ? `
     <div style="background:var(--warn-bg);border:1px solid #c62828;border-radius:6px;padding:16px 20px;margin-bottom:20px;">
-      <div style="font-weight:700;font-size:14px;color:#e74c3c;margin-bottom:6px;">
+      <div style="font-weight:700;font-size:13px;color:#e74c3c;margin-bottom:6px;">
         ${ICON_EXCEPTION} HTTP ${profile.statusCode} — ${escapeHtml(profile.statusMessage)}
       </div>
       <div style="font-family:monospace;font-size:12px;color:#999;">
@@ -769,8 +764,8 @@ function panelException(profile: IRequestProfile): string {
     </div>` : ""}
     ${errLogs.map(l => `
     <div style="background:#1e1a1a;border:1px solid #c62828;border-radius:6px;padding:14px 18px;margin-bottom:12px;">
-      <div style="font-weight:700;font-size:13px;color:#e74c3c;margin-bottom:8px;">${escapeHtml(l.level.toUpperCase())}</div>
-      <pre style="font-size:13px;color:#e0e0e0;white-space:pre-wrap;">${escapeHtml(l.message)}</pre>
+      <div style="font-weight:700;font-size:13px;color:#e74c3c;margin-bottom:6px;">${escapeHtml(l.level.toUpperCase())}</div>
+      <pre style="font-size:12px;color:#e0e0e0;white-space:pre-wrap;">${escapeHtml(l.message)}</pre>
       ${l.context ? `<pre class="json-pre" style="margin-top:10px;">${escapeHtml(JSON.stringify(l.context, null, 2))}</pre>` : ""}
     </div>`).join("")}
     `}`;
@@ -779,7 +774,7 @@ function panelException(profile: IRequestProfile): string {
 function panelRoutes(routes: IRegisteredRoute[]): string {
     if (routes.length === 0) {
         return `
-        <div class="panel-title" style="font-size:18px;margin-bottom:22px;">${ICON_MAP} Routes</div>
+        <div class="panel-title">${ICON_MAP} Routes</div>
         <div class="empty-state">
           <div class="empty-icon">🗺</div>
           <div class="empty-text">No routes found. Routes are collected after the server starts.</div>
@@ -802,7 +797,7 @@ function panelRoutes(routes: IRegisteredRoute[]): string {
     }
 
     function renderTable(rows: IRegisteredRoute[]): string {
-        if (rows.length === 0) return `<div style="padding:16px;color:var(--muted);font-size:12px;text-align:center;">None</div>`;
+        if (rows.length === 0) return `<div style="padding:14px;color:var(--muted);font-size:12px;text-align:center;">None</div>`;
         return `<table class="data-table">
           <thead><tr><th>Method</th><th>Path</th><th style="text-align:center;">Middlewares</th></tr></thead>
           <tbody>
@@ -817,7 +812,7 @@ function panelRoutes(routes: IRegisteredRoute[]): string {
     }
 
     return `
-    <div class="panel-title" style="font-size:18px;margin-bottom:22px;">${ICON_MAP} Routes</div>
+    <div class="panel-title">${ICON_MAP} Routes</div>
 
     <div class="routes-summary">
       <div class="routes-summary-item">
@@ -849,9 +844,11 @@ function panelRoutes(routes: IRegisteredRoute[]): string {
 }
 
 export function renderProfilerDetail(profile: IRequestProfile, panel: Panel = "request", appRoutes: IRegisteredRoute[] = []): string {
-    const logErrors = profile.logs.filter(l => l.level === "error" || l.level === "critical").length;
+    const logErrors   = profile.logs.filter(l => l.level === "error" || l.level === "critical").length;
     const logWarnings = profile.logs.filter(l => l.level === "warning").length;
     const hasException = profile.statusCode >= 400 || logErrors > 0;
+    const isError = profile.statusCode >= 500 || profile.statusCode >= 400;
+    const token6  = profile.token.slice(0, 6);
 
     let panelContent: string;
     switch (panel) {
@@ -865,82 +862,262 @@ export function renderProfilerDetail(profile: IRequestProfile, panel: Panel = "r
         default:              panelContent = panelRequest(profile);
     }
 
-    const token8 = profile.token.slice(0, 8);
+    // Banner color by status
+    let bannerBg: string, bannerBorder: string, bannerCode: string, bannerMsg: string;
+    if (profile.statusCode >= 500) {
+        bannerBg="#fcebec"; bannerBorder="#e1142d"; bannerCode="#e1142d"; bannerMsg="#d98a8f";
+    } else if (profile.statusCode >= 400) {
+        bannerBg="#fcebec"; bannerBorder="#e1142d"; bannerCode="#e1142d"; bannerMsg="#d98a8f";
+    } else if (profile.statusCode >= 300) {
+        bannerBg="#e3edf8"; bannerBorder="#1565c0"; bannerCode="#1565c0"; bannerMsg="#6a9fd8";
+    } else {
+        bannerBg="#e8f4ec"; bannerBorder="#2e7d32"; bannerCode="#2e7d32"; bannerMsg="#6aaa6a";
+    }
+
+    const methodBadge = `<span style="display:inline-block;padding:7px 13px;border:1px solid #d7d7d7;border-radius:4px;font-size:18px;font-weight:600;color:#555;background:#f5f5f5;">${escapeHtml(profile.method)}</span>`;
+
+    const fmtDate = new Date(profile.timestamp).toLocaleDateString("en-US", { month:"long", day:"numeric", year:"numeric" });
+    const fmtTime = new Date(profile.timestamp).toLocaleTimeString("en-US", { hour:"2-digit", minute:"2-digit", second:"2-digit" });
+
+    const panelLabel: Record<Panel, string> = {
+        request: "Request / Response", performance: "Performance",
+        logs: "Log Messages", routing: "Routing", configuration: "Configuration",
+        database: "Database", exception: "Exception", routes: "Routes",
+    };
 
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OptiCoreJs Profiler — ${profile.method} ${profile.url}</title>
-${BASE_CSS}
+<title>OptiCoreJs Profiler — ${profile.method} ${escapeHtml(profile.url)}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>${BASE_CSS}
+  /* Panel inner styles */
+  .panel-title { font-size:18px; font-weight:600; color:#333; margin-bottom:18px; }
+  .panel-section { margin-bottom:22px; }
+  .panel-section-title { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:#888; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+  .panel-section-title::after { content:""; flex:1; height:1px; background:#e6e6e6; }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-bottom:16px; }
+  .card { background:#f8f8f8; border:1px solid var(--border); border-radius:4px; padding:12px 16px; }
+  .card-title { font-size:11px; color:var(--muted); margin-bottom:4px; font-weight:600; text-transform:uppercase; letter-spacing:.4px; }
+  .card-value { font-size:13px; color:#333; }
+  .card-empty { color:var(--muted); font-style:italic; font-size:13px; }
+  .data-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .data-table th { background:#f5f5f5; padding:9px 13px; text-align:left; font-size:11px; font-weight:700; color:#666; border-bottom:1px solid #e6e6e6; text-transform:uppercase; letter-spacing:.4px; }
+  .data-table td { padding:9px 13px; border-bottom:1px solid #ececec; vertical-align:top; }
+  .data-table tr:hover td { background:#fafafa; }
+  .data-table tr:last-child td { border-bottom:none; }
+  .data-table .key-col { color:#555; font-family:monospace; font-size:12px; white-space:nowrap; width:240px; }
+  .data-table .val-col { color:#333; font-family:monospace; font-size:12px; word-break:break-all; }
+  .table-wrap { background:#fff; border:1px solid #e6e6e6; border-radius:4px; overflow:hidden; margin-bottom:18px; }
+  .table-wrap-title { background:#f5f5f5; padding:10px 14px; font-size:13px; font-weight:600; color:#444; border-bottom:1px solid #e6e6e6; display:flex; align-items:center; gap:10px; }
+  .table-search { margin-left:auto; background:#fff; border:1px solid #d0d0d0; color:#333; padding:3px 8px; border-radius:3px; font-size:12px; outline:none; font-family:${FF}; }
+  .table-search:focus { border-color:#C87A3C; }
+  .sql-block { padding:11px 14px; border-bottom:1px solid #ececec; }
+  .sql-block:last-child { border-bottom:none; }
+  .sql-meta { display:flex; gap:8px; margin-bottom:5px; align-items:center; }
+  .sql-type { font-size:10px; font-weight:700; padding:2px 6px; border-radius:3px; text-transform:uppercase; }
+  .sql-type-SELECT{background:#FDF3EA;color:#9A5020} .sql-type-INSERT{background:#e8f4ec;color:#1a7a3c}
+  .sql-type-UPDATE{background:#FEF9E7;color:#7D6608} .sql-type-DELETE{background:#fbe3e4;color:#c0392b} .sql-type-OTHER{background:#f0f0f0;color:#666}
+  .sql-duration { color:var(--muted); font-size:11px; margin-left:auto; }
+  .sql-code { background:#f8f8f8; border:1px solid #e6e6e6; border-radius:4px; padding:10px 12px; font-family:monospace; font-size:12px; color:#333; white-space:pre-wrap; word-break:break-all; line-height:1.6; }
+  .log-entry { padding:9px 13px; border-bottom:1px solid #ececec; display:flex; gap:10px; align-items:flex-start; }
+  .log-entry:last-child { border-bottom:none; }
+  .log-level { font-size:10px; font-weight:700; padding:2px 6px; border-radius:3px; text-transform:uppercase; white-space:nowrap; flex-shrink:0; }
+  .log-debug{background:#f0f0f0;color:#666} .log-info{background:#FDF3EA;color:#9A5020}
+  .log-warning{background:#FEF9E7;color:#7D6608} .log-error{background:#fbe3e4;color:#c0392b} .log-critical{background:#fbe3e4;color:#7F1010}
+  .log-msg { color:#333; font-size:13px; flex:1; word-break:break-word; }
+  .log-time { color:var(--muted); font-size:11px; white-space:nowrap; font-family:monospace; }
+  .log-context { margin-top:5px; font-family:monospace; font-size:11px; color:#555; background:#f5f5f5; padding:6px 8px; border-radius:3px; }
+  .perf-metrics-row { display:flex; border:1px solid #e6e6e6; border-radius:6px; overflow:hidden; margin-bottom:18px; }
+  .perf-metric { flex:1; padding:16px 20px; border-right:1px solid #e6e6e6; text-align:center; }
+  .perf-metric:last-child { border-right:none; }
+  .perf-metric-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin-bottom:6px; }
+  .perf-metric-value { font-size:22px; font-weight:700; color:#222; font-family:monospace; }
+  .perf-metric-unit { font-size:13px; font-weight:400; color:var(--muted); }
+  .tl-threshold-row { display:flex; align-items:center; gap:8px; font-size:12px; color:#333; margin-bottom:10px; flex-wrap:wrap; }
+  .tl-threshold-input { width:52px; padding:3px 7px; border:1px solid #d0d0d0; border-radius:3px; background:#fff; color:#333; font-size:12px; outline:none; text-align:center; font-family:${FF}; }
+  .tl-threshold-hint { color:var(--muted); font-size:12px; }
+  .tl-legend { display:flex; align-items:center; gap:12px; font-size:12px; color:var(--muted); margin-bottom:10px; }
+  .tl-legend-item { display:flex; align-items:center; gap:5px; }
+  .tl-legend-dot { width:10px; height:10px; border-radius:2px; display:inline-block; }
+  .tl-chart { background:#fff; border:1px solid #e6e6e6; border-radius:4px; overflow:hidden; }
+  .tl-row { display:flex; align-items:center; gap:12px; padding:8px 13px; border-bottom:1px solid #ececec; }
+  .tl-row:last-child { border-bottom:none; }
+  .tl-name { width:200px; flex-shrink:0; font-size:12px; color:#333; font-family:monospace; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .tl-track { flex:1; height:18px; background:#f0f0f0; border-radius:3px; overflow:hidden; position:relative; }
+  .tl-bar { height:100%; min-width:4px; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px; }
+  .tl-bar-label { color:#fff; font-size:10px; font-weight:600; white-space:nowrap; }
+  .tl-info { width:75px; font-size:11px; color:var(--muted); font-family:monospace; flex-shrink:0; text-align:right; }
+  .tl-empty { color:var(--muted); font-size:13px; padding:24px; text-align:center; }
+  .routes-summary { display:flex; border:1px solid #e6e6e6; border-radius:6px; overflow:hidden; margin-bottom:18px; }
+  .routes-summary-item { flex:1; padding:12px 16px; border-right:1px solid #e6e6e6; text-align:center; }
+  .routes-summary-item:last-child { border-right:none; }
+  .routes-summary-value { font-size:22px; font-weight:700; color:#222; font-family:monospace; }
+  .routes-summary-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin-top:4px; }
+  .route-method { display:inline-block; padding:2px 7px; border-radius:3px; font-size:11px; font-weight:700; color:#fff; font-family:monospace; }
+  .rm-GET{background:#2e7d32} .rm-POST{background:#1565c0} .rm-PUT{background:#e65100} .rm-DELETE{background:#c62828} .rm-PATCH{background:#6a1b9a} .rm-ALL{background:#424242} .rm-OPTIONS{background:#37474f}
+  .route-path { font-family:monospace; font-size:13px; color:#333; }
+  .route-path .param { color:#C87A3C; }
+  .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:16px; }
+  .stat-card { background:#f8f8f8; border:1px solid #e6e6e6; border-radius:4px; padding:12px 16px; text-align:center; }
+  .stat-value { font-size:20px; font-weight:700; color:#222; margin-bottom:3px; }
+  .stat-label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+  .badge { display:inline-block; padding:2px 7px; border-radius:4px; font-size:11px; font-weight:600; }
+  .badge-ok   { background:#e8f4ec; color:#1a7a3c; }
+  .badge-warn { background:#fbe3e4; color:#c0392b; }
+  .badge-info { background:#FDF3EA; color:#9A5020; }
+  .badge-muted{ background:#f0f0f0; color:#666; }
+  .empty-state { text-align:center; padding:40px 24px; color:var(--muted); }
+  .empty-icon { font-size:28px; margin-bottom:8px; }
+  .empty-text { font-size:13px; }
+  .json-pre { background:#f8f8f8; border:1px solid #e6e6e6; border-radius:4px; padding:12px; font-size:12px; color:#333; font-family:monospace; white-space:pre-wrap; word-break:break-all; max-height:400px; overflow:auto; line-height:1.6; }
+  hr.divider { border:none; border-top:1px solid #e6e6e6; margin:18px 0; }
+  .perf-bar-wrap { margin-bottom:8px; }
+  .perf-bar-label { display:flex; justify-content:space-between; font-size:12px; margin-bottom:3px; }
+  .perf-bar-outer { height:7px; background:#f0f0f0; border-radius:4px; overflow:hidden; }
+  .perf-bar-inner { height:100%; border-radius:4px; }
+  .center { text-align:center; }
+  .mono { font-family:monospace; }
+  .muted { color:var(--muted); }
+
+  /* ── LOG FILTER TABS ── */
+  .log-tabs { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  .log-tab {
+    padding:5px 13px; border:1px solid #e0e0e0; border-radius:4px;
+    font-size:13px; cursor:pointer; background:#f8f8f8; color:#555;
+    font-family:inherit; transition:all .12s;
+    display:inline-flex; align-items:center; gap:5px;
+  }
+  .log-tab.active { background:#fff; border-color:#C87A3C; color:#C87A3C; font-weight:600; }
+  .log-tab:hover:not(.active) { background:#fff; border-color:#bbb; color:#333; }
+  .log-tab-badge {
+    display:inline-flex; align-items:center; justify-content:center;
+    border-radius:10px; font-size:10px; font-weight:700;
+    min-width:18px; height:18px; padding:0 5px; color:#fff;
+  }
+  .log-tab-err  { background:#c0392b; }
+  .log-tab-warn { background:#e67e22; }
+  .log-tab-depr { background:#8e44ad; }
+  .log-tab-zero { color:#aaa; font-size:12px; }
+
+  /* ── LOG MESSAGES TABLE ── */
+  .log-table-wrap { border:1px solid #e6e6e6; border-radius:4px; overflow:hidden; }
+  .log-table { width:100%; border-collapse:collapse; font-size:12px; }
+  .log-table th { background:#f5f5f5; padding:9px 14px; text-align:left; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#888; border-bottom:1px solid #e6e6e6; }
+  .log-row { border-bottom:1px solid #ececec; }
+  .log-row:last-child { border-bottom:none; }
+  .log-row td { padding:10px 14px; vertical-align:top; }
+  .log-td-time { width:150px; white-space:nowrap; color:#888; font-family:monospace; font-size:11px; }
+  .log-row-error   { border-left:3px solid #e74c3c; }
+  .log-row-warning { border-left:3px solid #e67e22; }
+  .log-row-deprecation { border-left:3px solid #8e44ad; }
+  .log-msg-text { font-size:12.5px; color:#333; word-break:break-word; line-height:1.5; }
+  .log-meta-links { margin-top:5px; }
+  .log-ctx-btn {
+    background:none; border:none; padding:0; cursor:pointer;
+    color:#C87A3C; font-size:11.5px; text-decoration:underline; font-family:inherit;
+  }
+  .log-ctx-btn:hover { color:#9A5020; }
+  .log-ctx-btn + .log-ctx-btn { margin-left:10px; }
+  .log-context-detail {
+    display:none; margin-top:6px; background:#f5f5f5; border:1px solid #ebebeb;
+    border-radius:3px; padding:8px 10px; font-family:monospace; font-size:11px;
+    color:#555; white-space:pre-wrap; word-break:break-all;
+  }
+  .log-stack-trace {
+    max-height:280px; overflow-y:auto; line-height:1.7; color:#444;
+  }
+  .log-source-ref {
+    display:block; margin-top:4px; font-family:monospace; font-size:11px;
+    color:#888; word-break:break-all;
+  }
+  .log-deprecation { background:#f3e5f5; color:#6a1b9a; }
+</style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div class="pf-header">
-  <div class="pf-header-top">
-    <a href="/_debug/profiler" class="pf-logo" style="text-decoration:none;">
-      <div class="pf-logo-icon">OP</div>
-      <div>
-        <div>OptiCoreJs Profiler</div>
-        <div class="pf-header-title">Web Debug Toolbar</div>
+<!-- ── HEADER ── -->
+<div style="max-width:2000px;margin:0 auto;padding:34px 200px 0 200px;">
+  <div style="display:flex;align-items:center;justify-content:space-between;">
+    <a href="/_debug/profiler" style="display:flex;align-items:center;gap:14px;text-decoration:none;cursor:pointer;">
+      <div style="width:42px;height:42px;border-radius:50%;background:#C87A3C;display:flex;align-items:center;justify-content:center;flex:0 0 auto;">
+        ${LOGO_SVG}
       </div>
+      <span style="font-size:24px;font-weight:500;color:#222;letter-spacing:-.2px;">OptiCoreJs Profiler</span>
     </a>
-    <div class="pf-spacer"></div>
-    <form method="get" action="/_debug/profiler">
-      <input type="text" name="search" class="pf-search" placeholder="Search profiles…">
-    </form>
-    <a href="/_debug/profiler" class="pf-back">← All requests</a>
-  </div>
-
-  <div class="pf-status-bar">
-    <div class="pf-status-pill ${statusClass(profile.statusCode)}">
-      ${hasException ? "ERROR " : ""}${profile.statusCode} ${escapeHtml(profile.statusMessage)}
+    <div style="position:relative;width:340px;">
+      <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input placeholder="search on opticorejs.com" disabled style="width:100%;height:42px;padding:0 14px 0 36px;border:1px solid #d8d8d8;border-radius:4px;font-family:${FF};font-size:14px;color:#555;outline:none;background:#fff;cursor:default;opacity:.6;">
     </div>
-    <span class="pf-status-method">${escapeHtml(profile.method)}</span>
-    <span class="pf-status-url">${escapeHtml(profile.url)}</span>
-    <span class="pf-status-meta">
-      IP: ${escapeHtml(profile.request.ip)} &nbsp;|&nbsp;
-      Profiled on: ${formatTimestamp(profile.timestamp)} &nbsp;|&nbsp;
-      Token: ${token8}
-    </span>
   </div>
 </div>
 
-<!-- BODY -->
-<div class="pf-body">
-
-  <!-- SIDEBAR -->
-  <div class="pf-sidebar">
-    <div class="pf-sidebar-tabs">
-      <a class="pf-sidebar-tab" href="/_debug/profiler">Search profiles</a>
-      <a class="pf-sidebar-tab pf-sidebar-tab--active" href="?panel=${panel}">Latest</a>
+<!-- ── STATUS BANNER ── -->
+<div style="max-width:2000px;margin:22px auto 0 auto;padding:0 200px;">
+  <div style="background:${bannerBg};border-radius:6px;border-top:4px solid ${bannerBorder};padding:30px 36px 32px 36px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="${bannerBorder}" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.5" r="1.1" fill="${bannerBorder}" stroke="none"/></svg>
+      <span style="font-size:26px;font-weight:700;color:${bannerCode};">${isError ? "ERROR " : ""}${profile.statusCode}</span>
+      <span style="font-size:24px;font-weight:400;color:${bannerMsg};">${escapeHtml(profile.statusMessage)}</span>
     </div>
-    <div class="pf-sidebar-section">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+      ${methodBadge}
+      <span style="font-size:30px;font-weight:400;color:#333;">${escapeHtml(profile.url)}</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:34px;font-size:16px;color:#777;">
+      <span><strong style="color:#555;font-weight:600;">IP:</strong> ${escapeHtml(profile.request.ip)}</span>
+      <span><strong style="color:#555;font-weight:600;">Profiled on:</strong> ${fmtDate} at ${fmtTime}</span>
+      <span><strong style="color:#555;font-weight:600;">Token:</strong> ${token6}</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN GRID ── -->
+<div style="max-width:2000px;margin:30px auto 0 auto;padding:0 200px 80px 200px;display:grid;grid-template-columns:250px 1fr;gap:40px;">
+
+  <!-- ── SIDEBAR CARD ── -->
+  <div>
+    <div style="border:1px solid #e3e3e3;border-radius:4px;overflow:hidden;">
+
+      <!-- Search profiles | Latest header -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #ececec;">
+        <a href="/_debug/profiler" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span style="font-size:15px;color:#888;">Search profiles</span>
+        </a>
+        <a href="/_debug/profiler/latest" style="font-size:15px;color:#C87A3C;text-decoration:none;cursor:pointer;">Latest</a>
+      </div>
+
+      <!-- Nav items -->
       ${sidebarItem(ICON_ROUTE, "Request / Response", "request", panel)}
       ${sidebarItem(ICON_PERF, "Performance", "performance", panel)}
       ${sidebarItem(ICON_EXCEPTION, "Exception", "exception", panel,
-          hasException ? (profile.statusCode >= 400 ? 1 : logErrors) : 0, "warn")}
+          hasException ? (profile.statusCode >= 400 ? 1 : logErrors) : 0, true)}
       ${sidebarItem(ICON_LOG, "Logs", "logs", panel,
-          profile.logs.length,
-          logErrors > 0 ? "warn" : logWarnings > 0 ? "warn" : "ok")}
+          profile.logs.length, logErrors > 0)}
       ${sidebarItem(ICON_MAP, "Routes", "routes", panel,
-          appRoutes.filter(r => !r.path.startsWith("/_debug") && r.path !== "/").length, "ok")}
+          appRoutes.filter(r => !r.path.startsWith("/_debug") && r.path !== "/").length, false)}
       ${sidebarItem(ICON_ROUTE, "Routing", "routing", panel)}
       ${sidebarItem(ICON_DB, "Database", "database", panel,
-          profile.queries.length, "ok")}
+          profile.queries.length, false)}
       ${sidebarItem(ICON_CONFIG, "Configuration", "configuration", panel)}
+
     </div>
 
-    <div class="pf-sidebar-footer">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-      <a href="/_debug/profiler">Profiler settings</a>
-    </div>
+    <!-- Profiler settings -->
+    <a href="/_debug/profiler" style="display:flex;align-items:center;gap:8px;margin-top:18px;color:#777;text-decoration:none;font-size:15px;">
+      ${ICON_SETTINGS_LG}
+      Profiler settings
+    </a>
   </div>
 
-  <!-- CONTENT -->
+  <!-- ── CONTENT ── -->
   <div class="pf-content">
+    <h1 class="panel-title">${panelLabel[panel]}</h1>
     ${panelContent}
   </div>
 
@@ -948,11 +1125,11 @@ ${BASE_CSS}
 
 <script>
 function filterTable(input) {
-  const query = input.value.toLowerCase();
+  const q = input.value.toLowerCase();
   const wrap = input.closest(".table-wrap");
   if (!wrap) return;
-  wrap.querySelectorAll("tbody tr").forEach(row => {
-    row.style.display = row.textContent.toLowerCase().includes(query) ? "" : "none";
+  wrap.querySelectorAll("tbody tr").forEach(r => {
+    r.style.display = r.textContent.toLowerCase().includes(q) ? "" : "none";
   });
 }
 document.addEventListener("keydown", e => {

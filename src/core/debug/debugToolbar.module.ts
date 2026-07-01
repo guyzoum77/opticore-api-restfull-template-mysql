@@ -6,6 +6,8 @@ import type { Application, Request, Response } from "opticore-express";
 import { debugToolbarMiddleware } from "./middleware/debugToolbar.middleware";
 import { createDebugRouter } from "./router/debugToolbar.router";
 import { renderHomePage } from "./views/homePage.view";
+import { debugStore } from "./store/debugToolbar.store";
+import type { ILogEntry } from "./types/debugToolbar.types";
 
 
 export interface IRegisteredRoute {
@@ -132,8 +134,65 @@ function createHomeRouter() {
     return router;
 }
 
+let _errorCaptureRegistered = false;
+
+function extractFirstFrame(stack: string): string {
+    if (!stack) return "";
+    for (const line of stack.split("\n")) {
+        const t = line.trim();
+        if (!t.startsWith("at ")) continue;
+        if (t.startsWith("at node:") || t.includes("(node:") || t.includes("node:internal")) continue;
+        if (t.includes("(<anonymous>)")) continue;
+        const m = t.match(/\((.+:\d+:\d+)\)$/) ?? t.match(/at (.+:\d+:\d+)$/);
+        if (m) return m[1];
+    }
+    return "";
+}
+
+function buildErrorLogEntry(
+    err: Error,
+    type: "UncaughtException" | "UnhandledRejection"
+): ILogEntry {
+    const source = extractFirstFrame(err.stack ?? "");
+    const context: Record<string, unknown> = {
+        type,
+        name: err.name ?? "Error",
+        stack: err.stack ?? "",
+    };
+    if (source) context.source = source;
+    return {
+        level: "error",
+        message: `${err.name ?? "Error"}: ${err.message}`,
+        timestamp: Date.now(),
+        context,
+    };
+}
+
+function registerGlobalErrorCapture(): void {
+    if (_errorCaptureRegistered) return;
+    _errorCaptureRegistered = true;
+
+    // uncaughtExceptionMonitor fires before any uncaughtException handler —
+    // read-only: does not prevent the default behaviour or other listeners.
+    (process as any).on("uncaughtExceptionMonitor", (err: Error) => {
+        try {
+            debugStore.patchLatestLogs(buildErrorLogEntry(err, "UncaughtException"));
+        } catch { /* never let observer crash the process */ }
+    });
+
+    process.on("unhandledRejection", (reason: unknown) => {
+        try {
+            const err = reason instanceof Error
+                ? reason
+                : new Error(String(reason));
+            debugStore.patchLatestLogs(buildErrorLogEntry(err, "UnhandledRejection"));
+        } catch { /* never let observer crash the process */ }
+    });
+}
+
 export function registerDebugToolbar(app: Application): void {
     _expressApp = app;
+    registerGlobalErrorCapture();
     app.use(debugToolbarMiddleware);
     app.use("/", createHomeRouter());
     app.use("/_debug", createDebugRouter());
@@ -142,4 +201,7 @@ export function registerDebugToolbar(app: Application): void {
 export { sqlCollector } from "./collectors/sql.collector";
 export { logCollector } from "./collectors/log.collector";
 export { debugStore } from "./store/debugToolbar.store";
-export type { IRequestProfile, ISqlQuery, ILogEntry } from "./types/debugToolbar.types";
+export { ToolbarConfigBuilder, defaultToolbarConfig } from "./config/toolbar.config";
+export { SecurityService } from "./core/security.service";
+export { MetricsService } from "./core/metrics.service";
+export type { IRequestProfile, ISqlQuery, ILogEntry, ToolbarConfig, ProfileMetrics } from "./types/debugToolbar.types";
