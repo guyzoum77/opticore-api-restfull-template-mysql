@@ -26,6 +26,7 @@
     "homepage": "https://github.com/guyzoum77/opticore-api-restfull-template-mysql.git#readme",
     "dependencies": {
         "@types/gradient-string": "^1.1.6",
+        "nunjucks": "^3.2.4",
         "opticore-catch-exception-error": "^1.0.28",
         "opticore-env-access": "^1.0.20",
         "opticore-express": "^1.0.9",
@@ -50,6 +51,7 @@
         "@eslint/eslintrc": "^3.3.5",
         "@eslint/js": "^10.0.1",
         "@types/node": "^24.12.4",
+        "@types/nunjucks": "^3.2.6",
         "concurrently": "^10.0.3",
         "cross-env": "^10.1.0",
         "globals": "^17.6.0",

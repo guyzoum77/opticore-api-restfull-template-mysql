@@ -1,56 +1,65 @@
-import { IRequestProfile, ProfileMetrics } from "../types/debugToolbar.types";
+import { IRequestProfile } from "../types/debugToolbar.types";
 import { debugStore } from "../store/debugToolbar.store";
 import { defaultToolbarConfig } from "../config/toolbar.config";
 import { SecurityService } from "../core/security.service";
 import { MetricsService } from "../core/metrics.service";
-import { HttpTooltipRenderer } from "../renderers/http-tooltip.renderer";
-import { BlocksRenderer } from "../renderers/blocks.renderer";
-import { ToolbarTemplate } from "../templates/toolbar.template";
-import { formatDuration, ICON_CLOCK, ICON_MEMORY, ICON_DB, ICON_ROUTE, ICON_LOG } from "./helpers.view";
+import { formatDuration } from "./helpers.view";
 
-const security        = new SecurityService(defaultToolbarConfig.security);
-const metricsService  = new MetricsService();
-const tooltipRenderer = new HttpTooltipRenderer(defaultToolbarConfig, security);
-const blocksRenderer  = new BlocksRenderer(defaultToolbarConfig, security);
-const template        = new ToolbarTemplate();
+const security       = new SecurityService(defaultToolbarConfig.security);
+const metricsService = new MetricsService();
 
-export function renderToolbarBar(profile: IRequestProfile): string {
-    const recentProfiles: IRequestProfile[] = debugStore.getAll();
-    const metrics: ProfileMetrics = metricsService.compute(profile, recentProfiles.length);
-    const tooltipHtml: string = tooltipRenderer.render(profile.token, recentProfiles);
-    const blocksHtml: string = blocksRenderer.renderAll(profile, metrics, tooltipHtml);
-
-    return template.render({
-        statusCode:  profile.statusCode,
-        profilerUrl: `/_debug/profiler/${profile.token}`,
-        statusCls:   metrics.statusClass,
-        appVersion:  security.escapeHtml(profile.appVersion),
-        blocks:      blocksHtml,
-    });
+export interface IToolbarHttpRow {
+    isCurrent: boolean;
+    method: string;
+    url: string;
+    fullUrl: string;
+    token: string;
+    statusCode: number;
+    statusClass: string;
+    duration: string;
 }
 
-export function renderToolbarBarFragment(profile: IRequestProfile): string {
-    const metrics: ProfileMetrics = metricsService.compute(profile);
+export interface IToolbarBarViewModel {
+    statusCode: number;
+    profilerUrl: string;
+    statusCls: string;
+    appVersion: string;
+    base: string;
+    duration: { formatted: string; barWidth: number };
+    memory: { formatted: string };
+    logs: { count: number; errors: number; warnings: number };
+    route: { label: string };
+    http: { count: number; rows: IToolbarHttpRow[] };
+}
+
+export function buildToolbarBarViewModel(profile: IRequestProfile): IToolbarBarViewModel {
+    const recentProfiles = debugStore.getAll();
+    const metrics = metricsService.compute(profile, recentProfiles.length);
     const base = `/_debug/profiler/${profile.token}`;
 
-    return `<div class="sf-toolbar" id="sfwdt${profile.token}">
-  <div class="sf-toolbar-block sf-toolbar-status sf-toolbar-status-${metrics.statusClass}">
-    <a href="${base}" title="Open profiler">${profile.statusCode}</a>
-  </div>
-  <div class="sf-toolbar-block">
-    ${ICON_CLOCK} <a href="${base}?panel=performance">${metrics.durationFormatted}</a>
-  </div>
-  <div class="sf-toolbar-block">
-    ${ICON_MEMORY} ${metrics.memoryFormatted}
-  </div>
-  <div class="sf-toolbar-block">
-    ${ICON_LOG} <a href="${base}?panel=logs">${metrics.logCount}${metrics.logWarnings > 0 ? ` <sup>${metrics.logWarnings}</sup>` : ""}</a>
-  </div>
-  <div class="sf-toolbar-block">
-    ${ICON_DB} <a href="${base}?panel=database">${metrics.sqlCount} / ${formatDuration(metrics.sqlTotalTime)}</a>
-  </div>
-  <div class="sf-toolbar-block">
-    ${ICON_ROUTE} <a href="${base}?panel=routing">${profile.method} ${profile.route.path}</a>
-  </div>
-</div>`;
+    const httpRows: IToolbarHttpRow[] = recentProfiles
+        .slice(0, defaultToolbarConfig.maxRequests)
+        .map(p => ({
+            isCurrent: p.token === profile.token,
+            method: p.method,
+            url: security.truncateUrl(p.url),
+            fullUrl: p.url,
+            token: p.token,
+            statusCode: p.statusCode,
+            statusClass: p.statusCode >= 400 ? "tip-s-err" : p.statusCode >= 300 ? "tip-s-redir" : "tip-s-ok",
+            duration: formatDuration(p.duration),
+        }));
+
+    return {
+        statusCode: profile.statusCode,
+        profilerUrl: base,
+        statusCls: metrics.statusClass,
+        appVersion: profile.appVersion,
+        base,
+        duration: { formatted: metrics.durationFormatted, barWidth: Math.min(metrics.sqlTotalTime / 2, 100) },
+        memory: { formatted: metrics.memoryFormatted },
+        logs: { count: metrics.logCount, errors: metrics.logErrors, warnings: metrics.logWarnings },
+        route: { label: profile.route.path || profile.url },
+        http: { count: metrics.httpCount, rows: httpRows },
+    };
 }

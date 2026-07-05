@@ -1,5 +1,6 @@
 import { OpticoreRegisterRouter, TFeatureRoutes } from "opticore-router";
 import { UsersTestRouter } from "../../features/users-test/routes/users.router";
+import { DebugToolbarRouter } from "../../core/debug/routes/debugToolbar.router";
 
 
 /**
@@ -25,6 +26,7 @@ export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
 
     return new OpticoreRegisterRouter().registered([
         UsersTestRouter, // It' only just for test, remove it when you will start to dev
+        DebugToolbarRouter,
         // Add new features here as they are developed
     ]);
 }

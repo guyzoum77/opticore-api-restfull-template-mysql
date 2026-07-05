@@ -1,0 +1,36 @@
+{% import "macros/icons.njk" as icons %}
+{% if not panelData.hasQueries %}
+<div class="panel-title">{{ icons.icon("db") }} Database</div>
+<div class="empty-state">
+  <div class="empty-icon">🗄</div>
+  <div class="empty-text">No SQL queries were recorded for this request.</div>
+  <div style="font-size:12px;color:#555;margin-top:8px;">
+    Use <code>sqlCollector.record(token, { sql, duration })</code> in your repositories.
+  </div>
+</div>
+{% else %}
+<div class="panel-title">{{ icons.icon("db") }} Database Queries</div>
+
+<div class="stats-grid">
+  <div class="stat-card"><div class="stat-value">{{ panelData.totalCount }}</div><div class="stat-label">Total Queries</div></div>
+  <div class="stat-card"><div class="stat-value">{{ panelData.totalTimeFormatted }}</div><div class="stat-label">Total Time</div></div>
+  <div class="stat-card"><div class="stat-value">{{ panelData.avgFormatted }}</div><div class="stat-label">Avg per Query</div></div>
+</div>
+
+<div class="table-wrap">
+  <div class="table-wrap-title">{{ icons.icon("db") }} SQL Queries <span class="badge badge-info">{{ panelData.totalCount }}</span></div>
+  {% for q in panelData.queries %}
+  <div class="sql-block">
+    <div class="sql-meta">
+      <span class="sql-type sql-type-{{ q.type }}">{{ q.type }}</span>
+      <span style="color:#666;font-size:11px;">#{{ q.index }}</span>
+      {% if q.hasError %}<span class="badge badge-warn">ERROR</span>{% endif %}
+      <span class="sql-duration">{{ icons.icon("clock") }} {{ q.durationFormatted }}</span>
+    </div>
+    <pre class="sql-code">{{ q.sql }}</pre>
+    {% if q.bindingsJson %}<div style="margin-top:6px;font-size:11px;color:#666;">Bindings: <code>{{ q.bindingsJson }}</code></div>{% endif %}
+    {% if q.error %}<div style="color:#e74c3c;font-size:11px;margin-top:4px;">Error: {{ q.error }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

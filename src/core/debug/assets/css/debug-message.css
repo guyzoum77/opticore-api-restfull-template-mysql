@@ -1,0 +1,16 @@
+body {
+  background: #1a1a1a;
+  color: #666;
+  font-family: monospace;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  gap: 12px;
+}
+a { color: #7c98d3; }
+.msg-title { font-size: 18px; color: #e74c3c; }
+.msg-code code { color: #aaa; }

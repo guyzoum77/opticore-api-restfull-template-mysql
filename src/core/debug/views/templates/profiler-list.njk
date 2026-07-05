@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OptiCoreJs Profiler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/_debug/assets/css/profiler-list.css">
+</head>
+<body data-autoreload="{{ '1' if autoReload else '0' }}">
+
+<div class="pl-header">
+  <div class="pl-header-row">
+    <a href="/_debug/profiler" class="pl-brand">
+      <span class="pl-brand-name">OptiCoreJs Profiler</span>
+    </a>
+    <div class="pl-search-wrap">
+      <svg class="pl-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="pl-search-input" placeholder="search on opticorejs.com">
+    </div>
+  </div>
+</div>
+
+<div class="pl-banner">
+  <div class="pl-banner-inner">
+    <h2 class="pl-banner-title">Profile Search</h2>
+  </div>
+</div>
+
+<div class="pl-grid">
+
+  <!-- SIDEBAR -->
+  <div>
+    <div class="pl-sidebar-card">
+      <div class="pl-sidebar-head">
+        <a href="/_debug/profiler" class="pl-sidebar-search-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="pl-sidebar-search-label">Search profiles</span>
+        </a>
+        <a href="/_debug/profiler/latest" class="pl-sidebar-latest{{ ' is-disabled' if not filters.hasProfiles }}">Latest</a>
+      </div>
+
+      <form method="get" action="/_debug/profiler">
+        <label class="pl-label">IP</label>
+        <input name="ip" value="{{ filters.ip }}" class="pl-field pl-field--gap">
+
+        <div class="pl-field-row">
+          <div class="pl-field-col">
+            <label class="pl-label">Method</label>
+            <div class="pl-select-wrap">
+              <select name="method" class="pl-field pl-select">
+                {% for opt in filters.methodOptions %}
+                <option value="{{ opt.value }}"{{ ' selected' if opt.selected }}>{{ opt.label }}</option>
+                {% endfor %}
+              </select>
+              <span class="pl-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </div>
+          </div>
+          <div class="pl-field-col">
+            <label class="pl-label">Status</label>
+            <input name="status" value="{{ filters.status }}" class="pl-field">
+          </div>
+        </div>
+
+        <label class="pl-label">URL</label>
+        <input name="search" value="{{ filters.search }}" class="pl-field pl-field--gap">
+
+        <label class="pl-label">Token</label>
+        <input name="token" value="{{ filters.token }}" class="pl-field pl-field--token">
+
+        <label class="pl-label">From</label>
+        <div class="pl-field-date-wrap">
+          <input type="date" name="from" value="{{ filters.from }}" class="pl-field pl-date">
+        </div>
+
+        <label class="pl-label">Until</label>
+        <div class="pl-field-date-wrap">
+          <input type="date" name="until" value="{{ filters.until }}" class="pl-field pl-date">
+        </div>
+
+        <label class="pl-label">Results</label>
+        <div class="pl-results-row">
+          <div class="pl-select-wrap pl-select-wrap--limit">
+            <select name="limit" class="pl-field pl-select" style="width:74px;">
+              {% for opt in filters.limitOptions %}
+              <option value="{{ opt.value }}"{{ ' selected' if opt.selected }}>{{ opt.value }}</option>
+              {% endfor %}
+            </select>
+            <span class="pl-chevron pl-chevron--limit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+          <button type="submit" class="pl-submit-btn">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <a href="/_debug/profiler" class="pl-settings-link">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      Profiler settings
+    </a>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="pl-results">
+    <div class="pl-tabs">
+      <a href="{{ tabs.requests.href }}" class="pl-tab">
+        <span class="pl-tab-label{{ ' is-active' if tabs.requests.active }}">HTTP Requests</span>
+        <span class="pl-tab-underline{{ ' is-active' if tabs.requests.active }}"></span>
+      </a>
+      <a href="{{ tabs.commands.href }}" class="pl-tab">
+        <span class="pl-tab-label{{ ' is-active' if tabs.commands.active }}">Console Commands</span>
+        <span class="pl-tab-underline{{ ' is-active' if tabs.commands.active }}"></span>
+      </a>
+    </div>
+
+    {% if tab == "commands" %}
+    <h2 class="pl-section-heading">Console Commands</h2>
+    <div class="pl-empty-commands">
+      <div class="pl-empty-commands-text">No console commands have been executed yet.</div>
+    </div>
+    {% else %}
+    <h2 class="pl-section-heading">{{ resultCount }} result{{ 's' if resultCount != 1 }} found</h2>
+    <table class="pl-table">
+      <thead>
+        <tr>
+          <th>Status</th><th>Method</th><th>URL</th><th>Time</th><th>Token</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if rows.length > 0 %}
+          {% for row in rows %}
+          <tr class="pl-row" onclick="location.href='/_debug/profiler/{{ row.token }}'">
+            <td class="pl-cell"><span class="pl-status-badge pl-status-badge--{{ row.statusClass }}">{{ row.statusCode }}</span></td>
+            <td class="pl-cell">{{ row.method }}</td>
+            <td class="pl-cell pl-cell-url" title="{{ row.url }}">{{ row.url }}</td>
+            <td class="pl-cell pl-cell-date">{{ row.dateStr }}<br><span class="pl-cell-time">{{ row.timeStr }}</span></td>
+            <td class="pl-cell"><a href="/_debug/profiler/{{ row.token }}" onclick="event.stopPropagation()" class="pl-token-link">{{ row.tokenShort }}</a></td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <tr><td colspan="5" class="pl-empty-row">No requests found. Try adjusting your filters.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+</div>
+
+<script src="/_debug/assets/js/profiler-list.js"></script>
+</body>
+</html>

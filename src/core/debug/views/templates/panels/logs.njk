@@ -1,0 +1,44 @@
+{% if not panelData.hasLogs %}
+<div class="empty-state">
+  <div class="empty-icon">📋</div>
+  <div class="empty-text">No log entries were recorded for this request.</div>
+  <div style="font-size:12px;color:#555;margin-top:8px;">
+    Use <code>logCollector.record(token, { level, message })</code> to add entries.
+  </div>
+</div>
+{% else %}
+<div class="log-tabs" id="log-tabs">
+  <button class="log-tab active" data-ltab="all">All messages</button>
+  <button class="log-tab" data-ltab="error">Errors {% if panelData.errCount > 0 %}<span class="log-tab-badge log-tab-err">{{ panelData.errCount }}</span>{% else %}<span class="log-tab-zero">0</span>{% endif %}</button>
+  <button class="log-tab" data-ltab="deprecation">Deprecations {% if panelData.deprCount > 0 %}<span class="log-tab-badge log-tab-depr">{{ panelData.deprCount }}</span>{% else %}<span class="log-tab-zero">0</span>{% endif %}</button>
+  <button class="log-tab" data-ltab="warning">Warnings {% if panelData.warnCount > 0 %}<span class="log-tab-badge log-tab-warn">{{ panelData.warnCount }}</span>{% else %}<span class="log-tab-zero">0</span>{% endif %}</button>
+</div>
+
+<div class="log-table-wrap">
+  <table class="log-table">
+    <thead><tr><th>Time</th><th>Message</th></tr></thead>
+    <tbody id="log-tbody">
+      {% for row in panelData.rows %}
+      <tr class="log-row {{ row.rowClass }}" data-ltype="{{ row.logType }}">
+        <td class="log-td-time">
+          {{ row.timeStr }}<br>
+          <span class="log-level {{ row.levelCls }}">{{ row.level }}</span>
+        </td>
+        <td class="log-td-msg">
+          <span class="log-msg-text">{{ row.message }}</span>
+          {% if row.source %}<span class="log-source-ref">{{ row.source }}</span>{% endif %}
+          {% if row.extra %}
+          <div class="log-meta-links">
+            {% if row.extra.showContextBtn %}<button class="log-ctx-btn" onclick="toggleLogCtx('{{ row.extra.ctxId }}', this)">Show context</button>{% endif %}
+            {% if row.extra.showTraceBtn %}<button class="log-ctx-btn" onclick="toggleLogCtx('{{ row.extra.stackId }}', this)">Show trace</button>{% endif %}
+          </div>
+          {% if row.extra.ctxJson %}<pre id="{{ row.extra.ctxId }}" class="log-context-detail">{{ row.extra.ctxJson }}</pre>{% endif %}
+          {% if row.extra.stackText %}<pre id="{{ row.extra.stackId }}" class="log-context-detail log-stack-trace">{{ row.extra.stackText }}</pre>{% endif %}
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}

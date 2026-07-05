@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OptiCoreJs Debug Toolbar</title>
+<link rel="stylesheet" href="/_debug/assets/css/toolbar-standalone.css">
+</head>
+<body>
+<div class="toolbar" id="wdt">
+  <a href="{{ profilerUrl }}" class="tb-badge tb-badge--{{ statusCls }}">{{ statusCode }}</a>
+
+  <a href="{{ base }}?panel=performance" class="tb-block" style="position:relative;">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+    <span class="tb-label tb-underline">{{ duration.formatted }}</span>
+    <span class="tb-time-bar" style="width:{{ duration.barWidth }}%"></span>
+  </a>
+
+  <a href="{{ base }}?panel=performance" class="tb-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+    <span class="tb-label">{{ memory.formatted }}</span>
+  </a>
+
+  <a href="{{ base }}?panel=logs" class="tb-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+    <span class="tb-label">{{ logs.count }}</span>
+    {% if logs.errors > 0 %}<span class="tb-badge-pill">{{ logs.errors }}</span>{% endif %}
+    {% if logs.warnings > 0 %}<span class="tb-badge-pill tb-badge-pill--warn">{{ logs.warnings }}</span>{% endif %}
+  </a>
+
+  <a href="{{ base }}" class="tb-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+    <span class="tb-label">n/a</span>
+  </a>
+
+  <div class="tb-block tb-http-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+    <span class="tb-label">{{ http.count }} request{{ 's' if http.count != 1 }}</span>
+    <div class="tb-http-tooltip">
+      <div class="tb-tip-header">
+        {% if http.rows.length > 0 %}
+        <span>Last {{ http.rows.length }} HTTP Requests</span>
+        <a href="/_debug/profiler" class="tb-tip-viewall">View all &rarr;</a>
+        {% else %}
+        <span>HTTP Requests</span>
+        {% endif %}
+      </div>
+      {% if http.rows.length > 0 %}
+      <table class="tb-tip-table">
+        <thead><tr><th>Method</th><th>URL</th><th>Status</th><th>Time</th></tr></thead>
+        <tbody>
+          {% for row in http.rows %}
+          <tr class="{{ 'tip-current' if row.isCurrent }}">
+            <td><span class="tip-method tip-m-{{ row.method | lower }}">{{ row.method }}</span></td>
+            <td><a href="/_debug/profiler/{{ row.token }}" class="tip-url-link" title="{{ row.fullUrl }}">{{ row.url }}</a></td>
+            <td class="{{ row.statusClass }}">{{ row.statusCode }}</td>
+            <td class="tip-dur">{{ row.duration }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <div style="padding:12px;color:#666;font-size:11px;">No requests yet.</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <a href="{{ base }}?panel=routing" class="tb-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polygon points="12,5 19,5 22,9 19,13 12,13"/><polygon points="12,14 5,14 2,18 5,21 12,21"/></svg></span>
+    <span class="tb-label">{{ route.label }}</span>
+  </a>
+
+  <div class="tb-spacer"></div>
+  <a href="{{ profilerUrl }}" class="tb-brand">
+    <div class="tb-brand-icon">OP</div>
+    <span>Server</span>
+  </a>
+  <div class="tb-version">v{{ appVersion }}</div>
+  <button class="tb-close" onclick="document.getElementById('wdt').style.display='none'" title="Close toolbar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+</body>
+</html>

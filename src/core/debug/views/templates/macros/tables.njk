@@ -1,0 +1,17 @@
+{% macro kv_table(rows, emptyLabel="None", headers=None) %}
+{%- if rows.length == 0 -%}
+<div class="empty-state"><div class="empty-text">{{ emptyLabel }}</div></div>
+{%- else -%}
+<table class="data-table">
+  {%- if headers %}<thead><tr>{% for h in headers %}<th>{{ h }}</th>{% endfor %}</tr></thead>{% endif %}
+  <tbody>
+    {%- for row in rows %}
+    <tr>
+      <td class="key-col">{{ row.key }}</td>
+      <td class="val-col"{% if row.title %} title="{{ row.title }}"{% endif %}{% if row.truncate %} style="max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"{% endif %}>{% if row.badge %}<span class="badge badge-{{ row.badge.variant }}">{{ row.badge.text }}</span>{% elif row.code %}<code>{{ row.value }}</code>{% else %}{{ row.value }}{% endif %}</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+{%- endif -%}
+{% endmacro %}

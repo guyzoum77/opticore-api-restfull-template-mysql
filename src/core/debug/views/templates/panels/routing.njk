@@ -1,0 +1,22 @@
+{% import "macros/icons.njk" as icons %}
+{% from "macros/tables.njk" import kv_table %}
+<div class="panel-title">{{ icons.icon("route") }} Routing</div>
+
+<div class="panel-section">
+  <div class="panel-section-title">Matched Route</div>
+  <div class="table-wrap">{{ kv_table(panelData.routeRows) }}</div>
+</div>
+
+{% if panelData.hasRouteParams %}
+<div class="panel-section">
+  <div class="panel-section-title">Route Parameters</div>
+  <div class="table-wrap">{{ kv_table(panelData.routeParamsRows, headers=["Name","Value"]) }}</div>
+</div>
+{% endif %}
+
+{% if panelData.hasQueryParams %}
+<div class="panel-section">
+  <div class="panel-section-title">Query String</div>
+  <div class="table-wrap">{{ kv_table(panelData.queryParamsRows, headers=["Key","Value"]) }}</div>
+</div>
+{% endif %}

@@ -1,12 +1,11 @@
-import { execSync } from "child_process";
-import { existsSync } from "fs";
 import { join } from "path";
 import { express } from "opticore-express";
-import type { Application, Request, Response } from "opticore-express";
+import type { Application, Request, Response, NextFunction } from "opticore-express";
+import { OpticoreRoutingFactory } from "opticore-router";
 import { debugToolbarMiddleware } from "./middleware/debugToolbar.middleware";
-import { createDebugRouter } from "./router/debugToolbar.router";
-import { renderHomePage } from "./views/homePage.view";
+import { configureDebugViewEngine } from "./config/viewEngine.config";
 import { debugStore } from "./store/debugToolbar.store";
+import { DebugToolbarController } from "./controllers/debugToolbar.controller";
 import type { ILogEntry } from "./types/debugToolbar.types";
 
 
@@ -19,22 +18,6 @@ export interface IRegisteredRoute {
 // Holds the Express app reference once registerDebugToolbar() is called.
 // Routes are read lazily (after all app routes have been registered).
 let _expressApp: Application | null = null;
-
-function getNpmVersion(): string {
-    try {
-        return execSync("npm --version", { encoding: "utf8", stdio: ["ignore","pipe","ignore"] }).trim();
-    } catch {
-        return "—";
-    }
-}
-
-function isPackageInstalled(name: string): boolean {
-    return existsSync(join(process.cwd(), "node_modules", name, "package.json"));
-}
-
-function isToolbarEnabled(): boolean {
-    return process.env.PROFILE_WEB_TOOL_BAR === "true";
-}
 
 function getLayerPrefix(layer: any): string {
     try {
@@ -112,26 +95,17 @@ export function getExpressRoutes(): IRegisteredRoute[] {
     return extractRoutesFromApp(_expressApp);
 }
 
-function createHomeRouter() {
-    const router = express.Router();
-
-    router.get("/", (_req: Request, res: Response) => {
-        res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.setHeader("Cache-Control", "no-store");
-        res.send(renderHomePage({
-            appVersion: process.env.npm_package_version ?? "1.0.0",
-            nodeVersion: process.version,
-            npmVersion: getNpmVersion(),
-            environment: process.env.NODE_ENV ?? "development",
-            port: process.env.APP_PORT ?? "4200",
-            host: process.env.APP_HOST ?? "localhost",
-            showToolbar: isToolbarEnabled(),
-            cacheInstalled: isPackageInstalled("opticore-cache"),
-            gatewayInstalled: isPackageInstalled("opticore-api-gateway"),
-        }));
+function createHomeRoute() {
+    // Mounted directly (not via registerRouter()/TFeatureRoutes) so it is registered
+    // before WebServer's onStartServer() adds its "public/template" static middleware —
+    // otherwise a public/template/index.html would shadow this route at "/".
+    return OpticoreRoutingFactory.route({
+        method: "get",
+        path: "/",
+        handler: (async (ctx: { req: Request; res: Response }) => {
+            await DebugToolbarController.home(ctx.req, ctx.res);
+        }) as unknown as (req: Request, res: Response, next: NextFunction) => any,
     });
-
-    return router;
 }
 
 let _errorCaptureRegistered = false;
@@ -193,9 +167,10 @@ function registerGlobalErrorCapture(): void {
 export function registerDebugToolbar(app: Application): void {
     _expressApp = app;
     registerGlobalErrorCapture();
+    configureDebugViewEngine(app);
     app.use(debugToolbarMiddleware);
-    app.use("/", createHomeRouter());
-    app.use("/_debug", createDebugRouter());
+    app.use("/_debug/assets", express.static(join(__dirname, "assets"), { maxAge: "1h" }));
+    app.use(createHomeRoute());
 }
 
 export { sqlCollector } from "./collectors/sql.collector";
