@@ -1,6 +1,5 @@
 import { OpticoreRegisterRouter, TFeatureRoutes } from "opticore-router";
 import { UsersTestRouter } from "../../features/users-test/routes/users.router";
-import { DebugToolbarRouter } from "../../core/debug/routes/debugToolbar.router";
 
 
 /**
@@ -10,6 +9,9 @@ import { DebugToolbarRouter } from "../../core/debug/routes/debugToolbar.router"
  * It uses the OpticoreRegisterRouter class to initialize and register
  * the various routes for application features.
  *
+ * @param extraRoutes - Feature routers assembled by the caller (e.g. the
+ * profiler router, built from the same `opticoreProfiler()` instance mounted
+ * as middleware — see webApp.server.ts).
  * @returns {TFeatureRoutes[]} - Array containing all registered routes
  *
  *
@@ -21,12 +23,13 @@ import { DebugToolbarRouter } from "../../core/debug/routes/debugToolbar.router"
  * This function follows the Factory pattern for route creation
  * and allows easy extensibility by adding new features
  * in the registered() array
+ * Example : UsersTestRouter is It' only just for test, remove it when you will start to dev
  */
-export const registerRouter: () => TFeatureRoutes[] = (): TFeatureRoutes[] => {
+export const registerRouter: (extraRoutes?: TFeatureRoutes[]) => TFeatureRoutes[] = (extraRoutes = []): TFeatureRoutes[] => {
 
     return new OpticoreRegisterRouter().registered([
-        UsersTestRouter, // It' only just for test, remove it when you will start to dev
-        DebugToolbarRouter,
+        ...extraRoutes,
+        UsersTestRouter,
         // Add new features here as they are developed
     ]);
 }

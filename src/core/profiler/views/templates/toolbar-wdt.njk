@@ -1,0 +1,153 @@
+<div class="toolbar" id="wdt">
+  <div class="tb-block-wrap">
+    <a href="{{ profilerUrl }}" class="tb-badge tb-badge--{{ statusCls }}">{{ statusCode }}</a>
+    <div class="tb-tooltip">
+      <div class="tt-row"><span class="tt-label">Profile token</span><span class="tt-val"><code>{{ token }}</code></span></div>
+      <div class="tt-row"><span class="tt-label">Method</span><span class="tt-val"><span class="tt-badge" style="background:#1565c0">{{ method }}</span></span></div>
+      <div class="tt-row"><span class="tt-label">URL</span><span class="tt-val" style="word-break:break-all;">{{ url }}</span></div>
+      <div class="tt-row"><span class="tt-label">Status</span><span class="tt-val"><span class="tt-badge" style="background:{{ '#2e7d32' if statusCode < 400 else '#c0392b' }}">{{ statusCode }} {{ statusMessage }}</span></span></div>
+      <div class="tt-sep"></div>
+      <div class="tt-row"><span class="tt-label">Duration</span><span class="tt-val">{{ duration.formatted }}</span></div>
+      <a href="{{ profilerUrl }}" class="tt-link">Open Profiler</a>
+    </div>
+  </div>
+
+  <div class="tb-block-wrap">
+    <a href="{{ base }}?panel=performance" class="tb-block" style="position:relative;">
+      <span class="tb-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+      </span>
+      <span class="tb-label tb-underline">{{ duration.formatted }}</span>
+      <span class="tb-time-bar" style="width:{{ duration.barWidth }}%"></span>
+    </a>
+    <div class="tb-tooltip">
+      <div class="tt-row"><span class="tt-label">Total time</span><span class="tt-val"><b>{{ duration.appFormatted }}</b></span></div>
+      <div class="tt-row"><span class="tt-label">Application</span><span class="tt-val">{{ duration.appFormatted }}</span></div>
+      <div class="tt-row"><span class="tt-label">Database</span><span class="tt-val">{{ duration.dbFormatted }}</span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ base }}?panel=performance" class="tt-link">Performance</a>
+    </div>
+  </div>
+
+  <div class="tb-block-wrap">
+    <a href="{{ base }}?panel=performance" class="tb-block">
+      <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+      <span class="tb-label">{{ memory.formatted }}</span>
+    </a>
+    <div class="tb-tooltip">
+      <div class="tt-row"><span class="tt-label">Heap used</span><span class="tt-val">{{ memory.formatted }}</span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ base }}?panel=performance" class="tt-link">Performance</a>
+    </div>
+  </div>
+
+  <div class="tb-block-wrap">
+    <a href="{{ base }}?panel=logs" class="tb-block">
+      <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+      <span class="tb-label">{{ logs.count }}</span>
+      {% if logs.errors > 0 %}<span class="tb-badge-pill">{{ logs.errors }}</span>{% endif %}
+      {% if logs.warnings > 0 %}<span class="tb-badge-pill tb-badge-pill--warn">{{ logs.warnings }}</span>{% endif %}
+    </a>
+    <div class="tb-tooltip">
+      <div class="tt-row"><span class="tt-label">Errors</span><span class="tt-val">{% if logs.errors > 0 %}<span class="tt-badge" style="background:#c0392b">{{ logs.errors }}</span>{% else %}<span style="color:#555;">0</span>{% endif %}</span></div>
+      <div class="tt-row"><span class="tt-label">Warnings</span><span class="tt-val">{% if logs.warnings > 0 %}<span class="tt-badge" style="background:#e67e22">{{ logs.warnings }}</span>{% else %}<span style="color:#555;">0</span>{% endif %}</span></div>
+      <div class="tt-row"><span class="tt-label">Deprecations</span><span class="tt-val">{% if logs.deprecations > 0 %}<span class="tt-badge" style="background:#8e44ad">{{ logs.deprecations }}</span>{% else %}<span style="color:#555;">0</span>{% endif %}</span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ base }}?panel=logs" class="tt-link">Logs</a>
+    </div>
+  </div>
+
+  <div class="tb-block-wrap">
+    <a href="{{ base }}?panel=routing" class="tb-block">
+      <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polygon points="12,5 19,5 22,9 19,13 12,13"/><polygon points="12,14 5,14 2,18 5,21 12,21"/></svg></span>
+      <span class="tb-label">{{ route.label }}</span>
+    </a>
+    <div class="tb-tooltip">
+      <div class="tt-row"><span class="tt-label">Method</span><span class="tt-val"><span class="tt-badge" style="background:#1565c0">{{ route.method }}</span></span></div>
+      <div class="tt-row"><span class="tt-label">URL</span><span class="tt-val"><code>{{ route.label }}</code></span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ base }}?panel=routing" class="tt-link">Routing</a>
+    </div>
+  </div>
+
+  <div class="tb-block tb-http-block" id="wdt-ajax-block">
+    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+    <span class="tb-label">HTTP requests</span>
+    <span class="tb-badge-pill" id="wdt-ajax-count">{{ http.count }}</span>
+    <div class="tb-http-tooltip">
+      <div class="tb-tip-header">
+        {% if http.rows.length > 0 %}
+        <span>Last {{ http.rows.length }} HTTP Requests</span>
+        <a href="{{ profilerBase }}" class="tb-tip-viewall">View all &rarr;</a>
+        {% else %}
+        <span>HTTP Requests</span>
+        {% endif %}
+      </div>
+      <table class="tb-tip-table" id="wdt-ajax-table">
+        <thead><tr><th>Method</th><th>URL</th><th>Status</th><th>Time</th></tr></thead>
+        <tbody>
+          {% for row in http.rows %}
+          <tr class="{{ 'tip-current' if row.isCurrent }}">
+            <td><span class="tip-method tip-m-{{ row.method | lower }}">{{ row.method }}</span></td>
+            <td><a href="{{ profilerBase }}/{{ row.token }}" class="tip-url-link" title="{{ row.fullUrl }}">{{ row.url }}</a></td>
+            <td class="{{ row.statusClass }}">{{ row.statusCode }}</td>
+            <td class="tip-dur">{{ row.duration }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if http.rows.length == 0 %}
+        <div id="wdt-ajax-empty" style="padding:12px;color:#666;font-size:11px;">No requests yet.</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="tb-spacer"></div>
+
+  <div class="tb-block-wrap">
+    <a href="{{ profilerUrl }}" class="tb-brand">
+      <div class="tb-brand-icon">OP</div>
+      <span>Server</span>
+    </a>
+    <div class="tb-tooltip tb-tooltip--right">
+      <div class="tt-row"><span class="tt-label">Node.js</span><span class="tt-val"><span class="tt-badge" style="background:#1b3d1a">{{ nodeVersion }}</span></span></div>
+      <div class="tt-row"><span class="tt-label">Environment</span><span class="tt-val"><span class="tt-badge" style="background:{{ '#1a3320' if environment != 'production' else '#3d0a0a' }}">{{ environment }}</span></span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ profilerUrl }}" class="tt-link">📊 Open Profiler</a>
+      <a href="https://github.com/guyzoum77/opticore-api-restfull-template-mysql" target="_blank" class="tt-link">📖 Documentation</a>
+      <a href="https://github.com/guyzoum77/opticore-api-restfull-template-mysql/issues" target="_blank" class="tt-link">❓ Help &amp; Support</a>
+    </div>
+  </div>
+
+  <div class="tb-block-wrap">
+    <div class="tb-version">v{{ appVersion }}</div>
+    <div class="tb-tooltip tb-tooltip--right">
+      <div class="tt-row"><span class="tt-label">OptiCoreJs</span><span class="tt-val"><span class="tt-badge" style="background:#3D1E08">v{{ appVersion }}</span></span></div>
+      <div class="tt-row"><span class="tt-label">Node.js</span><span class="tt-val"><span class="tt-badge" style="background:#1b3d1a">{{ nodeVersion }}</span></span></div>
+      <div class="tt-row"><span class="tt-label">Environment</span><span class="tt-val"><span class="tt-badge" style="background:{{ '#1a3320' if environment != 'production' else '#3d0a0a' }}">{{ environment }}</span></span></div>
+      <div class="tt-sep"></div>
+      <a href="{{ profilerUrl }}" class="tt-link">📊 Open Profiler</a>
+      <a href="https://github.com/guyzoum77/opticore-api-restfull-template-mysql" target="_blank" class="tt-link">📖 Documentation</a>
+      <a href="https://github.com/guyzoum77/opticore-api-restfull-template-mysql/issues" target="_blank" class="tt-link">❓ Help &amp; Support</a>
+    </div>
+  </div>
+
+  <!-- collapse button — shrinks to mini pill, does NOT close -->
+  <button class="tb-collapse" onclick="wdtCollapse()" title="Minimize toolbar">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</div>
+
+<!-- mini collapsed pill (bottom-right) -->
+<div id="wdt-mini">
+  <a href="{{ profilerUrl }}" id="wdt-mini-logo">
+    <div id="wdt-mini-logo-icon">OP</div>
+    <span style="color:#888;font-size:11px;">Profiler</span>
+  </a>
+  <a href="{{ profilerUrl }}" id="wdt-mini-status" class="tb-badge--{{ statusCls }}">{{ statusCode }}</a>
+  <button id="wdt-mini-expand" onclick="wdtExpand()" title="Expand toolbar">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+</div>

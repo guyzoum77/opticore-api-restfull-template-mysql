@@ -12,7 +12,7 @@
 origin:
 methods: []
 allowedHeaders: []
-exposedHeaders: []
+exposedHeaders: [X-Debug-Token, X-Debug-Token-Link]
 credentials: false
 maxAge: 1d
 preflightContinue: false

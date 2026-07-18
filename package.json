@@ -4,8 +4,8 @@
     "description": "Opticore API Restfull template with mysql as database",
     "scripts": {
         "start:prod": "tsx server.ts",
-        "start:dev": " tsx --watch server.ts",
-        "stop": "sh -c 'lsof -i :${PORT:-4200} -t'",
+        "start:dev": " tsx server.ts",
+        "stop": "sh -c 'lsof -nP -iTCP:4200 -sTCP:LISTEN'",
         "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
         "db:push": "npx prisma db push",
         "test": "jest --forceExit --detectOpenHandles",
@@ -50,12 +50,15 @@
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.5",
         "@eslint/js": "^10.0.1",
+        "@types/jest": "^30.0.0",
         "@types/node": "^24.12.4",
         "@types/nunjucks": "^3.2.6",
         "concurrently": "^10.0.3",
         "cross-env": "^10.1.0",
         "globals": "^17.6.0",
+        "jest": "^30.4.2",
         "supertest": "^7.2.2",
+        "ts-jest": "^29.4.11",
         "tsx": "^4.22.4",
         "typescript": "^6.0.3"
     }
