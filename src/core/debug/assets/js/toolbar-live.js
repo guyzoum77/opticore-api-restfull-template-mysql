@@ -67,7 +67,7 @@
                row('Status',  badge(sc + ' ' + statusMsg(sc), ok ? '#2e7d32' : '#c0392b')) +
                sep() +
                row('Duration', fmtDuration(p.duration)) +
-               row('Profiler', '<a href="' + lastProfilerUrl + '" style="color:#FAC68E">Open →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '" style="color:#FAC68E">Open</a>');
     }
     function ttDuration(p) {
         const sqlMs = p.sqlCount > 0 ? '~' + p.duration + ' ms' : '0 ms';
@@ -76,14 +76,14 @@
                row('Application',  fmtDuration(appMs)) +
                row('Database',     sqlMs) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance</a>');
     }
     function ttMemory(p) {
         const mu = p.memoryUsage;
         return row('Heap used',  fmtMemory(mu)) +
                row('Node PID',  '' + (window._wdt_pid || '—')) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=performance" style="color:#FAC68E">Performance</a>');
     }
     function ttLogs(p) {
         let errors = p.logErrors || 0;
@@ -97,7 +97,7 @@
                row('Warnings', warnVal) +
                row('Deprecations', deprVal) +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=logs" style="color:#FAC68E">Logs →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=logs" style="color:#FAC68E">Logs</a>');
     }
     function ttHttp() {
         if (recentProfiles.length === 0) {
@@ -118,7 +118,7 @@
         }).join('');
         return '<div class="http-tt-head">' +
             '<span class="http-tt-head-title">Last ' + last10.length + ' HTTP Requests</span>' +
-            '<a href="/_debug/profiler" class="http-tt-head-link">View all →</a>' +
+            '<a href="/_debug/profiler" class="http-tt-head-link">View all</a>' +
             '</div>' +
             '<table class="http-tt-table">' +
             '<thead><tr><th>Method</th><th>URL</th><th>Status</th><th>Time</th></tr></thead>' +
@@ -129,9 +129,9 @@
         return row('Method', badge(p.method, '#1565c0')) +
                row('URL',    '<code>' + p.url + '</code>') +
                sep() +
-               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=routing" style="color:#FAC68E">Routing →</a>');
+               row('Profiler', '<a href="' + lastProfilerUrl + '?panel=routing" style="color:#FAC68E">Routing</a>');
     }
-    // hover sur "v1.0.0" → ancienne vue : versions + docs
+    // hover sur "v1.0.0" ancienne vue : versions + docs
     function ttVersion() {
         const env = CFG.environment;
         const envOk = env !== 'production';
@@ -145,7 +145,7 @@
                link('https://github.com/guyzoum77/opticore-api-restfull-template-mysql/issues', 'Help & Support', '❓');
     }
 
-    // hover sur "Server" → runtime + status packages + services
+    // hover sur "Server" runtime + status packages + services
     function ttServer() {
         const env = CFG.environment;
         const envOk = env !== 'production';
@@ -171,7 +171,7 @@
 
     }
 
-    // map data-tt → builder
+    // map data-tt builder
     const ttBuilders = {
         status:   () => lastProfile ? ttStatus(lastProfile)   : row('Status', 'No request yet'),
         duration: () => lastProfile ? ttDuration(lastProfile) : row('Duration', 'No request yet'),
@@ -303,21 +303,59 @@
         }
     }
 
-    async function fetchLatest() {
-        try {
-            const res  = await fetch('/_debug/api/profiles');
-            if (!res.ok) return;
-            const data = await res.json();
-            if (!data.profiles || data.profiles.length === 0) return;
-            recentProfiles = data.profiles;
-            const p = data.profiles[0];
-            const isNew = p.token !== lastToken;
-            if (isNew) lastToken = p.token;
-            // always update counts (errors may be patched in after the first fetch)
-            updateToolbar(p, isNew);
-        } catch(e) {}
+    function applySnapshot(data) {
+        if (!data.profiles || data.profiles.length === 0) return;
+        recentProfiles = data.profiles;
+        const p = data.profiles[0];
+        const isNew = p.token !== lastToken;
+        if (isNew) lastToken = p.token;
+        updateToolbar(p, isNew);
     }
 
-    fetchLatest();
-    setInterval(fetchLatest, 2000);
+    function applyNewProfile(p) {
+        recentProfiles = [p, ...recentProfiles].slice(0, 10);
+        lastToken = p.token;
+        updateToolbar(p, true);
+    }
+
+    async function fetchLatest() {
+        try {
+            const res = await fetch('/_debug/api/profiles');
+            if (!res.ok) return;
+            applySnapshot(await res.json());
+        } catch (e) {}
+    }
+
+    function connectStream() {
+        if (typeof EventSource === 'undefined') {
+            // fallback for browsers without SSE support
+            fetchLatest();
+            setInterval(fetchLatest, 2000);
+            return;
+        }
+
+        const es = new EventSource('/_debug/api/profiles/stream');
+        let reconnectDelay = 1000;
+
+        es.addEventListener('snapshot', (evt) => {
+            try { applySnapshot(JSON.parse(evt.data)); } catch (e) {}
+        });
+
+        es.addEventListener('profile', (evt) => {
+            try { applyNewProfile(JSON.parse(evt.data)); } catch (e) {}
+        });
+
+        es.onopen = () => { reconnectDelay = 1000; };
+
+        es.onerror = () => {
+            // browsers auto-reconnect EventSource; this is just a safety net
+            // in case the connection is closed outright (e.g. server restart)
+            if (es.readyState === EventSource.CLOSED) {
+                setTimeout(connectStream, reconnectDelay);
+                reconnectDelay = Math.min(reconnectDelay * 2, 30000);
+            }
+        };
+    }
+
+    connectStream();
 })();

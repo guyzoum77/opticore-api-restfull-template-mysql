@@ -1,17 +1,17 @@
-import { IRequestProfile, ISqlQuery, ILogEntry } from "../types/debugToolbar.types";
+import {
+    IRequestProfile,
+    ISqlQuery,
+    ILogEntry,
+    IKvRow,
+    Panel,
+    IRequestPanelData,
+    IPerformancePanelData, IDatabasePanelData, ILogsPanelData, IRoutingPanelData, IConfigurationPanelData,
+    IExceptionPanelData, IRoutePathSegment, IRouteTableRow, IRoutesPanelData, ISidebarItem, ILogRow, ILogExtra,
+    ITimelineEvent
+} from "../types/debugToolbar.types";
 import { IRegisteredRoute } from "../debugToolbar.module";
 import { formatDuration, formatMemory, sqlTotalTime } from "./helpers.view";
 
-export type Panel = "request" | "performance" | "logs" | "routing" | "configuration" | "database" | "exception" | "routes";
-
-interface IKvRow {
-    key: string;
-    value?: string;
-    title?: string;
-    truncate?: boolean;
-    code?: boolean;
-    badge?: { text: string; variant: "ok" | "warn" | "info" | "muted" };
-}
 
 function toKvRows(obj: Record<string, unknown>): IKvRow[] {
     return Object.entries(obj).map(([key, v]) => ({
@@ -22,25 +22,6 @@ function toKvRows(obj: Record<string, unknown>): IKvRow[] {
 
 function headersToRows(headers: Record<string, string>): IKvRow[] {
     return Object.entries(headers ?? {}).map(([key, value]) => ({ key, value }));
-}
-
-// ===== Request / Response panel =====
-
-interface IRequestPanelData {
-    statusOk: boolean;
-    statusCode: number;
-    durationFormatted: string;
-    memoryFormatted: string;
-    sqlQueryCount: number;
-    getParams: IKvRow[];
-    postParams: IKvRow[];
-    routeParams: IKvRow[];
-    attributes: IKvRow[];
-    requestHeaders: IKvRow[];
-    responseHeaders: IKvRow[];
-    hasCookies: boolean;
-    cookies: IKvRow[];
-    responseBodyJson: string | null;
 }
 
 function buildRequestPanel(profile: IRequestProfile): IRequestPanelData {
@@ -70,24 +51,10 @@ function buildRequestPanel(profile: IRequestProfile): IRequestPanelData {
     };
 }
 
-// ===== Performance panel =====
-
-interface ITimelineEvent { label: string; widthPct: string; color: string; durationFormatted: string }
-
-interface IPerformancePanelData {
-    total: number;
-    appTime: number;
-    memoryMiB: string;
-    hasEvents: boolean;
-    events: ITimelineEvent[];
-    hasSqlTime: boolean;
-    processInfo: IKvRow[];
-}
-
 function buildPerformancePanel(profile: IRequestProfile): IPerformancePanelData {
-    const total = profile.duration;
-    const sqlTime = sqlTotalTime(profile);
-    const appTime = Math.max(0, total - sqlTime);
+    const total: number = profile.duration;
+    const sqlTime: number = sqlTotalTime(profile);
+    const appTime: number = Math.max(0, total - sqlTime);
 
     const rawEvents = [
         { label: "kernel.request  (Application)", duration: appTime, color: "#C87A3C" },
@@ -95,7 +62,7 @@ function buildPerformancePanel(profile: IRequestProfile): IPerformancePanelData 
     ].filter(e => e.duration > 0);
 
     const events: ITimelineEvent[] = rawEvents.map(e => {
-        const pct = total > 0 ? Math.min((e.duration / total) * 100, 100) : 0;
+        const pct: number = total > 0 ? Math.min((e.duration / total) * 100, 100) : 0;
         return {
             label: e.label,
             widthPct: Math.max(pct, 0.5).toFixed(1),
@@ -123,26 +90,6 @@ function buildPerformancePanel(profile: IRequestProfile): IPerformancePanelData 
             { key: "Uptime", value: `${Math.round(process.uptime())}s` },
         ],
     };
-}
-
-// ===== Database panel =====
-
-interface ISqlQueryRow {
-    type: string;
-    index: number;
-    hasError: boolean;
-    durationFormatted: string;
-    sql: string;
-    bindingsJson: string | null;
-    error: string | null;
-}
-
-interface IDatabasePanelData {
-    hasQueries: boolean;
-    totalCount: number;
-    totalTimeFormatted: string;
-    avgFormatted: string;
-    queries: ISqlQueryRow[];
 }
 
 function sqlType(sql: string): string {
@@ -174,45 +121,15 @@ function buildDatabasePanel(profile: IRequestProfile): IDatabasePanelData {
     };
 }
 
-// ===== Logs panel =====
-
-interface ILogExtra {
-    showContextBtn: boolean;
-    showTraceBtn: boolean;
-    ctxId: string;
-    stackId: string;
-    ctxJson: string | null;
-    stackText: string | null;
-}
-
-interface ILogRow {
-    rowClass: string;
-    logType: string;
-    timeStr: string;
-    levelCls: string;
-    level: string;
-    message: string;
-    source: string;
-    extra: ILogExtra | null;
-}
-
-interface ILogsPanelData {
-    hasLogs: boolean;
-    errCount: number;
-    warnCount: number;
-    deprCount: number;
-    rows: ILogRow[];
-}
-
 function buildLogsPanel(profile: IRequestProfile): ILogsPanelData {
-    const logs = profile.logs;
+    const logs: ILogEntry[] = profile.logs;
     if (logs.length === 0) {
         return { hasLogs: false, errCount: 0, warnCount: 0, deprCount: 0, rows: [] };
     }
 
-    const errCount  = logs.filter(l => l.level === "error" || l.level === "critical").length;
-    const warnCount = logs.filter(l => l.level === "warning").length;
-    const deprCount = logs.filter(l => (l.level as string) === "deprecation").length;
+    const errCount: number  = logs.filter((l: ILogEntry): boolean => l.level === "error" || l.level === "critical").length;
+    const warnCount: number = logs.filter((l: ILogEntry): boolean => l.level === "warning").length;
+    const deprCount: number = logs.filter((l: ILogEntry): boolean => (l.level as string) === "deprecation").length;
 
     function levelCls(level: string): string {
         if (level === "critical") return "log-error";
@@ -235,15 +152,15 @@ function buildLogsPanel(profile: IRequestProfile): ILogsPanelData {
     }
 
     const rows: ILogRow[] = logs.map((l: ILogEntry, i: number) => {
-        const ctx = l.context ?? {};
-        const hasCtx = Object.keys(ctx).length > 0;
-        const hasStack = hasCtx && typeof ctx.stack === "string" && (ctx.stack as string).length > 0;
-        const source = hasCtx && typeof ctx.source === "string" ? (ctx.source as string) : "";
+        const ctx: Record<string, unknown> = l.context ?? {};
+        const hasCtx: boolean = Object.keys(ctx).length > 0;
+        const hasStack: boolean = hasCtx && typeof ctx.stack === "string" && (ctx.stack as string).length > 0;
+        const source: string = hasCtx && typeof ctx.source === "string" ? (ctx.source as string) : "";
 
         const ctxId   = `lctx${i}`;
         const stackId = `lstk${i}`;
-        const ms = String(l.timestamp % 1000).padStart(3, "0");
-        const timeStr = new Date(l.timestamp).toLocaleTimeString("en-US", {
+        const ms: string = String(l.timestamp % 1000).padStart(3, "0");
+        const timeStr: string = new Date(l.timestamp).toLocaleTimeString("en-US", {
             hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true
         }) + "." + ms;
 
@@ -254,7 +171,7 @@ function buildLogsPanel(profile: IRequestProfile): ILogsPanelData {
             for (const [k, v] of Object.entries(ctx)) {
                 if (k !== "stack") ctxWithoutStack[k] = v;
             }
-            const hasOtherCtx = Object.keys(ctxWithoutStack).length > 0;
+            const hasOtherCtx: boolean = Object.keys(ctxWithoutStack).length > 0;
             extra = {
                 showContextBtn: hasOtherCtx,
                 showTraceBtn: true,
@@ -287,19 +204,9 @@ function buildLogsPanel(profile: IRequestProfile): ILogsPanelData {
     return { hasLogs: true, errCount, warnCount, deprCount, rows };
 }
 
-// ===== Routing panel =====
-
-interface IRoutingPanelData {
-    routeRows: IKvRow[];
-    hasRouteParams: boolean;
-    routeParamsRows: IKvRow[];
-    hasQueryParams: boolean;
-    queryParamsRows: IKvRow[];
-}
-
 function buildRoutingPanel(profile: IRequestProfile): IRoutingPanelData {
-    const routeParams = profile.route.params ?? {};
-    const queryParams = profile.request.query ?? {};
+    const routeParams: Record<string, string | string[]> = profile.route.params ?? {};
+    const queryParams: Record<string, unknown> = profile.request.query ?? {};
     return {
         routeRows: [
             { key: "Route", value: profile.route.path, code: true },
@@ -314,18 +221,10 @@ function buildRoutingPanel(profile: IRequestProfile): IRoutingPanelData {
     };
 }
 
-// ===== Configuration panel =====
-
-interface IConfigurationPanelData {
-    appInfo: IKvRow[];
-    envRows: IKvRow[];
-    envCount: number;
-}
-
 function buildConfigurationPanel(profile: IRequestProfile): IConfigurationPanelData {
-    const safeEnv = Object.entries(process.env)
-        .filter(([k]) => !/(PASSWORD|SECRET|KEY|TOKEN|AUTH|PASS|PRIVATE)/i.test(k))
-        .sort(([a], [b]) => a.localeCompare(b));
+    const safeEnv: [string, string | undefined][] = Object.entries(process.env)
+        .filter(([k]): boolean => !/(PASSWORD|SECRET|KEY|TOKEN|AUTH|PASS|PRIVATE)/i.test(k))
+        .sort(([a], [b]): number => a.localeCompare(b));
 
     return {
         appInfo: [
@@ -339,24 +238,12 @@ function buildConfigurationPanel(profile: IRequestProfile): IConfigurationPanelD
     };
 }
 
-// ===== Exception panel =====
-
-interface IExceptionErrorLog { levelUpper: string; message: string; contextJson: string | null }
-
-interface IExceptionPanelData {
-    noException: boolean;
-    showBanner: boolean;
-    statusCode: number;
-    statusMessage: string;
-    method: string;
-    url: string;
-    errLogs: IExceptionErrorLog[];
-}
-
 function buildExceptionPanel(profile: IRequestProfile): IExceptionPanelData {
-    const errLogs = profile.logs.filter(l => l.level === "error" || l.level === "critical");
-    const isError = profile.statusCode >= 500;
-    const isNotFound = profile.statusCode === 404;
+    const errLogs: ILogEntry[] = profile.logs.filter((l: ILogEntry): boolean => l.level === "error"
+        || l.level === "critical");
+    const isError: boolean = profile.statusCode >= 500;
+    const isNotFound: boolean = profile.statusCode === 404;
+
     return {
         noException: errLogs.length === 0 && !isError,
         showBanner: isError || isNotFound,
@@ -364,28 +251,12 @@ function buildExceptionPanel(profile: IRequestProfile): IExceptionPanelData {
         statusMessage: profile.statusMessage,
         method: profile.method,
         url: profile.url,
-        errLogs: errLogs.map(l => ({
+        errLogs: errLogs.map((l: ILogEntry) => ({
             levelUpper: l.level.toUpperCase(),
             message: l.message,
             contextJson: l.context ? JSON.stringify(l.context, null, 2) : null,
         })),
     };
-}
-
-// ===== Routes panel =====
-
-interface IRoutePathSegment { type: "text" | "param"; value: string }
-interface IRouteTableRow { methodClass: string; method: string; pathSegments: IRoutePathSegment[]; middlewareCount: number }
-
-interface IRoutesPanelData {
-    hasRoutes: boolean;
-    totalRoutes: number;
-    appRoutesCount: number;
-    methodCounts: { method: string; count: number }[];
-    hasAppRoutes: boolean;
-    appRoutesRows: IRouteTableRow[];
-    hasDebugRoutes: boolean;
-    debugRoutesRows: IRouteTableRow[];
 }
 
 function pathToSegments(path: string): IRoutePathSegment[] {
@@ -436,17 +307,6 @@ function buildRoutesPanel(routes: IRegisteredRoute[]): IRoutesPanelData {
         hasDebugRoutes: debugRoutes.length > 0,
         debugRoutesRows: toRouteRows(debugRoutes),
     };
-}
-
-// ===== Shell / sidebar =====
-
-interface ISidebarItem {
-    icon: string;
-    label: string;
-    panel: Panel;
-    active: boolean;
-    badge: number;
-    badgeIsError: boolean;
 }
 
 export function buildProfilerDetailViewModel(

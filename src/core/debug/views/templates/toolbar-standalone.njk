@@ -11,7 +11,11 @@
   <a href="{{ profilerUrl }}" class="tb-badge tb-badge--{{ statusCls }}">{{ statusCode }}</a>
 
   <a href="{{ base }}?panel=performance" class="tb-block" style="position:relative;">
-    <span class="tb-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+    <span class="tb-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+    </span>
     <span class="tb-label tb-underline">{{ duration.formatted }}</span>
     <span class="tb-time-bar" style="width:{{ duration.barWidth }}%"></span>
   </a>
@@ -60,7 +64,7 @@
         </tbody>
       </table>
       {% else %}
-      <div style="padding:12px;color:#666;font-size:11px;">No requests yet.</div>
+        <div style="padding:12px;color:#666;font-size:11px;">No requests yet.</div>
       {% endif %}
     </div>
   </div>

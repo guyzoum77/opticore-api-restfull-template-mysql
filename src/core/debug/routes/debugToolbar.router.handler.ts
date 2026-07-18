@@ -42,6 +42,12 @@ export const DebugToolbarHandlerRouter: () => IMultipleRouteDefinition = () => {
                 handler: async (ctx: ICustomContext) => DebugToolbarController.apiProfiles(ctx.req, ctx.res)
             },
             {
+                path: "/_debug/api/profiles/stream",
+                method: "get",
+                middlewares: [],
+                handler: async (ctx: ICustomContext) => DebugToolbarController.streamProfiles(ctx.req, ctx.res)
+            },
+            {
                 path: "/_debug/api/profiles/:token",
                 method: "get",
                 middlewares: [],

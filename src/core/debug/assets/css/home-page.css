@@ -37,6 +37,7 @@ a:hover { text-decoration: underline; }
   transform-origin: top left;
   will-change: transform;
 }
+
 /*
  * 3 animations distinctes :
  *  - vitesses très différentes  → effet parallaxe 3D

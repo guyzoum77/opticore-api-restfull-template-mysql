@@ -1,40 +1,16 @@
-import { IRequestProfile } from "../types/debugToolbar.types";
+import {IRequestProfile, IToolbarBarViewModel, IToolbarHttpRow, ProfileMetrics} from "../types/debugToolbar.types";
 import { debugStore } from "../store/debugToolbar.store";
 import { defaultToolbarConfig } from "../config/toolbar.config";
 import { SecurityService } from "../core/security.service";
 import { MetricsService } from "../core/metrics.service";
 import { formatDuration } from "./helpers.view";
 
-const security       = new SecurityService(defaultToolbarConfig.security);
+const security = new SecurityService(defaultToolbarConfig.security);
 const metricsService = new MetricsService();
 
-export interface IToolbarHttpRow {
-    isCurrent: boolean;
-    method: string;
-    url: string;
-    fullUrl: string;
-    token: string;
-    statusCode: number;
-    statusClass: string;
-    duration: string;
-}
-
-export interface IToolbarBarViewModel {
-    statusCode: number;
-    profilerUrl: string;
-    statusCls: string;
-    appVersion: string;
-    base: string;
-    duration: { formatted: string; barWidth: number };
-    memory: { formatted: string };
-    logs: { count: number; errors: number; warnings: number };
-    route: { label: string };
-    http: { count: number; rows: IToolbarHttpRow[] };
-}
-
 export function buildToolbarBarViewModel(profile: IRequestProfile): IToolbarBarViewModel {
-    const recentProfiles = debugStore.getAll();
-    const metrics = metricsService.compute(profile, recentProfiles.length);
+    const recentProfiles: IRequestProfile[] = debugStore.getAll();
+    const metrics: ProfileMetrics = metricsService.compute(profile, recentProfiles.length);
     const base = `/_debug/profiler/${profile.token}`;
 
     const httpRows: IToolbarHttpRow[] = recentProfiles

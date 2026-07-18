@@ -18,7 +18,7 @@ input:focus, select:focus { border-color:#C87A3C !important; outline:none; }
 
 .pl-banner { max-width:2000px; margin:15px auto 0 auto; padding:0 200px; }
 .pl-banner-inner { background:#f5f5f5; border-radius:5px 5px 0 0; padding:16px 36px; border-top:4px solid #737373; }
-.pl-banner-title { margin:0; font-size:22px; font-weight:900; color:#3c3c3c; }
+.pl-banner-title { margin:0; font-size: 20px; font-weight:900; color:#3c3c3c; }
 
 .pl-grid {
   max-width:2000px; margin:20px auto 0 auto; padding:0 200px 80px 200px;

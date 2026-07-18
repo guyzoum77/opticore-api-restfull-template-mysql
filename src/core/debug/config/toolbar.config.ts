@@ -20,7 +20,7 @@ const DEFAULT_CONFIG: ToolbarConfig = {
 };
 
 export class ToolbarConfigBuilder {
-    private config: ToolbarConfig;
+    private readonly config: ToolbarConfig;
 
     constructor(overrides: Partial<ToolbarConfig> = {}) {
         this.config = JSON.parse(JSON.stringify({ ...DEFAULT_CONFIG, ...overrides }));

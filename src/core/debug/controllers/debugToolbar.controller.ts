@@ -8,8 +8,39 @@ import { renderView } from "../core/render.util";
 import { buildToolbarBarViewModel } from "../views/toolbar.view";
 import { buildProfilerListViewModel, ProfilerListTab } from "../views/profilerList.view";
 import { buildProfilerDetailViewModel, Panel } from "../views/profilerDetail.view";
+import {ResponseHandler} from "opticore-http-response";
+import { IRequestProfile } from "../types/debugToolbar.types";
 
-const PANELS: readonly Panel[] = ["request", "performance", "logs", "routing", "configuration", "database", "exception", "routes"];
+const SSE_HEARTBEAT_MS = 15000;
+
+function toProfileSummary(p: IRequestProfile) {
+    return {
+        token: p.token,
+        timestamp: p.timestamp,
+        method: p.method,
+        url: p.url,
+        statusCode: p.statusCode,
+        duration: p.duration,
+        memoryUsage: p.memoryUsage,
+        sqlCount: p.queries.length,
+        logCount: p.logs.length,
+        logErrors: p.logs.filter(l => l.level === "error" || l.level === "critical").length,
+        logWarnings: p.logs.filter(l => l.level === "warning").length,
+        logDeprecations: p.logs.filter(l => (l.level as string) === "deprecation").length,
+    };
+}
+
+
+const PANELS: readonly Panel[] = [
+    "request",
+    "performance",
+    "logs",
+    "routing",
+    "configuration",
+    "database",
+    "exception",
+    "routes"
+];
 
 function isValidPanel(p: unknown): p is Panel {
     return typeof p === "string" && (PANELS as readonly string[]).includes(p as Panel);
@@ -92,7 +123,9 @@ export class DebugToolbarController {
         const token  = str("token");
         const from   = str("from");
         const until  = str("until");
-        const limitRaw = typeof qs.limit === "string" ? parseInt(qs.limit as string, 10) : 10;
+        const limitRaw = typeof qs.limit === "string"
+            ? parseInt(qs.limit as string, 10)
+            : 10;
         const limit = [10, 25, 50, 100].includes(limitRaw) ? limitRaw : 10;
         const tab: ProfilerListTab = qs.tab === "commands" ? "commands" : "requests";
         await renderView(res, "profiler-list.njk", buildProfilerListViewModel(
@@ -126,21 +159,37 @@ export class DebugToolbarController {
     }
 
     static apiProfiles(_req: Request, res: Response): void {
-        const profiles = debugStore.getAll().map(p => ({
-            token: p.token,
-            timestamp: p.timestamp,
-            method: p.method,
-            url: p.url,
-            statusCode: p.statusCode,
-            duration: p.duration,
-            memoryUsage: p.memoryUsage,
-            sqlCount: p.queries.length,
-            logCount: p.logs.length,
-            logErrors: p.logs.filter(l => l.level === "error" || l.level === "critical").length,
-            logWarnings: p.logs.filter(l => l.level === "warning").length,
-            logDeprecations: p.logs.filter(l => (l.level as string) === "deprecation").length,
-        }));
+        const profiles = debugStore.getAll().map(toProfileSummary);
         res.json({ count: profiles.length, profiles });
+    }
+
+    static streamProfiles(req: Request, res: Response): void {
+        res.setHeader("Content-Type", "text/event-stream");
+        res.setHeader("Cache-Control", "no-cache, no-transform");
+        res.setHeader("Connection", "keep-alive");
+        res.setHeader("X-Accel-Buffering", "no");
+        res.flushHeaders?.();
+
+        const send = (event: string, data: unknown): void => {
+            res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+        };
+
+        const latest = debugStore.getAll().slice(0, 10).map(toProfileSummary);
+        send("snapshot", { count: latest.length, profiles: latest });
+
+        const onProfile = (profile: IRequestProfile): void => {
+            send("profile", toProfileSummary(profile));
+        };
+        debugStore.on("profile", onProfile);
+
+        const heartbeat = setInterval(() => {
+            res.write(": heartbeat\n\n");
+        }, SSE_HEARTBEAT_MS);
+
+        req.on("close", () => {
+            clearInterval(heartbeat);
+            debugStore.off("profile", onProfile);
+        });
     }
 
     static apiProfileByToken(req: Request, res: Response): void {

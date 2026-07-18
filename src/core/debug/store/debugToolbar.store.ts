@@ -1,23 +1,31 @@
+import { EventEmitter } from "events";
 import { IRequestProfile, ILogEntry } from "../types/debugToolbar.types";
 
-class DebugToolbarStore {
+
+class DebugToolbarStore extends EventEmitter {
     private readonly profiles: Map<string, IRequestProfile> = new Map();
     private readonly tokens: string[] = [];
     private readonly maxSize: number = 100;
 
+    constructor() {
+        super();
+        this.setMaxListeners(0);
+    }
+
     save(profile: IRequestProfile): void {
         if (this.tokens.length >= this.maxSize) {
-            const oldest = this.tokens.shift()!;
+            const oldest: string = this.tokens.shift()!;
             this.profiles.delete(oldest);
         }
         this.tokens.push(profile.token);
         this.profiles.set(profile.token, profile);
+        this.emit("profile", profile);
     }
 
     patchLatestLogs(entry: ILogEntry): void {
-        const lastToken = this.tokens[this.tokens.length - 1];
+        const lastToken: string = this.tokens[this.tokens.length - 1];
         if (!lastToken) return;
-        const profile = this.profiles.get(lastToken);
+        const profile: IRequestProfile | undefined = this.profiles.get(lastToken);
         if (profile) {
             profile.logs.push(entry);
         }
@@ -30,13 +38,16 @@ class DebugToolbarStore {
     getAll(): IRequestProfile[] {
         return [...this.tokens]
             .reverse()
-            .map(t => this.profiles.get(t)!)
+            .map((t: string): IRequestProfile => this.profiles.get(t)!)
             .filter(Boolean);
     }
 
     getLatest(): IRequestProfile | undefined {
-        const lastToken = this.tokens[this.tokens.length - 1];
-        return lastToken ? this.profiles.get(lastToken) : undefined;
+        const lastToken: string = this.tokens[this.tokens.length - 1];
+
+        return lastToken
+            ? this.profiles.get(lastToken)
+            : undefined;
     }
 
     clear(): void {

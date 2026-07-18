@@ -1,5 +1,6 @@
 import { ISqlQuery } from "../types/debugToolbar.types";
 
+
 class SqlCollector {
     private readonly queries: Map<string, ISqlQuery[]> = new Map();
 
@@ -8,14 +9,14 @@ class SqlCollector {
     }
 
     record(token: string, query: Omit<ISqlQuery, "timestamp">): void {
-        const list = this.queries.get(token);
+        const list: ISqlQuery[] | undefined = this.queries.get(token);
         if (list) {
             list.push({ ...query, timestamp: Date.now() });
         }
     }
 
     flush(token: string): ISqlQuery[] {
-        const list = this.queries.get(token) ?? [];
+        const list: ISqlQuery[] = this.queries.get(token) ?? [];
         this.queries.delete(token);
         return list;
     }
