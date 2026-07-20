@@ -27,6 +27,9 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.json",
+    ".env",
+    "node_modules/@types/node/globals.d.ts",
+    "node_modules/@types/node/globals.d.ts"
   ],
   "baseUrl": "src",
   "paths": {

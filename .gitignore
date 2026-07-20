@@ -4,3 +4,5 @@ node_modules/
 localhost
 src/core/cache/*
 !src/core/cache/.gitkeep
+ .DS_Store
+ src/.DS_Store

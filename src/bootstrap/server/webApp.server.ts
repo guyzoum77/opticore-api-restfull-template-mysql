@@ -14,7 +14,7 @@ import {
     instrumentMySQL,
     instrumentLogger,
     FileStorage,
-} from "../../core/profiler";
+} from "opticore-profiler";
 
 
 
@@ -35,7 +35,6 @@ const yamlParsing: YamlParsing = new YamlParsing(environment.defaultLocal, envPa
  */
 new LocalLanguageLoader(environment.defaultLocal, yamlParsing.absolutPath()).load();
 
-
 /**
  * Instantiate application bootstrap.
  */
@@ -46,11 +45,11 @@ const app: WebServer = new WebServer({
     localLanguage: environment.defaultLocal,
     loggerConfig: new LoggerCore(loggerConfig(envPath) as ILoggerConfig),
     hotReload: {
-        rootDir: "src",
-        watchExtensions: [".ts", ".js", ".json"],
-        hotReloadExtensions: [".json"],
-        ignore: ["uploads", "tmp", "node_modules"],
-        debounceMs: 300,
+        rootDir: getEnvironmentValue(envPath).rootDir,
+        watchExtensions: getEnvironmentValue(envPath).watchExtensions,
+        hotReloadExtensions: getEnvironmentValue(envPath).hotReloadExtensions,
+        ignore: getEnvironmentValue(envPath).ignore,
+        debounceMs: getEnvironmentValue(envPath).debounceMs,
     }
 });
 
