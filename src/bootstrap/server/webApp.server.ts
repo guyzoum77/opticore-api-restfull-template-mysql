@@ -14,6 +14,7 @@ import {
     instrumentMySQL,
     instrumentLogger,
     FileStorage,
+    OpticoreProfiler,
 } from "opticore-profiler";
 
 
@@ -45,11 +46,11 @@ const app: WebServer = new WebServer({
     localLanguage: environment.defaultLocal,
     loggerConfig: new LoggerCore(loggerConfig(envPath) as ILoggerConfig),
     hotReload: {
-        rootDir: getEnvironmentValue(envPath).rootDir,
-        watchExtensions: getEnvironmentValue(envPath).watchExtensions,
-        hotReloadExtensions: getEnvironmentValue(envPath).hotReloadExtensions,
-        ignore: getEnvironmentValue(envPath).ignore,
-        debounceMs: getEnvironmentValue(envPath).debounceMs,
+        rootDir: environment.rootDir,
+        watchExtensions: environment.watchExtensions,
+        hotReloadExtensions: environment.hotReloadExtensions,
+        ignore: environment.ignore,
+        debounceMs: environment.debounceMs,
     }
 });
 
@@ -69,9 +70,9 @@ instrumentLogger(LoggerCore);
  * getEnvironmentValue() above) — the same flag the previous debug toolbar
  * used. Defaults to disabled if the flag is missing or not "true".
  */
-const profiler = opticoreProfiler({
-    enabled: process.env.PROFILE_WEB_TOOL_BAR === "true",
-    storage: new FileStorage(process.env.PROFILE_CACHE_PATH),
+const profiler: OpticoreProfiler = opticoreProfiler({
+    enabled: environment.profileWebToolbar,
+    storage: new FileStorage(environment.profileCachePath),
 });
 
 /**
