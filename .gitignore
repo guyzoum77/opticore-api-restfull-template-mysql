@@ -4,6 +4,6 @@ node_modules/
 localhost
 src/core/cache/*
 !src/core/cache/.gitkeep
-src/core/private.pem
+src/core/keys/private.pem
  .DS_Store
  src/.DS_Store
