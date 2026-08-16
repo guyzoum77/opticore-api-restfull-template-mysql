@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "target": "ESNext",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -10,7 +11,7 @@
     "noEmit": false,
     "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types"],
-    "types": ["reflect-metadata", "node"],
+    "types": ["node"],
     "sourceMap": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
@@ -31,12 +32,6 @@
     "node_modules/@types/node/globals.d.ts",
     "node_modules/@types/node/globals.d.ts"
   ],
-  "baseUrl": "src",
-  "paths": {
-    "@opticoreWebApp/*": ["*"],
-    "core/*": ["core/*"],
-    "bootstrap/*": ["bootstrap/*"]
-  },
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
