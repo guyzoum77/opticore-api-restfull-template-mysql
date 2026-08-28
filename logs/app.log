@@ -2,3 +2,58 @@
 [OPTICORE] 08/03/2026, 07:20 | Dependencies container | DEPENDENCIES_CONTAINER - No dependencies are recorded in the container.
 8/3/2026, 7:21:14 AM | SUCCESS | serverWebStopped
 8/3/2026, 7:21:14 AM | SUCCESS | finishingProcessWell
+[SERVER] 08/03/2026, 07:21 | SERVER RUNNING | OPTICORE SERVER - Server is running at : [4mhttp://localhost:4200[24m
+[OPTICORE] 08/03/2026, 07:21 | Dependencies container | DEPENDENCIES_CONTAINER - Dependencies stored in container : LoggerCore, OpticoreLogger
+8/3/2026, 7:21:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /
+    Request content  -  [ Response ] HTML_CONTENT_HASHED 936950c05f51dea37e26e698c6d99c96781134649a4cb22b30b7191644119493 - [ Status ]  200 
+8/3/2026, 7:21:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/home-page.css
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:21:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/toolbar-standalone.css
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:21:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/home-particles.js
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:21:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/wdt/s5oe5xdt
+    Request content  - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 2d56de4b3a7b815a495ff6667f9b65d61322b79ced5fa44aa2a55a2f1aa04ab4 - [ Status ]  200 
+8/3/2026, 7:21:58 AM | ERROR |  Not found  [ Host ] http://localhost:4200 - [ Route ] /favicon.ico -  [ Response ]  - [ Status ]  404 
+8/3/2026, 7:21:58 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/toolbar.js
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:22:03 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=performance
+    Request content  - [ query ] {"panel":"performance"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 230dc270a3a9e6d84e3ede49c9a014999617f587670f6a4ec7bcaa4e194bbe2d - [ Status ]  200 
+8/3/2026, 7:22:03 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:22:03 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  200 
+8/3/2026, 7:22:10 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=logs
+    Request content  - [ query ] {"panel":"logs"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 2d93a192c6633b4efbd9890fe604646be0e784b0dcdee30ca8118fbb3d15a3b0 - [ Status ]  200 
+8/3/2026, 7:22:10 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:22:10 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:22:20 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=logs&lang=en
+    Request content  - [ query ] {"panel":"logs","lang":"en"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 8bc090439c0bb932a20072d607b8fcb2db189b6a5b762eebecb22e781c231295 - [ Status ]  200 
+8/3/2026, 7:22:20 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:22:20 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:22:33 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=routes
+    Request content  - [ query ] {"panel":"routes"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED be7a634e6643f99505ff9f20f5d0a88e3714cde2f11c63d482ebf13f5217f895 - [ Status ]  200 
+8/3/2026, 7:22:33 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:22:33 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:41:44 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=logs&lang=en
+    Request content  - [ query ] {"panel":"logs","lang":"en"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 8bc090439c0bb932a20072d607b8fcb2db189b6a5b762eebecb22e781c231295 - [ Status ]  200 
+8/3/2026, 7:41:56 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=routing
+    Request content  - [ query ] {"panel":"routing"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED 6cabbf9a944e8f2e0caba2a88c510b31697166834b3749585f6f05e9ac690648 - [ Status ]  200 
+8/3/2026, 7:41:56 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:41:56 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:41:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/s5oe5xdt?panel=database
+    Request content  - [ query ] {"panel":"database"} - [ params ] {"token":"s5oe5xdt"} -  [ Response ] HTML_CONTENT_HASHED a52c8e6ebf9947fdc1612be80c5adc7c17dda6a29526b4266de369c78893adb7 - [ Status ]  200 
+8/3/2026, 7:41:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/css/profiler-detail.css
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:41:57 AM | INFO | [ Host ] http://localhost:4200 - [ Route ] /_profiler/assets/js/profiler-detail.js
+    Request content  -  [ Response ]  - [ Status ]  304 
+8/3/2026, 7:44:29 AM | SUCCESS | serverWebStopped
+8/3/2026, 7:44:29 AM | SUCCESS | finishingProcessWell
