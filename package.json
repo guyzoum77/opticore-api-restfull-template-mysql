@@ -37,7 +37,7 @@
         "opticore-logger": "^1.0.34",
         "opticore-mysqldb": "^1.0.43",
         "opticore-profiler": "^1.0.7",
-        "opticore-router": "^1.0.22",
+        "opticore-router": "^1.0.24",
         "opticore-server-logger": "^1.0.16",
         "opticore-webapp": "^1.0.88",
         "opticore-webapp-core": "^1.0.22",
