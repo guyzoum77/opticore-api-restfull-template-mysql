@@ -30,7 +30,7 @@
         "@typescript-eslint/eslint-plugin": "^8.65.0",
         "@typescript-eslint/parser": "^8.65.0",
         "nunjucks": "^3.2.4",
-        "opticore-cli": "^1.0.5",
+        "opticore-cli": "^1.0.7",
         "opticore-dependency-inject": "^1.0.11",
         "opticore-env-access": "^1.0.26",
         "opticore-express": "^1.0.9",
