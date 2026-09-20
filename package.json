@@ -41,7 +41,7 @@
         "opticore-router": "^1.0.26",
         "opticore-server-logger": "^1.0.18",
         "opticore-webapp": "^1.0.91",
-        "opticore-webapp-core": "^1.0.24",
+        "opticore-webapp-core": "^1.0.25",
         "reflect-metadata": "^0.2.2"
     },
     "overrides": {
