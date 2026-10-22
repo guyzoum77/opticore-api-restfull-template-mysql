@@ -9,9 +9,9 @@ import { UsersTestRouter } from "../../features/users-test/routes/users.router";
  * It uses the OpticoreRegisterRouter class to initialize and register
  * the various routes for application features.
  *
- * @param extraRoutes - Feature routers assembled by the caller (e.g. the
- * profiler router, built from the same `opticoreProfiler()` instance mounted
- * as middleware — see webApp.server.ts).
+ * @param extraRoutes - Feature routers assembled by the caller, placed ahead of
+ * the features' own (the profiler's router is added by the WebServer itself
+ * when the startup configuration has a `profiler` — see bootstrap/config/app.config.ts).
  * @returns {TFeatureRoutes[]} - Array containing all registered routes
  *
  *
